@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="O:/git/SBML-Reaction-Finder/thirdParty/biomodels-wslib_standalone-1.12.jar"/>
+	<classpathentry kind="lib" path="O:/git/SBML-Reaction-Finder/thirdParty/jdom.jar"/>
+	<classpathentry kind="lib" path="O:/git/SBML-Reaction-Finder/thirdParty/jsbml-1.1-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="O:/git/SBML-Reaction-Finder/thirdParty/owlapi-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

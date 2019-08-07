@@ -1,0 +1,4581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model metaid="_506841" name="Arnold2011_Zhu2007_CalvinCycle_Starch_Sucrose_Photorespiration">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+      This model is from the article:
+      <br/>
+        <strong> A quantitative comparison of Calvin–Benson cycle models
+</strong>
+        <br/>
+Anne Arnold, Zoran Nikoloski
+      <em>Trends in Plant Science</em>2011 Oct 14.
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22001849">22001849</a>,
+      <br/>
+        <strong>Abstract:</strong>
+        <br/>
+The Calvin-Benson cycle (CBC) provides the precursors for biomass synthesis necessary for plant growth. The dynamic behavior and yield of the CBC depend on the environmental conditions and regulation of the cellular state. Accurate quantitative models hold the promise of identifying the key determinants of the tightly regulated CBC function and their effects on the responses in future climates. We provide an integrative analysis of the largest compendium of existing models for photosynthetic processes. Based on the proposed ranking, our framework facilitates the discovery of best-performing models with regard to metabolomics data and of candidates for metabolic engineering.
+   </p>
+        <p>
+          <b>Note:</b> Model of the Calvin cycle and the related end-product pathways to starch and sucrose synthesis and photorespiration by Zhu et al. (2007, <a href="http://dx.doi.org/10.1104/pp.107.103713">DOI:10.1104/pp.107.103713</a>) and the personally provided implementation.</p> The parameter values are partly taken from Pettersson and Ryde-Pettersson (1988, <a href="http://dx.doi.org/10.1111/j.1432-1033.1988.tb14242.x">DOI:10.1111/j.1432-1033.1988.tb14242.x</a>). The initial metabolite values are chosen from the data set of Zhu et al. (2007, <a href="http://dx.doi.org/10.1104/pp.107.103713">DOI:10.1104/pp.107.103713</a>). A detailed description of all modifications is given in the model described by Arnold and Nikoloski (2011, <a href="http://www.ncbi.nlm.nih.gov/pubmed/22001849">PMID:22001849</a>.<p>To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p>
+          <p>In summary, you are entitled to use this encoded model in absolutely any manner you deem suitable, verbatim, or with modification, alone or embedded it in a larger context, redistribute it, commercially or not, in a restricted way or not.</p>
+          <p>To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pubmed/20587024" target="_blank">Li C, Donizelli M, Rodriguez N, Dharuri H, Endler L, Chelliah V, Li L, He E, Henry A, Stefan MI, Snoep JL, Hucka M, Le Novère N, Laibe C (2010) BioModels Database: An enhanced, curated and annotated resource for published quantitative kinetic models. BMC Syst Biol., 4:92.</a>
+        </p>
+      </body>
+    </notes>
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+        <rdf:Description rdf:about="#_506841">
+          <dc:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Chelliah</vCard:Family>
+                  <vCard:Given>Vijayalakshmi</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>viji@ebi.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>EMBL-EBI</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Arnold</vCard:Family>
+                  <vCard:Given>Anne</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>arnold@mpimp-golm.mpg.de</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>Max-Planck-Institute of Molecular Plant Physiology</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Nikoloski</vCard:Family>
+                  <vCard:Given>Zoran</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>nikoloski@mpimp-golm.mpg.de</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>Institute  of Biochemistry and Biology, University of Potsdam, 14476 Potsdam, Germany</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2011-10-24T11:17:58Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-04-20T19:50:41Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:biomodels.db:BIOMD0000000393"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL1109270009"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:pubmed:22001849"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+          <bqbiol:encodes>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0019253"/>
+            </rdf:Bag>
+          </bqbiol:encodes>
+          <bqbiol:occursIn>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:taxonomy:33090"/>
+            </rdf:Bag>
+          </bqbiol:occursIn>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+    <listOfFunctionDefinitions>
+      <functionDefinition metaid="_507228" id="function_9" name="MMlike s2p2 + reg 3*c-s1,1*m-s2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p2 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr2 </ci>
+            </bvar>
+            <bvar>
+              <ci> r3 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr3 </ci>
+            </bvar>
+            <bvar>
+              <ci> r4 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr41 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr42 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> s1 </ci>
+                    <ci> s2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> p1 </ci>
+                      <ci> p2 </ci>
+                    </apply>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> s1 </ci>
+                  <apply>
+                    <times/>
+                    <ci> Ks1 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r1 </ci>
+                        <ci> Kr1 </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> r2 </ci>
+                        <ci> Kr2 </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> r3 </ci>
+                        <ci> Kr3 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> s2 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r4 </ci>
+                        <ci> Kr41 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> Ks2 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r4 </ci>
+                        <ci> Kr42 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507229" id="function_18" name="Competitive inhibition (irr)">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> substrate </ci>
+            </bvar>
+            <bvar>
+              <ci> Inhibitor </ci>
+            </bvar>
+            <bvar>
+              <ci> Km </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <bvar>
+              <ci> Ki </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> V </ci>
+                <ci> substrate </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> Km </ci>
+                <ci> substrate </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> Km </ci>
+                    <ci> Inhibitor </ci>
+                  </apply>
+                  <ci> Ki </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507231" id="function_17" name="Henri-Michaelis-Menten (irreversible)">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> substrate </ci>
+            </bvar>
+            <bvar>
+              <ci> Km </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> V </ci>
+                <ci> substrate </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> Km </ci>
+                <ci> substrate </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507232" id="function_5" name="MMlike s1p2 + reg 2*c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p2 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <ci> s1 </ci>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> p1 </ci>
+                      <ci> p2 </ci>
+                    </apply>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> s1 </ci>
+                <apply>
+                  <times/>
+                  <ci> Ks1 </ci>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> r1 </ci>
+                      <ci> Kr1 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> r2 </ci>
+                      <ci> Kr2 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507233" id="function_14" name="MMlike s2p2 + reg 1*c-s1,4*c-s2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p2 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks2 </ci>
+            </bvar>
+            <bvar>
+              <ci> r2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr2 </ci>
+            </bvar>
+            <bvar>
+              <ci> r3 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr3 </ci>
+            </bvar>
+            <bvar>
+              <ci> r4 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr4 </ci>
+            </bvar>
+            <bvar>
+              <ci> r5 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr5 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> s1 </ci>
+                    <ci> s2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> p1 </ci>
+                      <ci> p2 </ci>
+                    </apply>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> s1 </ci>
+                  <apply>
+                    <times/>
+                    <ci> Ks1 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r1 </ci>
+                        <ci> Kr1 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> s2 </ci>
+                  <apply>
+                    <times/>
+                    <ci> Ks2 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r2 </ci>
+                        <ci> Kr2 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r3 </ci>
+                        <ci> Kr3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r4 </ci>
+                        <ci> Kr4 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r5 </ci>
+                        <ci> Kr5 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507235" id="function_21" name="MMlike s2p2 -s2 + reg 1*c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p2 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> s1 </ci>
+                    <ci> s2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> p1 </ci>
+                      <ci> p2 </ci>
+                    </apply>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> s1 </ci>
+                <apply>
+                  <times/>
+                  <ci> Ks1 </ci>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> r1 </ci>
+                      <ci> Kr1 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507236" id="function_15" name="MMlike s2p2 + reg 2*c-s1,1*c-s2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p2 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks2 </ci>
+            </bvar>
+            <bvar>
+              <ci> r3 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr3 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> s1 </ci>
+                    <ci> s2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> p1 </ci>
+                      <ci> p2 </ci>
+                    </apply>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> s1 </ci>
+                  <apply>
+                    <times/>
+                    <ci> Ks1 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r1 </ci>
+                        <ci> Kr1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r2 </ci>
+                        <ci> Kr2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> s2 </ci>
+                  <apply>
+                    <times/>
+                    <ci> Ks2 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r3 </ci>
+                        <ci> Kr3 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507237" id="function_4" name="MM s2p1 - reg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kp1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> s1 </ci>
+                    <ci> s2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> p1 </ci>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> Ks1 </ci>
+                <ci> Ks2 </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> s1 </ci>
+                        <ci> Ks1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> s2 </ci>
+                        <ci> Ks2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> p1 </ci>
+                    <ci> Kp1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507239" id="function_8" name="MMlike s1p2 + reg 1*c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p2 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <ci> s1 </ci>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> p1 </ci>
+                      <ci> p2 </ci>
+                    </apply>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> s1 </ci>
+                <apply>
+                  <times/>
+                  <ci> Ks1 </ci>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> r1 </ci>
+                      <ci> Kr1 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507240" id="function_12" name="MM s1p2 - reg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p2 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kp1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kp2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <ci> s1 </ci>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> p1 </ci>
+                      <ci> p2 </ci>
+                    </apply>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> Ks1 </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <divide/>
+                    <ci> s1 </ci>
+                    <ci> Ks1 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> p1 </ci>
+                        <ci> Kp1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> p2 </ci>
+                        <ci> Kp2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507241" id="function_13" name="MM s2p2 - reg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p2 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kp1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kp2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> s1 </ci>
+                    <ci> s2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> p1 </ci>
+                      <ci> p2 </ci>
+                    </apply>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> Ks1 </ci>
+                <ci> Ks2 </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <ci> s1 </ci>
+                          <ci> Ks1 </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <ci> s2 </ci>
+                          <ci> Ks2 </ci>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <ci> p1 </ci>
+                          <ci> Kp1 </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <ci> p2 </ci>
+                          <ci> Kp2 </ci>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507243" id="function_2" name="MM s2 + reg 1*c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks2 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <ci> s1 </ci>
+                <ci> s2 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> s1 </ci>
+                  <ci> Ks1 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> s2 </ci>
+                  <apply>
+                    <times/>
+                    <ci> Ks2 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r1 </ci>
+                        <ci> Kr1 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507244" id="function_10" name="starch synthase - Pettersson">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> K1 </ci>
+            </bvar>
+            <bvar>
+              <ci> K2 </ci>
+            </bvar>
+            <bvar>
+              <ci> R1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KR1 </ci>
+            </bvar>
+            <bvar>
+              <ci> R2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KA1 </ci>
+            </bvar>
+            <bvar>
+              <ci> A1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KA2 </ci>
+            </bvar>
+            <bvar>
+              <ci> A2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KA3 </ci>
+            </bvar>
+            <bvar>
+              <ci> A3 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <ci> S1 </ci>
+                <ci> S2 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> S1 </ci>
+                  <ci> K1 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> R1 </ci>
+                    <ci> KR1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> S2 </ci>
+                  <apply>
+                    <times/>
+                    <ci> K2 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <times/>
+                          <ci> K2 </ci>
+                          <ci> R2 </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <times/>
+                            <ci> KA1 </ci>
+                            <ci> A1 </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <ci> KA2 </ci>
+                            <ci> A2 </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <ci> KA3 </ci>
+                            <ci> A3 </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507245" id="function_19" name="MM s1 + reg 2*s">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <ci> s1 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> s1 </ci>
+                <apply>
+                  <times/>
+                  <ci> Ks1 </ci>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> r1 </ci>
+                      <ci> Kr1 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> r2 </ci>
+                      <ci> Kr2 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507247" id="function_20" name="MMlike s2p2 + reg 1*c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p2 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> s1 </ci>
+                    <ci> s2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> p1 </ci>
+                      <ci> p2 </ci>
+                    </apply>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> s1 </ci>
+                  <apply>
+                    <times/>
+                    <ci> Ks1 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r1 </ci>
+                        <ci> Kr1 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> s2 </ci>
+                  <ci> Ks2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507248" id="function_1" name="MM s1 + reg 5*c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> S </ci>
+            </bvar>
+            <bvar>
+              <ci> K </ci>
+            </bvar>
+            <bvar>
+              <ci> R1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KR1 </ci>
+            </bvar>
+            <bvar>
+              <ci> R2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KR2 </ci>
+            </bvar>
+            <bvar>
+              <ci> R3 </ci>
+            </bvar>
+            <bvar>
+              <ci> KR3 </ci>
+            </bvar>
+            <bvar>
+              <ci> R4 </ci>
+            </bvar>
+            <bvar>
+              <ci> KR4 </ci>
+            </bvar>
+            <bvar>
+              <ci> R5 </ci>
+            </bvar>
+            <bvar>
+              <ci> KR5 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <ci> S </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> S </ci>
+                <apply>
+                  <times/>
+                  <ci> K </ci>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> R1 </ci>
+                      <ci> KR1 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> R2 </ci>
+                      <ci> KR2 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> R3 </ci>
+                      <ci> KR3 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> R4 </ci>
+                      <ci> KR4 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> R5 </ci>
+                      <ci> KR5 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507249" id="function_3" name="MM s2 - reg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> K1 </ci>
+            </bvar>
+            <bvar>
+              <ci> K2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <ci> s1 </ci>
+                <ci> s2 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> s1 </ci>
+                  <ci> K1 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> s2 </ci>
+                  <ci> K2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507251" id="function_22" name="MMlike s1 - reg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <ci> s1 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> s1 </ci>
+                <apply>
+                  <times/>
+                  <ci> Ks1 </ci>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> r1 </ci>
+                      <ci> Kr1 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507252" id="function_16" name="MM s1 + reg 2*n">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <ci> s1 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> s1 </ci>
+                  <ci> Ks1 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> r1 </ci>
+                    <ci> Kr1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> r2 </ci>
+                    <ci> Kr2 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507253" id="function_6" name="MMlike s2p2 + reg 2*c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> p2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks2 </ci>
+            </bvar>
+            <bvar>
+              <ci> r1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr1 </ci>
+            </bvar>
+            <bvar>
+              <ci> r2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kr2 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> s1 </ci>
+                    <ci> s2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> p1 </ci>
+                      <ci> p2 </ci>
+                    </apply>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> s1 </ci>
+                  <apply>
+                    <times/>
+                    <ci> Ks1 </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> r1 </ci>
+                        <ci> Kr1 </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> r2 </ci>
+                        <ci> Kr2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> s2 </ci>
+                  <ci> Ks2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507255" id="function_7" name="MMlike s2p1 - reg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> s1 </ci>
+            </bvar>
+            <bvar>
+              <ci> s2 </ci>
+            </bvar>
+            <bvar>
+              <ci> p1 </ci>
+            </bvar>
+            <bvar>
+              <ci> q </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ks2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> s1 </ci>
+                    <ci> s2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> p1 </ci>
+                    <ci> q </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> s1 </ci>
+                  <ci> Ks1 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> s2 </ci>
+                  <ci> Ks2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition metaid="_507256" id="function_11" name="MM s1 + reg A,3*c ">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vm </ci>
+            </bvar>
+            <bvar>
+              <ci> S </ci>
+            </bvar>
+            <bvar>
+              <ci> KA </ci>
+            </bvar>
+            <bvar>
+              <ci> A </ci>
+            </bvar>
+            <bvar>
+              <ci> K </ci>
+            </bvar>
+            <bvar>
+              <ci> R1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KR1 </ci>
+            </bvar>
+            <bvar>
+              <ci> R2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KR2 </ci>
+            </bvar>
+            <bvar>
+              <ci> R3 </ci>
+            </bvar>
+            <bvar>
+              <ci> KR3 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vm </ci>
+                <ci> S </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <ci> S </ci>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> KA </ci>
+                      <ci> A </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> K </ci>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <ci> KA </ci>
+                          <ci> A </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <divide/>
+                          <ci> R1 </ci>
+                          <ci> KR1 </ci>
+                        </apply>
+                        <apply>
+                          <divide/>
+                          <ci> R2 </ci>
+                          <ci> KR2 </ci>
+                        </apply>
+                        <apply>
+                          <divide/>
+                          <ci> R3 </ci>
+                          <ci> KR3 </ci>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition id="volume">
+        <listOfUnits>
+          <unit kind="litre"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="substance">
+        <listOfUnits>
+          <unit kind="mole" scale="-3"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="_506843" id="chloroplast" name="chloroplast" size="1"/>
+      <compartment metaid="_506845" id="cytosol" name="cytosol" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="_506847" id="PGA" name="PGA" compartment="chloroplast" initialConcentration="2.4">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506847">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:724"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506849" id="DPGA" name="DPGA" compartment="chloroplast" initialConcentration="0.0011">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506849">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:44472828"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506850" id="GAP" name="GAP" compartment="chloroplast" initialConcentration="0.0238095238095238" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506850">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:643984"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506851" id="DHAP" name="DHAP" compartment="chloroplast" initialConcentration="0.476190476190476" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506851">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:668"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506852" id="TP" name="TP" compartment="chloroplast" initialConcentration="0.5">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506852">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:24794350"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506854" id="FBP" name="FBP" compartment="chloroplast" initialConcentration="0.669999999999999">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506854">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:172313"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506855" id="F6P" name="F6P" compartment="chloroplast" initialConcentration="0.640764257004718" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506855">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:69507"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506856" id="G6P" name="G6P" compartment="chloroplast" initialConcentration="1.47375779111085" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506856">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:439958"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506858" id="G1P" name="G1P" compartment="chloroplast" initialConcentration="0.0854779518844294" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506858">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:65533"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506859" id="HeP" name="HeP" compartment="chloroplast" initialConcentration="2.2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506859">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15965"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506860" id="E4P" name="E4P" compartment="chloroplast" initialConcentration="0.05">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506860">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:122357"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506862" id="SBP" name="SBP" compartment="chloroplast" initialConcentration="0.3">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506862">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A17969"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506863" id="S7P" name="S7P" compartment="chloroplast" initialConcentration="2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506863">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15721"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506864" id="X5P" name="X5P" compartment="chloroplast" initialConcentration="0.0747384155455904" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506864">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:42609827"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506866" id="R5P" name="R5P" compartment="chloroplast" initialConcentration="0.125186846038864" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506866">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:439167"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506867" id="Ru5P" name="Ru5P" compartment="chloroplast" initialConcentration="0.0500747384155456" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506867">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:439184"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506868" id="PeP" name="PeP" compartment="chloroplast" initialConcentration="0.25">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506868">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:1005"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506870" id="RuBP" name="RuBP" compartment="chloroplast" initialConcentration="2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506870">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:4337391"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506871" id="ATP" name="ATP" compartment="chloroplast" initialConcentration="0.68">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506871">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15422"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506872" id="ADP" name="ADP" compartment="chloroplast" initialConcentration="0.82" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506872">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16761"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506874" id="NADPH" name="NADPH" compartment="chloroplast" initialConcentration="0.21" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506874">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16474"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506875" id="Pi" name="Pi" compartment="chloroplast" initialConcentration="1.4749" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506875">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A43474"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506876" id="PGCA" name="PGCA" compartment="chloroplast" initialConcentration="0.0029">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506876">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:126523595"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506878" id="GCA" name="GCA" compartment="chloroplast" initialConcentration="0.36">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506878">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:126523016"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506879" id="GCEA" name="GCEA" compartment="chloroplast" initialConcentration="0.1812">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506879">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:3557"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506880" id="CO2" name="CO2" compartment="chloroplast" initialConcentration="0.009" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506880">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16526"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506882" id="O2" name="O2" compartment="chloroplast" initialConcentration="0.2646" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506882">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15279"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506883" id="NADP" name="NADP" compartment="chloroplast" initialConcentration="0.29" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506883">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A25523"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506884" id="HPRc" name="HPRc" compartment="chloroplast" initialConcentration="0.0035">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506884">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:3468"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506886" id="GCAc" name="GCAc" compartment="cytosol" initialConcentration="0.36">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506886">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:841751"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506887" id="GOAc" name="GOAc" compartment="cytosol" initialConcentration="0.028">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506887">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:2775"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506888" id="GLYc" name="GLYc" compartment="cytosol" initialConcentration="1.8">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506888">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15428"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506890" id="SERc" name="SERc" compartment="cytosol" initialConcentration="7.5">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506890">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A17822"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506891" id="GCEAc" name="GCEAc" compartment="cytosol" initialConcentration="0.1812">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506891">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:3557"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506892" id="PGAc" name="PGAc" compartment="cytosol" initialConcentration="0">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506892">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:668242"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506894" id="GAPc" name="GAPc" compartment="cytosol" initialConcentration="0.109523809523809" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506894">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:152025"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506895" id="DHAPc" name="DHAPc" compartment="cytosol" initialConcentration="2.19047619047619" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506895">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:53788488"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506896" id="TPc" name="TPc" compartment="cytosol" initialConcentration="2.3">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506896">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:841076"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506898" id="FBPc" name="FBPc" compartment="cytosol" initialConcentration="2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506898">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:56435918"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506899" id="F6Pc" name="F6Pc" compartment="cytosol" initialConcentration="1.68883505322742" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506899">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:691766"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506900" id="G6Pc" name="G6Pc" compartment="cytosol" initialConcentration="3.88432062242307" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506900">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:126700772"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506902" id="G1Pc" name="G1Pc" compartment="cytosol" initialConcentration="0.226844324349507" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506902">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:49847001"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506903" id="HePc" name="HePc" compartment="cytosol" initialConcentration="5.8">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506903">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15965"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506904" id="F26BPc" name="F26BPc" compartment="cytosol" initialConcentration="7.8e-06">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506904">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:105021"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506906" id="UDPGc" name="UDPGc" compartment="cytosol" initialConcentration="0.57">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506906">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:53477679"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506907" id="SucPc" name="SucPc" compartment="cytosol" initialConcentration="0">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506907">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16308"/>
+                </rdf:Bag>
+              </bqmodel:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506908" id="Succ" name="Succ" compartment="cytosol" initialConcentration="0">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506908">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:5988"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506910" id="UTPc" name="UTPc" compartment="cytosol" initialConcentration="0.75" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506910">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:6133"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506911" id="UDPc" name="UDPc" compartment="cytosol" initialConcentration="0.18" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506911">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:pubchem.compound:20056717"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506912" id="NAD" name="NAD" compartment="cytosol" initialConcentration="0.4" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506912">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A13389"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506914" id="NADH" name="NADH" compartment="cytosol" initialConcentration="0.47" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506914">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16908"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506915" id="GLUc" name="GLUc" compartment="cytosol" initialConcentration="24" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506915">
+              <bqbiol:isPartOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A17234"/>
+                </rdf:Bag>
+              </bqbiol:isPartOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506916" id="KGc" name="KGc" compartment="cytosol" initialConcentration="0.4" boundaryCondition="true" constant="true"/>
+      <species metaid="_506918" id="Pic" name="Pic" compartment="cytosol" initialConcentration="4.09998299977232" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506918">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A43474"/>
+                </rdf:Bag>
+              </bqmodel:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506919" id="PiTc" name="PiTc" compartment="cytosol" initialConcentration="4.0999844" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506919">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A43474"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506920" id="ATPc" name="ATPc" compartment="cytosol" initialConcentration="0.35" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506920">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15422"/>
+                </rdf:Bag>
+              </bqmodel:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506922" id="ADPc" name="ADPc" compartment="cytosol" initialConcentration="0.65" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506922">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16761"/>
+                </rdf:Bag>
+              </bqmodel:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_506923" id="PiPic" name="PiPic" compartment="cytosol" initialConcentration="1.40022767958214e-06" boundaryCondition="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_506923">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A43474"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="_507257" id="cA" name="cA" value="1.5" sboTerm="SBO:0000009"/>
+      <parameter metaid="_507258" id="cP" name="cP" value="15" sboTerm="SBO:0000009"/>
+      <parameter metaid="_507259" id="cAc" name="cAc" value="1" sboTerm="SBO:0000009"/>
+      <parameter metaid="_507261" id="cPc" name="cPc" value="15" sboTerm="SBO:0000009"/>
+      <parameter metaid="_507262" id="cNc" name="cNc" value="0.87" sboTerm="SBO:0000009"/>
+      <parameter metaid="_507263" id="cUc" name="cUc" value="1.5" sboTerm="SBO:0000009"/>
+      <parameter metaid="_507265" id="E" name="E" value="1.456965457" sboTerm="SBO:0000009"/>
+      <parameter metaid="_507266" id="Wc_min" name="Wc*min" value="0.76667245633627" constant="false" sboTerm="SBO:0000009"/>
+      <parameter metaid="_507267" id="Wo_min" name="Wo*min" value="0.280229143229506" constant="false" sboTerm="SBO:0000009"/>
+      <parameter metaid="_507269" id="K52a" name="K52a" value="0.00277857142857143" constant="false" sboTerm="SBO:0000009"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="_507198" variable="K52a">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 0.0025 </cn>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <ci> F26BPc </ci>
+                <cn type="e-notation"> 7 <sep/> -5 </cn>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507199" variable="R5P">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <ci> PeP </ci>
+              <cn> 0.4 </cn>
+            </apply>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 0.4 </cn>
+              </apply>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 0.67 </cn>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507201" variable="G6P">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> HeP </ci>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 2.3 </cn>
+              </apply>
+              <cn> 0.058 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507202" variable="DHAP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> TP </ci>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <cn> 0.05 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507203" variable="GAP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <cn> 0.05 </cn>
+              <ci> TP </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <cn> 0.05 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507205" variable="G1P">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> HeP </ci>
+              <cn> 0.058 </cn>
+            </apply>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 2.3 </cn>
+              </apply>
+              <cn> 0.058 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507206" variable="X5P">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <ci> PeP </ci>
+              <cn> 0.67 </cn>
+            </apply>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 0.4 </cn>
+              </apply>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 0.67 </cn>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507207" variable="Pi">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <minus/>
+              <ci> cP </ci>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <apply>
+                  <plus/>
+                  <ci> RuBP </ci>
+                  <ci> DPGA </ci>
+                  <ci> FBP </ci>
+                  <ci> SBP </ci>
+                </apply>
+              </apply>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> PGA </ci>
+              <ci> TP </ci>
+              <ci> HeP </ci>
+              <ci> E4P </ci>
+              <ci> S7P </ci>
+              <ci> PeP </ci>
+              <ci> ATP </ci>
+              <ci> PGCA </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507209" variable="Ru5P">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> PeP </ci>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 0.4 </cn>
+              </apply>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 0.67 </cn>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507210" variable="F6P">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <ci> HeP </ci>
+              <cn> 2.3 </cn>
+            </apply>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 2.3 </cn>
+              </apply>
+              <cn> 0.058 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507211" variable="ADP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> cA </ci>
+            <ci> ATP </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507213" variable="G6Pc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> HePc </ci>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 2.3 </cn>
+              </apply>
+              <cn> 0.0584 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507214" variable="GAPc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <cn> 0.05 </cn>
+              <ci> TPc </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <cn> 0.05 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507215" variable="PiTc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <minus/>
+              <ci> cPc </ci>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <apply>
+                  <plus/>
+                  <ci> FBPc </ci>
+                  <ci> F26BPc </ci>
+                </apply>
+              </apply>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> PGAc </ci>
+              <ci> TPc </ci>
+              <ci> HePc </ci>
+              <ci> SucPc </ci>
+              <ci> ATPc </ci>
+              <ci> UTPc </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507217" variable="F6Pc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <ci> HePc </ci>
+              <cn> 2.3 </cn>
+            </apply>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 2.3 </cn>
+              </apply>
+              <cn> 0.0584 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507218" variable="Pic">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <divide/>
+              <cn type="integer"> 12000000 </cn>
+              <cn type="integer"> 2 </cn>
+            </apply>
+            <apply>
+              <minus/>
+              <apply>
+                <root/>
+                <degree>
+                  <cn type="integer"> 2 </cn>
+                </degree>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <cn type="integer"> 4 </cn>
+                      <ci> PiTc </ci>
+                    </apply>
+                    <cn type="integer"> 12000000 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <cn type="integer"> 1 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507219" variable="PiPic">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> PiTc </ci>
+            <ci> Pic </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507221" variable="Wc_min">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <cn> 2.913930914 </cn>
+                <ci> CO2 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> CO2 </ci>
+                <apply>
+                  <times/>
+                  <cn> 0.0115 </cn>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> O2 </ci>
+                      <cn> 0.222 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> RuBP </ci>
+                    <ci> E </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <abs/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> RuBP </ci>
+                      <ci> E </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <cn type="integer"> 2 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507222" variable="G1Pc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> HePc </ci>
+              <cn> 0.0584 </cn>
+            </apply>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <cn> 2.3 </cn>
+              </apply>
+              <cn> 0.0584 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507223" variable="DHAPc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> TPc </ci>
+            <apply>
+              <plus/>
+              <cn type="integer"> 1 </cn>
+              <cn> 0.05 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507225" variable="UDPc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <minus/>
+              <ci> cUc </ci>
+              <ci> UTPc </ci>
+            </apply>
+            <ci> UDPGc </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507226" variable="Wo_min">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <cn> 0.24 </cn>
+                <cn> 2.913930914 </cn>
+                <ci> O2 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> O2 </ci>
+                <apply>
+                  <times/>
+                  <cn> 0.222 </cn>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> CO2 </ci>
+                      <cn> 0.0115 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> RuBP </ci>
+                    <ci> E </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <abs/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> RuBP </ci>
+                      <ci> E </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <cn type="integer"> 2 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_507227" variable="ADPc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> cAc </ci>
+            <ci> ATPc </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="_506924" id="RuBisCO_CO2" name="RuBisCO - CO2" reversible="false">
+        <listOfReactants>
+          <speciesReference species="RuBP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PGA" stoichiometry="2"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PGA"/>
+          <modifierSpeciesReference species="FBP"/>
+          <modifierSpeciesReference species="SBP"/>
+          <modifierSpeciesReference species="Pi"/>
+          <modifierSpeciesReference species="NADPH"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> Wc_min </ci>
+                <ci> RuBP </ci>
+                <ci> K </ci>
+                <ci> PGA </ci>
+                <ci> KR1 </ci>
+                <ci> FBP </ci>
+                <ci> KR2 </ci>
+                <ci> SBP </ci>
+                <ci> KR3 </ci>
+                <ci> Pi </ci>
+                <ci> KR4 </ci>
+                <ci> NADPH </ci>
+                <ci> KR5 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_506971" id="K" name="K" value="0.02" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506972" id="KR1" name="KR1" value="0.84" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506973" id="KR2" name="KR2" value="0.04" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506975" id="KR3" name="KR3" value="0.075" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506976" id="KR4" name="KR4" value="0.9" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506977" id="KR5" name="KR5" value="0.07" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506925" id="PGA_K" name="PGA kinase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="PGA"/>
+          <speciesReference species="ATP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="DPGA"/>
+          <speciesReference species="ADP"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ADP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_2 </ci>
+                <ci> Vm </ci>
+                <ci> PGA </ci>
+                <ci> ATP </ci>
+                <ci> Ks1 </ci>
+                <ci> Ks2 </ci>
+                <ci> ADP </ci>
+                <ci> Kr1 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_506978" id="Vm" name="Vm" value="30.1408" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506979" id="Ks1" name="Ks1" value="0.24" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506981" id="Ks2" name="Ks2" value="0.39" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506982" id="Kr1" name="Kr1" value="0.23" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506926" id="GAP_DH" name="GAP dehydrogenase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="DPGA"/>
+          <speciesReference species="NADPH"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="TP"/>
+          <speciesReference species="NADP"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GAP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_3 </ci>
+                <ci> Vm </ci>
+                <ci> DPGA </ci>
+                <ci> NADPH </ci>
+                <ci> K1 </ci>
+                <ci> K2 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_506983" id="Vm" name="Vm" value="4.03948" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506984" id="K1" name="K1" value="0.004" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506985" id="K2" name="K2" value="0.1" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506928" id="FBP_A" name="FBP aldolase">
+        <listOfReactants>
+          <speciesReference species="TP" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="FBP"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GAP"/>
+          <modifierSpeciesReference species="DHAP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_4 </ci>
+                <ci> GAP </ci>
+                <ci> DHAP </ci>
+                <ci> FBP </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> Ks2 </ci>
+                <ci> Kp1 </ci>
+                <ci> Vm </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_506986" id="q" name="q" value="7.1" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506987" id="Ks1" name="Ks1" value="0.3" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506989" id="Ks2" name="Ks2" value="0.4" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506990" id="Kp1" name="Kp1" value="0.02" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506991" id="Vm" name="Vm" value="1.21889" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506929" id="FBPase" name="FBPase">
+        <listOfReactants>
+          <speciesReference species="FBP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HeP"/>
+          <speciesReference species="Pi"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F6P"/>
+          <modifierSpeciesReference species="Pi"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_5 </ci>
+                <ci> Vm </ci>
+                <ci> FBP </ci>
+                <ci> F6P </ci>
+                <ci> Pi </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> F6P </ci>
+                <ci> Kr1 </ci>
+                <ci> Pi </ci>
+                <ci> Kr2 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_506992" id="Vm" name="Vm" value="0.72626" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506993" id="q" name="q" value="666000" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506995" id="Ks1" name="Ks1" value="0.033" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506996" id="Kr1" name="Kr1" value="0.7" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506997" id="Kr2" name="Kr2" value="12" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506930" id="F6P_TK" name="F6P transketolase">
+        <listOfReactants>
+          <speciesReference species="HeP"/>
+          <speciesReference species="TP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="E4P"/>
+          <speciesReference species="PeP"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F6P"/>
+          <modifierSpeciesReference species="GAP"/>
+          <modifierSpeciesReference species="X5P"/>
+          <modifierSpeciesReference species="E4P"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_6 </ci>
+                <ci> Vm </ci>
+                <ci> F6P </ci>
+                <ci> GAP </ci>
+                <ci> X5P </ci>
+                <ci> E4P </ci>
+                <ci> Ks1 </ci>
+                <ci> Ks2 </ci>
+                <ci> X5P </ci>
+                <ci> Kr1 </ci>
+                <ci> E4P </ci>
+                <ci> Kr2 </ci>
+                <ci> q </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_506998" id="Vm" name="Vm" value="3.12207" sboTerm="SBO:0000009"/>
+            <parameter metaid="_506999" id="Ks1" name="Ks1" value="0.1" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507001" id="Ks2" name="Ks2" value="0.1" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507002" id="Kr1" name="Kr1" value="0.1" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507003" id="Kr2" name="Kr2" value="0.1" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507005" id="q" name="q" value="10" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506932" id="SBP_A" name="SBP aldolase">
+        <listOfReactants>
+          <speciesReference species="TP"/>
+          <speciesReference species="E4P"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SBP"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="DHAP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_7 </ci>
+                <ci> Vm </ci>
+                <ci> DHAP </ci>
+                <ci> E4P </ci>
+                <ci> SBP </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> Ks2 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507007" id="Vm" name="Vm" value="1.21889" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507009" id="q" name="q" value="1.017" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507010" id="Ks1" name="Ks1" value="0.4" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507011" id="Ks2" name="Ks2" value="0.2" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506933" id="SBPase" name="SBPase">
+        <listOfReactants>
+          <speciesReference species="SBP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="S7P"/>
+          <speciesReference species="Pi"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Pi"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_8 </ci>
+                <ci> Vm </ci>
+                <ci> SBP </ci>
+                <ci> S7P </ci>
+                <ci> Pi </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> Pi </ci>
+                <ci> Kr1 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507012" id="Vm" name="Vm" value="0.324191" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507013" id="q" name="q" value="666000" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507015" id="Ks1" name="Ks1" value="0.05" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507016" id="Kr1" name="Kr1" value="12" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506934" id="S7P_TK" name="S7P transketolase">
+        <listOfReactants>
+          <speciesReference species="TP"/>
+          <speciesReference species="S7P"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PeP" stoichiometry="2"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GAP"/>
+          <modifierSpeciesReference species="X5P"/>
+          <modifierSpeciesReference species="R5P"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_6 </ci>
+                <ci> Vm </ci>
+                <ci> GAP </ci>
+                <ci> S7P </ci>
+                <ci> X5P </ci>
+                <ci> R5P </ci>
+                <ci> Ks1 </ci>
+                <ci> Ks2 </ci>
+                <ci> X5P </ci>
+                <ci> Kr1 </ci>
+                <ci> R5P </ci>
+                <ci> Kr2 </ci>
+                <ci> q </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507017" id="Vm" name="Vm" value="3.12207" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507018" id="Ks1" name="Ks1" value="0.072" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507019" id="Ks2" name="Ks2" value="0.46" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507021" id="Kr1" name="Kr1" value="0.1" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507022" id="Kr2" name="Kr2" value="1.5" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507023" id="q" name="q" value="1.17647" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506936" id="Ru5P_K" name="Ru5P kinase">
+        <listOfReactants>
+          <speciesReference species="PeP"/>
+          <speciesReference species="ATP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="RuBP"/>
+          <speciesReference species="ADP"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Ru5P"/>
+          <modifierSpeciesReference species="PGA"/>
+          <modifierSpeciesReference species="RuBP"/>
+          <modifierSpeciesReference species="Pi"/>
+          <modifierSpeciesReference species="ADP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_9 </ci>
+                <ci> Vm </ci>
+                <ci> Ru5P </ci>
+                <ci> ATP </ci>
+                <ci> RuBP </ci>
+                <ci> ADP </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> PGA </ci>
+                <ci> Kr1 </ci>
+                <ci> RuBP </ci>
+                <ci> Kr2 </ci>
+                <ci> Pi </ci>
+                <ci> Kr3 </ci>
+                <ci> ADP </ci>
+                <ci> Kr41 </ci>
+                <ci> Ks2 </ci>
+                <ci> Kr42 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507024" id="Vm" name="Vm" value="10.8348" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507025" id="q" name="q" value="6846" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507027" id="Ks1" name="Ks1" value="0.05" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507028" id="Kr1" name="Kr1" value="2" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507029" id="Kr2" name="Kr2" value="0.7" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507031" id="Kr3" name="Kr3" value="4" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507032" id="Kr41" name="Kr41" value="2.5" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507033" id="Ks2" name="Ks2" value="0.059" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507035" id="Kr42" name="Kr42" value="0.4" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506937" id="ATP_S" name="ATP synthetase">
+        <listOfReactants>
+          <speciesReference species="ADP"/>
+          <speciesReference species="Pi"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_4 </ci>
+                <ci> ADP </ci>
+                <ci> Pi </ci>
+                <ci> ATP </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> Ks2 </ci>
+                <ci> Kp1 </ci>
+                <ci> Vm </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507037" id="q" name="q" value="5.734" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507039" id="Ks1" name="Ks1" value="0.014" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507040" id="Ks2" name="Ks2" value="0.3" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507041" id="Kp1" name="Kp1" value="0.3" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507043" id="Vm" name="Vm" value="15" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506938" id="AGPase" name="AGPase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="HeP"/>
+          <speciesReference species="ATP"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference species="G1P"/>
+          <modifierSpeciesReference species="ADP"/>
+          <modifierSpeciesReference species="Pi"/>
+          <modifierSpeciesReference species="PGA"/>
+          <modifierSpeciesReference species="F6P"/>
+          <modifierSpeciesReference species="FBP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_10 </ci>
+                <ci> Vm </ci>
+                <ci> G1P </ci>
+                <ci> ATP </ci>
+                <ci> K1 </ci>
+                <ci> K2 </ci>
+                <ci> ADP </ci>
+                <ci> KR1 </ci>
+                <ci> Pi </ci>
+                <ci> KA1 </ci>
+                <ci> PGA </ci>
+                <ci> KA2 </ci>
+                <ci> F6P </ci>
+                <ci> KA3 </ci>
+                <ci> FBP </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507045" id="Vm" name="Vm" value="0.266843" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507047" id="K1" name="K1" value="0.08" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507048" id="K2" name="K2" value="0.08" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507049" id="KR1" name="KR1" value="10" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507051" id="KA1" name="KA1" value="0.1" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507052" id="KA2" name="KA2" value="0.02" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507053" id="KA3" name="KA3" value="0.02" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506940" id="TPT_PGA" name="TPT - PGA" reversible="false">
+        <listOfReactants>
+          <speciesReference species="PGA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PGAc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Pic"/>
+          <modifierSpeciesReference species="Pi"/>
+          <modifierSpeciesReference species="GAP"/>
+          <modifierSpeciesReference species="DHAP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_11 </ci>
+              <ci> Vm </ci>
+              <ci> PGA </ci>
+              <ci> KA </ci>
+              <ci> Pic </ci>
+              <ci> K </ci>
+              <ci> Pi </ci>
+              <ci> KR1 </ci>
+              <ci> GAP </ci>
+              <ci> KR2 </ci>
+              <ci> DHAP </ci>
+              <ci> KR3 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507054" id="Vm" name="Vm" value="1.24333" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507055" id="KA" name="KA" value="0.74" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507057" id="K" name="K" value="0.25" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507058" id="KR1" name="KR1" value="0.63" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507059" id="KR2" name="KR2" value="0.075" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507061" id="KR3" name="KR3" value="0.077" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506941" id="TPT_GAP" name="TPT - GAP" reversible="false">
+        <listOfReactants>
+          <speciesReference species="TP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="TPc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GAP"/>
+          <modifierSpeciesReference species="GAPc"/>
+          <modifierSpeciesReference species="Pic"/>
+          <modifierSpeciesReference species="Pi"/>
+          <modifierSpeciesReference species="PGA"/>
+          <modifierSpeciesReference species="DHAP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_11 </ci>
+              <ci> Vm </ci>
+              <ci> GAP </ci>
+              <ci> KA </ci>
+              <ci> Pic </ci>
+              <ci> K </ci>
+              <ci> Pi </ci>
+              <ci> KR1 </ci>
+              <ci> PGA </ci>
+              <ci> KR2 </ci>
+              <ci> DHAP </ci>
+              <ci> KR3 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507063" id="Vm" name="Vm" value="1.24333" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507065" id="KA" name="KA" value="0.74" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507066" id="K" name="K" value="0.075" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507067" id="KR1" name="KR1" value="0.63" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507069" id="KR2" name="KR2" value="0.25" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507070" id="KR3" name="KR3" value="0.077" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506942" id="TPT_DHAP" name="TPT - DHAP" reversible="false">
+        <listOfReactants>
+          <speciesReference species="TP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="TPc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="DHAP"/>
+          <modifierSpeciesReference species="DHAPc"/>
+          <modifierSpeciesReference species="Pic"/>
+          <modifierSpeciesReference species="Pi"/>
+          <modifierSpeciesReference species="PGA"/>
+          <modifierSpeciesReference species="GAP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_11 </ci>
+              <ci> Vm </ci>
+              <ci> DHAP </ci>
+              <ci> KA </ci>
+              <ci> Pic </ci>
+              <ci> K </ci>
+              <ci> Pi </ci>
+              <ci> KR1 </ci>
+              <ci> PGA </ci>
+              <ci> KR2 </ci>
+              <ci> GAP </ci>
+              <ci> KR3 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507071" id="Vm" name="Vm" value="1.24333" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507072" id="KA" name="KA" value="0.74" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507073" id="K" name="K" value="0.077" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507075" id="KR1" name="KR1" value="0.63" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507076" id="KR2" name="KR2" value="0.25" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507077" id="KR3" name="KR3" value="0.075" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506944" id="FBPc_A" name="FBPc aldolase">
+        <listOfReactants>
+          <speciesReference species="TPc" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="FBPc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GAPc"/>
+          <modifierSpeciesReference species="DHAPc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_4 </ci>
+                <ci> GAPc </ci>
+                <ci> DHAPc </ci>
+                <ci> FBPc </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> Ks2 </ci>
+                <ci> Kp1 </ci>
+                <ci> Vm </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507078" id="q" name="q" value="12" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507079" id="Ks1" name="Ks1" value="0.3" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507081" id="Ks2" name="Ks2" value="0.4" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507082" id="Kp1" name="Kp1" value="0.02" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507083" id="Vm" name="Vm" value="0.107377" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506945" id="FBPcase" name="FBPcase">
+        <listOfReactants>
+          <speciesReference species="FBPc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HePc"/>
+          <speciesReference species="Pic"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F6Pc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_12 </ci>
+                <ci> FBPc </ci>
+                <ci> F6Pc </ci>
+                <ci> Pic </ci>
+                <ci> q </ci>
+                <ci> K52a </ci>
+                <ci> Kp1 </ci>
+                <ci> Kp2 </ci>
+                <ci> Vm </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507084" id="q" name="q" value="6663" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507085" id="Kp1" name="Kp1" value="0.7" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507087" id="Kp2" name="Kp2" value="12" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507088" id="Vm" name="Vm" value="0.063979" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506946" id="UGPase" name="UGPase">
+        <listOfReactants>
+          <speciesReference species="HePc"/>
+          <speciesReference species="UTPc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="UDPGc"/>
+          <speciesReference species="PiPic"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="G1Pc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_13 </ci>
+                <ci> G1Pc </ci>
+                <ci> UTPc </ci>
+                <ci> UDPGc </ci>
+                <ci> PiPic </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> Ks2 </ci>
+                <ci> Kp1 </ci>
+                <ci> Kp2 </ci>
+                <ci> Vm </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507089" id="q" name="q" value="0.31" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507090" id="Ks1" name="Ks1" value="0.14" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507091" id="Ks2" name="Ks2" value="0.1" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507093" id="Kp1" name="Kp1" value="0.12" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507094" id="Kp2" name="Kp2" value="0.11" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507095" id="Vm" name="Vm" value="0.115403" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506948" id="SucPc_S" name="SucPc synthase">
+        <listOfReactants>
+          <speciesReference species="HePc"/>
+          <speciesReference species="UDPGc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SucPc"/>
+          <speciesReference species="UDPc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F6Pc"/>
+          <modifierSpeciesReference species="FBPc"/>
+          <modifierSpeciesReference species="UDPc"/>
+          <modifierSpeciesReference species="SucPc"/>
+          <modifierSpeciesReference species="Succ"/>
+          <modifierSpeciesReference species="Pic"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_14 </ci>
+                <ci> Vm </ci>
+                <ci> F6Pc </ci>
+                <ci> UDPGc </ci>
+                <ci> SucPc </ci>
+                <ci> UDPc </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> FBPc </ci>
+                <ci> Kr1 </ci>
+                <ci> Ks2 </ci>
+                <ci> UDPc </ci>
+                <ci> Kr2 </ci>
+                <ci> SucPc </ci>
+                <ci> Kr3 </ci>
+                <ci> Succ </ci>
+                <ci> Kr4 </ci>
+                <ci> Pic </ci>
+                <ci> Kr5 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507096" id="Vm" name="Vm" value="0.0555034" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507097" id="q" name="q" value="10" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507099" id="Ks1" name="Ks1" value="0.8" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507100" id="Kr1" name="Kr1" value="0.8" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507101" id="Ks2" name="Ks2" value="2.4" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507103" id="Kr2" name="Kr2" value="0.7" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507104" id="Kr3" name="Kr3" value="0.4" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507105" id="Kr4" name="Kr4" value="50" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507107" id="Kr5" name="Kr5" value="11" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506949" id="SucPc_P" name="SucPc phosphatase">
+        <listOfReactants>
+          <speciesReference species="SucPc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Succ"/>
+          <speciesReference species="Pic"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Succ"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_8 </ci>
+                <ci> Vm </ci>
+                <ci> SucPc </ci>
+                <ci> Succ </ci>
+                <ci> Pic </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> Succ </ci>
+                <ci> Kr1 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507109" id="Vm" name="Vm" value="0.555034" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507111" id="q" name="q" value="780" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507112" id="Ks1" name="Ks1" value="0.35" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507113" id="Kr1" name="Kr1" value="80" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506950" id="F6Pc_K" name="F6Pc kinase">
+        <listOfReactants>
+          <speciesReference species="HePc"/>
+          <speciesReference species="ATPc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="F26BPc"/>
+          <speciesReference species="ADPc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F6Pc"/>
+          <modifierSpeciesReference species="F26BPc"/>
+          <modifierSpeciesReference species="DHAPc"/>
+          <modifierSpeciesReference species="ADPc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_15 </ci>
+                <ci> Vm </ci>
+                <ci> F6Pc </ci>
+                <ci> ATPc </ci>
+                <ci> F26BPc </ci>
+                <ci> ADPc </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> F26BPc </ci>
+                <ci> Kr1 </ci>
+                <ci> DHAPc </ci>
+                <ci> Kr2 </ci>
+                <ci> Ks2 </ci>
+                <ci> ADPc </ci>
+                <ci> Kr3 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507114" id="Vm" name="Vm" value="0.100915" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507115" id="q" name="q" value="590" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507117" id="Ks1" name="Ks1" value="0.5" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507118" id="Kr1" name="Kr1" value="0.021" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507119" id="Kr2" name="Kr2" value="0.7" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507121" id="Ks2" name="Ks2" value="0.5" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507122" id="Kr3" name="Kr3" value="0.16" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506952" id="F26BPc_P" name="F26BPc phosphatase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="F26BPc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HePc"/>
+          <speciesReference species="Pic"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Pic"/>
+          <modifierSpeciesReference species="F6Pc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_16 </ci>
+                <ci> Vm </ci>
+                <ci> F26BPc </ci>
+                <ci> Pic </ci>
+                <ci> Kr1 </ci>
+                <ci> F6Pc </ci>
+                <ci> Kr2 </ci>
+                <ci> Ks1 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507123" id="Vm" name="Vm" value="0.0168192" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507124" id="Kr1" name="Kr1" value="0.5" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507125" id="Kr2" name="Kr2" value="0.1" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507127" id="Ks1" name="Ks1" value="0.032" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506953" id="Succ_Deg" name="Succ degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Succ"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_17 </ci>
+                <ci> Succ </ci>
+                <ci> Km </ci>
+                <ci> V </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507129" id="Km" name="Km" value="5" sboTerm="SBO:0000027"/>
+            <parameter metaid="_507131" id="V" name="V" value="2" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506954" id="PGAc_Deg" name="PGAc degradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="PGAc"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_17 </ci>
+                <ci> PGAc </ci>
+                <ci> Km </ci>
+                <ci> V </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507133" id="Km" name="Km" value="1" sboTerm="SBO:0000027"/>
+            <parameter metaid="_507135" id="V" name="V" value="0.5" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506956" id="GPT_GCEAc" name="GPT - GCEAc" reversible="false">
+        <listOfReactants>
+          <speciesReference species="GCEAc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GCEA"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GCAc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_18 </ci>
+              <ci> GCEAc </ci>
+              <ci> GCAc </ci>
+              <ci> Km </ci>
+              <ci> V </ci>
+              <ci> Ki </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507137" id="Km" name="Km" value="0.39" sboTerm="SBO:0000027"/>
+            <parameter metaid="_507139" id="V" name="V" value="5" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507140" id="Ki" name="Ki" value="0.28" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506957" id="GPT_GCEA" name="GPT - GCEA" reversible="false">
+        <listOfReactants>
+          <speciesReference species="GCEA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GCEAc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GCA"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_18 </ci>
+              <ci> GCEA </ci>
+              <ci> GCA </ci>
+              <ci> Km </ci>
+              <ci> V </ci>
+              <ci> Ki </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507141" id="Km" name="Km" value="0.39" sboTerm="SBO:0000027"/>
+            <parameter metaid="_507142" id="V" name="V" value="5" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507143" id="Ki" name="Ki" value="0.28" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506958" id="GPT_GCA" name="GPT - GCA" reversible="false">
+        <listOfReactants>
+          <speciesReference species="GCA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GCAc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GCEA"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_18 </ci>
+              <ci> GCA </ci>
+              <ci> GCEA </ci>
+              <ci> Km </ci>
+              <ci> V </ci>
+              <ci> Ki </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507144" id="Km" name="Km" value="0.2" sboTerm="SBO:0000027"/>
+            <parameter metaid="_507145" id="V" name="V" value="6" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507147" id="Ki" name="Ki" value="0.22" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506960" id="GPT_GCAc" name="GPT - GCAc" reversible="false">
+        <listOfReactants>
+          <speciesReference species="GCAc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GCA"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GCEAc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_18 </ci>
+              <ci> GCAc </ci>
+              <ci> GCEAc </ci>
+              <ci> Km </ci>
+              <ci> V </ci>
+              <ci> Ki </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507149" id="Km" name="Km" value="0.2" sboTerm="SBO:0000027"/>
+            <parameter metaid="_507151" id="V" name="V" value="6" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507152" id="Ki" name="Ki" value="0.22" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506961" id="RuBisCO_O2" name="RuBisC0 - O2" reversible="false">
+        <listOfReactants>
+          <speciesReference species="RuBP"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PGA"/>
+          <speciesReference species="PGCA"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PGA"/>
+          <modifierSpeciesReference species="FBP"/>
+          <modifierSpeciesReference species="SBP"/>
+          <modifierSpeciesReference species="Pi"/>
+          <modifierSpeciesReference species="NADPH"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> Wo_min </ci>
+                <ci> RuBP </ci>
+                <ci> K </ci>
+                <ci> PGA </ci>
+                <ci> KR1 </ci>
+                <ci> FBP </ci>
+                <ci> KR2 </ci>
+                <ci> SBP </ci>
+                <ci> KR3 </ci>
+                <ci> Pi </ci>
+                <ci> KR4 </ci>
+                <ci> NADPH </ci>
+                <ci> KR5 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507153" id="K" name="K" value="0.02" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507154" id="KR1" name="KR1" value="0.84" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507155" id="KR2" name="KR2" value="0.04" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507157" id="KR3" name="KR3" value="0.075" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507158" id="KR4" name="KR4" value="0.9" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507159" id="KR5" name="KR5" value="0.07" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506962" id="PGCA_P" name="PGCA phosphatase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="PGCA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GCA"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GCA"/>
+          <modifierSpeciesReference species="Pi"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_19 </ci>
+                <ci> Vm </ci>
+                <ci> PGCA </ci>
+                <ci> Ks1 </ci>
+                <ci> GCA </ci>
+                <ci> Kr1 </ci>
+                <ci> Pi </ci>
+                <ci> Kr2 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507160" id="Vm" name="Vm" value="52.4199" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507161" id="Ks1" name="Ks1" value="0.026" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507163" id="Kr1" name="Kr1" value="94" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507164" id="Kr2" name="Kr2" value="2.55" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506964" id="GCEA_K" name="GCEA kinase">
+        <listOfReactants>
+          <speciesReference species="ATP"/>
+          <speciesReference species="GCEA"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PGA"/>
+          <speciesReference species="ADP"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PGA"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> chloroplast </ci>
+              <apply>
+                <ci> function_20 </ci>
+                <ci> Vm </ci>
+                <ci> ATP </ci>
+                <ci> GCEA </ci>
+                <ci> PGA </ci>
+                <ci> ADP </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> PGA </ci>
+                <ci> Kr1 </ci>
+                <ci> Ks2 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507165" id="Vm" name="Vm" value="5.71579" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507166" id="q" name="q" value="300" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507167" id="Ks1" name="Ks1" value="0.21" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507169" id="Kr1" name="Kr1" value="0.36" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507170" id="Ks2" name="Ks2" value="0.25" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506965" id="GCAc_Ox" name="GCAc oxidase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="GCAc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GOAc"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_17 </ci>
+                <ci> GCAc </ci>
+                <ci> Km </ci>
+                <ci> V </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507171" id="Km" name="Km" value="0.1" sboTerm="SBO:0000027"/>
+            <parameter metaid="_507172" id="V" name="V" value="1.45611" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506966" id="SERcGOAc_AT" name="SERc:GOAc aminotransferase">
+        <listOfReactants>
+          <speciesReference species="SERc"/>
+          <speciesReference species="GOAc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HPRc"/>
+          <speciesReference species="GLYc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GLYc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_20 </ci>
+              <ci> Vm </ci>
+              <ci> SERc </ci>
+              <ci> GOAc </ci>
+              <ci> HPRc </ci>
+              <ci> GLYc </ci>
+              <ci> q </ci>
+              <ci> Ks1 </ci>
+              <ci> GLYc </ci>
+              <ci> Kr1 </ci>
+              <ci> Ks2 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507173" id="Vm" name="Vm" value="3.30619" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507174" id="q" name="q" value="0.24" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507175" id="Ks1" name="Ks1" value="2.7" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507177" id="Kr1" name="Kr1" value="33" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507178" id="Ks2" name="Ks2" value="0.15" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506968" id="GCEA_DH" name="GCEA dehydrogenase">
+        <listOfReactants>
+          <speciesReference species="HPRc"/>
+          <speciesReference species="NADH"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GCEAc"/>
+          <speciesReference species="NAD"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="HPRc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_21 </ci>
+              <ci> Vm </ci>
+              <ci> HPRc </ci>
+              <ci> NADH </ci>
+              <ci> GCEAc </ci>
+              <ci> NAD </ci>
+              <ci> q </ci>
+              <ci> Ks1 </ci>
+              <ci> HPRc </ci>
+              <ci> Kr1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507179" id="Vm" name="Vm" value="10.0098" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507180" id="q" name="q" value="250000" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507181" id="Ks1" name="Ks1" value="0.09" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507183" id="Kr1" name="Kr1" value="12" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506969" id="GLUcGOAc_AT" name="GLUc:GOAc aminotransferase">
+        <listOfReactants>
+          <speciesReference species="GLUc"/>
+          <speciesReference species="GOAc"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="KGc"/>
+          <speciesReference species="GLYc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GLYc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_20 </ci>
+                <ci> Vm </ci>
+                <ci> GLUc </ci>
+                <ci> GOAc </ci>
+                <ci> KGc </ci>
+                <ci> GLYc </ci>
+                <ci> q </ci>
+                <ci> Ks1 </ci>
+                <ci> GLYc </ci>
+                <ci> Kr1 </ci>
+                <ci> Ks2 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507185" id="Vm" name="Vm" value="2.74582" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507187" id="q" name="q" value="607" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507188" id="Ks1" name="Ks1" value="1.7" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507189" id="Kr1" name="Kr1" value="2" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507191" id="Ks2" name="Ks2" value="0.15" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_506970" id="GLYc_DC" name="GLYc decarboxylase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="GLYc" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SERc"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="SERc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytosol </ci>
+              <apply>
+                <ci> function_22 </ci>
+                <ci> Vm </ci>
+                <ci> GLYc </ci>
+                <ci> Ks1 </ci>
+                <ci> SERc </ci>
+                <ci> Kr1 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="_507193" id="Vm" name="Vm" value="2.49475" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507195" id="Ks1" name="Ks1" value="6" sboTerm="SBO:0000009"/>
+            <parameter metaid="_507196" id="Kr1" name="Kr1" value="4" sboTerm="SBO:0000009"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

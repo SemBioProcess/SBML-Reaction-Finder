@@ -4,14 +4,19 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLDecoder;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
+import java.util.StringTokenizer;
 
 import javax.xml.stream.XMLStreamException;
 
@@ -32,6 +37,10 @@ import org.semanticweb.owlapi.model.OWLException;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 
+//import com.fasterxml.jackson.core.JsonProcessingException;
+//import com.fasterxml.jackson.databind.JsonNode;
+//import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 public class SBMLreactionCollector {
 	
@@ -49,6 +58,9 @@ public class SBMLreactionCollector {
 	public static Set<String> modelmetaids = new HashSet<String>();
 	public static Namespace rdfns = Namespace.getNamespace("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
 	public static Namespace uniprotns = Namespace.getNamespace("http://purl.uniprot.org/core/");
+//	static final ObjectMapper mapper = new ObjectMapper();
+	static final String API_KEY = "24e0ee9a-54e0-11e0-9d7b-005056aa3316";
+	public static Map<String,ArrayList<String>> GOidLabelMap = new HashMap<String,ArrayList<String>>();
 
 	public static void collectReactions() throws JDOMException, IOException, OWLException, XMLStreamException{
 
@@ -64,26 +76,65 @@ public class SBMLreactionCollector {
 		
 		File modeldir = new File("resources/curated_models/");
 		
+		// Read in locally-stored GO class info
+		Scanner GOscan = new Scanner(new File("./resources/GO.csv"));
+		System.out.println(GOscan.hasNext());
+
+		GOscan.nextLine(); // bypass header
+		
+		
+		while(GOscan.hasNext()) {
+			System.out.println("HERE");
+			String id;
+			ArrayList<String> prefandsyn = new ArrayList<String>();
+			String line = GOscan.nextLine();
+			StringTokenizer ctoken = new StringTokenizer(line, ",");
+			
+			if(ctoken.hasMoreTokens()) { // If ID present
+				id = ctoken.nextToken();
+				id = id.substring(id.lastIndexOf("/")+1, id.length());
+				System.out.println(id);
+				if(ctoken.hasMoreTokens()) { // If preferred label present
+					prefandsyn.add(ctoken.nextToken());
+					
+					if(ctoken.hasMoreTokens()) { // If synonyms present
+						String syns = ctoken.nextToken();
+						
+						StringTokenizer bartoken = new StringTokenizer(syns,"|");
+						
+						while(bartoken.hasMoreTokens()) {
+							prefandsyn.add(bartoken.nextToken());
+						}
+					}
+					GOidLabelMap.put(id, prefandsyn);
+				}
+			}
+		}
+		GOscan.close();
+		
+		
 		File[] SBMLmodels = modeldir.listFiles();
 		SBMLreactionFinder.msgarea.setText("Building local knowledge base...0% complete");
 		SBMLreactionFinder.msgbar.setValue(0);
+		
+		SBMLDocument sbmldoc = null;
+		Model sbmlmodel = null;
+		SAXBuilder builder = new SAXBuilder();
+		Document doc = null;
+		
+		Namespace bqbiolns = Namespace.getNamespace("bqbiol","http://biomodels.net/biology-qualifiers/");
+		Namespace bqmodelns = Namespace.getNamespace("bqmodel","http://biomodels.net/model-qualifiers/");
+
 		for(int i=0; i<SBMLmodels.length; i++){
 			if(SBMLmodels[i].getName().startsWith("BIOMD")){ // && i < 4){
 				System.out.println(SBMLmodels[i].getCanonicalPath());
-				SBMLDocument sbmldoc = null;
 				try {
 					sbmldoc = new SBMLReader().readSBML(SBMLmodels[i].getAbsolutePath());
 				} catch (Exception e) {e.printStackTrace();}
 				
-				Model sbmlmodel = sbmldoc.getModel();
-									
-				//Namespace dcns = Namespace.getNamespace("dc", "http://purl.org/dc/elements/1.1/");
-				//Namespace vCardns = Namespace.getNamespace("vCardns","http://www.w3.org/2001/vcard-rdf/3.0#");
-				Namespace bqbiolns = Namespace.getNamespace("bqbiol","http://biomodels.net/biology-qualifiers/");
-				Namespace bqmodelns = Namespace.getNamespace("bqmodel","http://biomodels.net/model-qualifiers/");
+				sbmlmodel = sbmldoc.getModel();
 				
-				SAXBuilder builder = new SAXBuilder();
-				Document doc = builder.build(SBMLmodels[i]);
+				doc = builder.build(SBMLmodels[i]);
 				
 				Element root = doc.getRootElement();
 				Namespace ns = doc.getRootElement().getNamespace();
@@ -109,6 +160,7 @@ public class SBMLreactionCollector {
 				OWLMethods.setRDFLabel(ontology, onemodelclass, modelname, manager);
 				OWLMethods.addClass(ontology, factory.getOWLClass(IRI.create(base + modelname)), modelclass, manager);
 				OWLMethods.setClsDatatypeProperty(ontology, onemodelclass.getIRI().toString(), base + "hasBiomodelsID", SBMLmodels[i].getName().replace(".xml", ""), manager);
+				
 				if(sbmldoc.getModel()!=null){
 					if(sbmlmodel.getNotesString()!=null){
 						String strippednotes = sbmlmodel.getNotesString().replaceAll("\\<.*?>"," ");
@@ -259,28 +311,30 @@ public class SBMLreactionCollector {
 													while(refit.hasNext()){
 														String ann = refit.next().getAttributeValue("resource", rdfns);
 														// If the miriam annotation is a GO term or an ec-code (BRENDA)
-														if(ann.contains("urn:miriam:obo.go:") || ann.contains("urn:miriam:ec-code:")){
+														if(ann.contains("urn:miriam:obo.go:") || ann.contains("urn:miriam:ec-code:") 
+																|| ann.contains("//identifiers.org/go/") || ann.contains("//identifiers.org/ec-code")) {
 															
 															ann = URLDecoder.decode(ann, "UTF-8");
 															String annenc = "";
 															// If it's a GO annotation
-															if(ann.contains("urn:miriam:obo.go:")){
+															if(ann.contains("urn:miriam:obo.go:") || ann.contains("//identifiers.org/go/")){
 																hasGOannotation = true;
+																System.out.println(ann);
 																ann = ann.substring(ann.indexOf("GO:"),ann.length());
 															}
 															// Use BRENDA web service to get the GO xref for ec-code annotations
- 															else if(ann.contains("urn:miriam:ec-code:")){
-																
-																ann = ann.substring(ann.lastIndexOf(":")+1,ann.length());
-																ArrayList<String> GOxrefs = BRENDAwebservice.getGOxrefsFromID(ann);
-																// If there is a GO xref 
-																if(!GOxrefs.isEmpty()){
-																	if(!GOxrefs.get(0).equals("0")){
-																		hasGOannotation = true;
-																		ann = GOxrefs.get(0);
-																	}
-																}
-															}
+// 															else if(ann.contains("urn:miriam:ec-code:") || ann.contains("//identifiers.org/ec-code")){
+//																
+//																ann = ann.substring(ann.lastIndexOf(":")+1,ann.length());
+//																ArrayList<String> GOxrefs = BRENDAwebservice.getGOxrefsFromID(ann);
+//																// If there is a GO xref 
+//																if( ! GOxrefs.isEmpty()){
+//																	if( ! GOxrefs.get(0).equals("0")){
+//																		hasGOannotation = true;
+//																		ann = GOxrefs.get(0);
+//																	}
+//																}
+//															}
 															// If we've found a GO annotation, add the GO class and the reaction to the KB, unless already there
 															if(hasGOannotation){
 																annenc = ann.replace(":", "_");
@@ -301,15 +355,22 @@ public class SBMLreactionCollector {
 																String[] labelandsyns = new String[]{};
 																labelandsyns = OWLMethods.getRDFLabelAndSynonyms(SBMLreactionFinder.rxnont, GOclass);
 																if(labelandsyns.length==0){
-																	if(!GOtermsadded.contains(annenc) && labelandsyns.length==0){
-																		labelandsyns = queryBioPortalGOAndProcess(annenc);
+																	if( ! GOtermsadded.contains(annenc) && labelandsyns.length==0){
+																		
+																		// Lookup term in local GO table
+																		if(GOidLabelMap.containsKey(annenc)) {
+																			labelandsyns = GOidLabelMap.get(annenc).toArray(new String[] {});
+																			System.out.println("Found term in GO table for " + labelandsyns[0]);
+																		}
+																		
+																		//labelandsyns = queryBioPortalGOAndProcess(annenc);
 																		if(labelandsyns.length>0){
 																			setRDFLabelAndSynonyms(labelandsyns, GOclass, annenc);
 																		}
 																	}
 																}
 																else{
-																	System.out.println("Using existing annotation from KB for " + labelandsyns[0]);
+																	System.out.println("Using existing term from KB for " + labelandsyns[0]);
 																	setRDFLabelAndSynonyms(labelandsyns, GOclass, annenc);
 																}
 															}
@@ -382,55 +443,39 @@ public class SBMLreactionCollector {
 	}
 	
 	
-	public static String[] queryBioPortalGOAndProcess(String text){
-		SAXBuilder newbuilder = new SAXBuilder();
-		Document docu = new Document();
-		String bioportalID = "1070";  // GeneOntology ID on BioPortal
-		String label = "";
-		
-		try {
-			URL url = new URL(
-					"http://rest.bioontology.org/bioportal/virtual/ontology/" + bioportalID + "?conceptid="+ text + "&apikey=24e0ee9a-54e0-11e0-9d7b-005056aa3316");
-			System.out.println(url.toString());
-			URLConnection yc = url.openConnection();
-			yc.setReadTimeout(60000); // Tiemout after a minute
-			BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
-			docu = newbuilder.build(in);
-			in.close();
-		} catch (Exception e) { 
-			e.printStackTrace();
-			logfilewriter.println("Error accessing: " + e.getMessage());
-		}
-
-		String[] labelandsynonyms = new String[]{};
-		// Process XML results from BioPortal REST service
-		if (docu.hasRootElement()) {
-			if (docu.getRootElement().getChild("data").getChild("classBean") == null) {
-			} else {
-				label = docu.getRootElement().getChild("data").getChild("classBean").getChildText("label");
-				
-				String fullID = docu.getRootElement().getChild("data").getChild("classBean").getChildText("fullID");
-				
-				if(docu.getRootElement().getChild("data").getChild("classBean").getChild("synonyms")!=null){
-					List<Element> synonyms = docu.getRootElement().getChild("data").getChild("classBean").getChild("synonyms").getChildren("string");
-					Iterator<Element> synit = synonyms.iterator();
-					
-					labelandsynonyms = new String[1+ synonyms.size()];
-					labelandsynonyms[0] = label;
-					int f = 1;
-					while(synit.hasNext()){
-						Element synonymel = synit.next();
-						String synonym = synonymel.getText();
-						labelandsynonyms[f] = synonym;
-						System.out.println(synonym);
-						f++;
-					}
-				}
-				else{labelandsynonyms = new String[]{label};};
-			}
-		}
-		return labelandsynonyms;
-	}
+	// Query BioPortal to get preferred label and synonyms for GO class
+//	public static String[] queryBioPortalGOAndProcess(String GOclass){
+//		ArrayList<String> labelandsynonyms = new ArrayList<String>();
+//
+//		URL resturl;
+//		try {
+//			resturl = new URL("http://data.bioontology.org/ontologies/GO/classes/http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2F" + GOclass);
+//			System.out.println(resturl.toString());
+//			
+//	        String jsonstring = get(resturl.toString());
+//	        
+//	        System.out.println(jsonstring);
+//	        
+//	        JsonNode jsonnode = jsonToNode(jsonstring);
+//	        
+//	        if (!jsonnode.get("prefLabel").isNull()) {
+//	        	labelandsynonyms.add(jsonnode.get("prefLabel").asText());
+//	            
+//	            for(JsonNode synnode : jsonnode.get("synonym")) {
+//	            	labelandsynonyms.add(synnode.asText());
+//	            }
+//	        }
+//	        
+//	        // Print out all the labels
+//	        for (String asdf : labelandsynonyms) {
+//	            System.out.println(asdf);
+//	        }
+//		} catch (Exception e) {
+//			logfilewriter.println(e.getMessage());
+//		}
+//		
+//		return labelandsynonyms.toArray(new String[]{});
+//	}
 	
 	
 	public static String[] queryUniProtTaxonomyAndProcess(String id){
@@ -489,4 +534,41 @@ public class SBMLreactionCollector {
 			OWLMethods.setClsDatatypeProperty(ontology, GOclass.getIRI().toString(), base + "synonym", labelandsyns[u], manager);
 		}
 	}
+	
+	
+//	private static JsonNode jsonToNode(String json) {
+//        JsonNode root = null;
+//        try {
+//            root = mapper.readTree(json);
+//        } catch (JsonProcessingException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return root;
+//    }
+//
+//    private static String get(String urlToGet) {
+//        URL url;
+//        HttpURLConnection conn;
+//        BufferedReader rd;
+//        String line;
+//        String result = "";
+//        try {
+//            url = new URL(urlToGet);
+//            conn = (HttpURLConnection) url.openConnection();
+//            conn.setRequestMethod("GET");
+//            conn.setRequestProperty("Authorization", "apikey token=" + API_KEY);
+//            conn.setRequestProperty("Accept", "application/json");
+//            rd = new BufferedReader( new InputStreamReader(conn.getInputStream()));
+//            while ((line = rd.readLine()) != null) {
+//                result += line;
+//            }
+//            rd.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return result;
+//    }
+    
 }

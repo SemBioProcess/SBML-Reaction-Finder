@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
-  <model metaid="COPASI1" id="Cookson2011_EnzymaticQueueingCoupling" name="Cookson2011_EnzymaticQueueingCoupling">
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" metaid="_913b0fdd-1824-43be-abdc-bb279113847f" version="4">
+  <model id="Cookson2011_EnzymaticQueueingCoupling" metaid="COPASI1" name="Cookson2011_EnzymaticQueueingCoupling">
     <notes>
       <body xmlns="http://www.w3.org/1999/xhtml">
         <p>
@@ -21,10 +21,8 @@ High-throughput technologies have led to the generation of complex wiring diagra
           <b>Note:</b>
           <br/>
 Individual stochastic trajectories for a queueing system in three different conditions, 1) Underloaded, 2) Balanced and 3) Overloaded, demonstrate correlation resonance. The parameter values in this model correspond to the Balanced Condition. </p>
-          <p>This model originates from BioModels Database: A Database of Annotated Published Models (http://www.ebi.ac.uk/biomodels/). <br/>
-To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p>
-          <p>In summary, you are entitled to use this encoded model in absolutely any manner you deem suitable, verbatim, or with modification, alone or embedded it in a larger context, redistribute it, commercially or not, in a restricted way or not..<br/>
-          <br/>
+          <p>This model originates from BioModels Database: A Database of Annotated Published Models (http://www.ebi.ac.uk/biomodels/). It is copyright (c) 2005-2012 The BioModels.net Team.<br/>
+For more information see the <a href="http://www.ebi.ac.uk/biomodels/legal.html" target="_blank">terms of use</a>.<br/>
 To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pubmed/20587024" target="_blank">Li C, Donizelli M, Rodriguez N, Dharuri H, Endler L, Chelliah V, Li L, He E, Henry A, Stefan MI, Snoep JL, Hucka M, Le Novère N, Laibe C (2010) BioModels Database: An enhanced, curated and annotated resource for published quantitative kinetic models. BMC Syst Biol., 4:92.</a>
         </p>
       </body>
@@ -62,70 +60,75 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
           </rdf:Description>
         </rdf:RDF>
       </COPASI>
-      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
         <rdf:Description rdf:about="#COPASI1">
-          <dc:creator>
-            <rdf:Bag>
-              <rdf:li rdf:parseType="Resource">
-                <vCard:N rdf:parseType="Resource">
-                  <vCard:Family>Chelliah</vCard:Family>
-                  <vCard:Given>Vijayalakshmi</vCard:Given>
-                </vCard:N>
-                <vCard:EMAIL>viji@ebi.ac.uk</vCard:EMAIL>
-                <vCard:ORG rdf:parseType="Resource">
-                  <vCard:Orgname>EMBL-EBI</vCard:Orgname>
-                </vCard:ORG>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard:N rdf:parseType="Resource">
-                  <vCard:Family>Mather</vCard:Family>
-                  <vCard:Given>William</vCard:Given>
-                </vCard:N>
-                <vCard:EMAIL>wmather@ucsd.edu</vCard:EMAIL>
-                <vCard:ORG rdf:parseType="Resource">
-                  <vCard:Orgname>Hasty Lab, UCSD Biology</vCard:Orgname>
-                </vCard:ORG>
-              </rdf:li>
-            </rdf:Bag>
-          </dc:creator>
-          <dcterms:created rdf:parseType="Resource">
-            <dcterms:W3CDTF>2011-11-03T08:34:08Z</dcterms:W3CDTF>
-          </dcterms:created>
-          <dcterms:modified rdf:parseType="Resource">
-            <dcterms:W3CDTF>2012-04-20T19:27:19Z</dcterms:W3CDTF>
-          </dcterms:modified>
-          <bqmodel:is>
-            <rdf:Bag>
-              <rdf:li rdf:resource="urn:miriam:biomodels.db:BIOMD0000000405"/>
-            </rdf:Bag>
-          </bqmodel:is>
-          <bqmodel:is>
-            <rdf:Bag>
-              <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL1111150000"/>
-            </rdf:Bag>
-          </bqmodel:is>
-          <bqmodel:isDescribedBy>
-            <rdf:Bag>
-              <rdf:li rdf:resource="urn:miriam:pubmed:22186735"/>
-            </rdf:Bag>
-          </bqmodel:isDescribedBy>
-          <bqbiol:isVersionOf>
-            <rdf:Bag>
-              <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0019899"/>
-              <rdf:li rdf:resource="urn:miriam:cco:CCO%3AY0000030"/>
-            </rdf:Bag>
-          </bqbiol:isVersionOf>
-          <bqbiol:occursIn>
-            <rdf:Bag>
-              <rdf:li rdf:resource="urn:miriam:taxonomy:131567"/>
-            </rdf:Bag>
-          </bqbiol:occursIn>
-        </rdf:Description>
-      </rdf:RDF>
-    </annotation>
-    <listOfFunctionDefinitions>
-      <functionDefinition metaid="_506709" id="function_1" name="Constant flux (irreversible)">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Chelliah</vCard:Family>
+	<vCard:Given>Vijayalakshmi</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>viji@ebi.ac.uk</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>EMBL-EBI</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Mather</vCard:Family>
+	<vCard:Given>William</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>wmather@ucsd.edu</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>Hasty Lab, UCSD Biology</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2011-11-03T08:34:08Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2014-04-06T20:48:51Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1111150000"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/BIOMD0000000405"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	<bqmodel:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/22186735"/>
+	</rdf:Bag>
+	</bqmodel:isDescribedBy>
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0050790"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	<bqbiol:hasTaxon>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/taxonomy/131567"/>
+	</rdf:Bag>
+	</bqbiol:hasTaxon>
+	<bqbiol:hasProperty>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/mamo/MAMO_0000046"/>
+	</rdf:Bag>
+	</bqbiol:hasProperty>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+      <listOfFunctionDefinitions>
+      <functionDefinition id="function_1" metaid="_506709" name="Constant flux (irreversible)">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <lambda>
             <bvar>
               <ci> v </ci>
@@ -133,25 +136,25 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             <ci> v </ci>
           </lambda>
         </math>
-      </functionDefinition>
+            </functionDefinition>
     </listOfFunctionDefinitions>
     <listOfUnitDefinitions>
-      <unitDefinition id="volume" name="volume">
+      <unitDefinition id="volume" metaid="d1b1e60a-4f66-4710-886f-ead347385e1c" name="volume">
         <listOfUnits>
-          <unit kind="dimensionless"/>
+          <unit kind="dimensionless" metaid="e6e29fee-9faa-4847-a384-fb9cc6bddd9b"/>
         </listOfUnits>
       </unitDefinition>
-      <unitDefinition id="substance" name="substance">
+      <unitDefinition id="substance" metaid="cc650cb2-76ec-46b1-8b08-a15ce09bea7d" name="substance">
         <listOfUnits>
-          <unit kind="item"/>
+          <unit kind="item" metaid="_3910fb1c-5168-41ff-b1a2-1ff4f7591835"/>
         </listOfUnits>
       </unitDefinition>
     </listOfUnitDefinitions>
     <listOfCompartments>
-      <compartment metaid="_506473" id="compartment_1" name="compartment" size="1"/>
+      <compartment id="compartment_1" metaid="_506473" name="compartment" size="1"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species metaid="COPASI2" id="species_1" name="x1" compartment="compartment_1" initialConcentration="0" sboTerm="SBO:0000252">
+      <species compartment="compartment_1" id="species_1" initialConcentration="0" metaid="COPASI2" name="x1" sboTerm="SBO:0000252">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -164,18 +167,19 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
               </rdf:Description>
             </rdf:RDF>
           </COPASI>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
             <rdf:Description rdf:about="#COPASI2">
-              <bqbiol:isVersionOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A36080"/>
-                </rdf:Bag>
-              </bqbiol:isVersionOf>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </species>
-      <species metaid="COPASI3" id="species_2" name="x2" compartment="compartment_1" initialConcentration="0" sboTerm="SBO:0000252">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species compartment="compartment_1" id="species_2" initialConcentration="0" metaid="COPASI3" name="x2" sboTerm="SBO:0000252">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -188,18 +192,19 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
               </rdf:Description>
             </rdf:RDF>
           </COPASI>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
             <rdf:Description rdf:about="#COPASI3">
-              <bqbiol:isVersionOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A36080"/>
-                </rdf:Bag>
-              </bqbiol:isVersionOf>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </species>
-      <species metaid="COPASI4" id="species_3" name="E1" compartment="compartment_1" initialConcentration="0" sboTerm="SBO:0000014">
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36080"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species compartment="compartment_1" id="species_3" initialConcentration="0" metaid="COPASI4" name="E1" sboTerm="SBO:0000014">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -213,8 +218,8 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-      </species>
-      <species metaid="COPASI5" id="species_4" name="E2" compartment="compartment_1" initialConcentration="0" sboTerm="SBO:0000014">
+            </species>
+      <species compartment="compartment_1" id="species_4" initialConcentration="0" metaid="COPASI5" name="E2" sboTerm="SBO:0000014">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -228,8 +233,8 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-      </species>
-      <species metaid="COPASI6" id="species_5" name="E" compartment="compartment_1" initialConcentration="100" sboTerm="SBO:0000014">
+            </species>
+      <species compartment="compartment_1" id="species_5" initialConcentration="100" metaid="COPASI6" name="E" sboTerm="SBO:0000014">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -243,23 +248,24 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-      </species>
-      <species metaid="_506561" id="species_6" name="E+x1" compartment="compartment_1" initialConcentration="1" sboTerm="SBO:0000296">
+            </species>
+      <species compartment="compartment_1" id="species_6" initialConcentration="1" metaid="_506561" name="E+x1" sboTerm="SBO:0000296">
         <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
             <rdf:Description rdf:about="#_506561">
-              <bqbiol:isVersionOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0043234"/>
-                </rdf:Bag>
-              </bqbiol:isVersionOf>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </species>
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0043234"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+            </species>
     </listOfSpecies>
     <listOfParameters>
-      <parameter metaid="COPASI7" id="parameter_1" name="lambda1" value="500" sboTerm="SBO:0000009">
+      <parameter id="parameter_1" metaid="COPASI7" name="lambda1" sboTerm="SBO:0000009" value="500">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -273,8 +279,8 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-      </parameter>
-      <parameter metaid="COPASI8" id="parameter_2" name="lambda2" value="500" sboTerm="SBO:0000009">
+            </parameter>
+      <parameter id="parameter_2" metaid="COPASI8" name="lambda2" sboTerm="SBO:0000009" value="500">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -288,8 +294,8 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-      </parameter>
-      <parameter metaid="COPASI9" id="parameter_3" name="mu" value="10" sboTerm="SBO:0000009">
+            </parameter>
+      <parameter id="parameter_3" metaid="COPASI9" name="mu" sboTerm="SBO:0000009" value="10">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -303,8 +309,8 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-      </parameter>
-      <parameter metaid="COPASI10" id="parameter_4" name="Kp" value="1000" sboTerm="SBO:0000009">
+            </parameter>
+      <parameter id="parameter_4" metaid="COPASI10" name="Kp" sboTerm="SBO:0000009" value="1000">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -318,8 +324,8 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-      </parameter>
-      <parameter metaid="COPASI11" id="parameter_5" name="g" value="0.03465735902799" sboTerm="SBO:0000009">
+            </parameter>
+      <parameter id="parameter_5" metaid="COPASI11" name="g" sboTerm="SBO:0000009" value="0.03465735902799">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -333,10 +339,10 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-      </parameter>
+            </parameter>
     </listOfParameters>
     <listOfReactions>
-      <reaction metaid="COPASI12" id="reaction_1" name="binding1" reversible="false" sboTerm="SBO:0000344">
+      <reaction id="reaction_1" metaid="COPASI12" name="binding1" reversible="false" sboTerm="SBO:0000344">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -350,15 +356,15 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-        <listOfReactants>
-          <speciesReference species="species_1"/>
-          <speciesReference species="species_5"/>
+              <listOfReactants>
+          <speciesReference metaid="_2327c080-5450-4d5e-a937-dfe36ccca2bb" species="species_1"/>
+          <speciesReference metaid="e820cb52-4ecf-4cc0-9e67-8a1bf0480f32" species="species_5"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="species_3"/>
+          <speciesReference metaid="b01ba965-a5d3-43a8-8a46-dfc23d6a2b51" species="species_3"/>
         </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="a9063647-5a12-4502-9f32-348facdee4f3">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> compartment_1 </ci>
@@ -367,9 +373,9 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
               <ci> species_5 </ci>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
-      <reaction metaid="COPASI13" id="reaction_2" name="binding2" reversible="false" sboTerm="SBO:0000344">
+      <reaction id="reaction_2" metaid="COPASI13" name="binding2" reversible="false" sboTerm="SBO:0000344">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -383,15 +389,15 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-        <listOfReactants>
-          <speciesReference species="species_2"/>
-          <speciesReference species="species_5"/>
+              <listOfReactants>
+          <speciesReference metaid="bd7d9b26-e1b4-401d-b279-1355042b4576" species="species_2"/>
+          <speciesReference metaid="_47f7fbd1-e41e-427d-b986-1e83a35301f6" species="species_5"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="species_4"/>
+          <speciesReference metaid="_7766de7b-0eaa-4be2-9b4a-13cac5e19251" species="species_4"/>
         </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="_2b8b9438-f303-4620-830d-aea1709c3e48">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> compartment_1 </ci>
@@ -400,9 +406,9 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
               <ci> species_5 </ci>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
-      <reaction metaid="COPASI14" id="reaction_3" name="production1" reversible="false" sboTerm="SBO:0000393">
+      <reaction id="reaction_3" metaid="COPASI14" name="production1" reversible="false" sboTerm="SBO:0000393">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -416,11 +422,11 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-        <listOfProducts>
-          <speciesReference species="species_1"/>
+              <listOfProducts>
+          <speciesReference metaid="a8b1de28-0121-45f7-8264-0491b50bea81" species="species_1"/>
         </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="f896ecad-b18a-4bf1-abc2-78bf349d5928">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> compartment_1 </ci>
@@ -430,9 +436,9 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
               </apply>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
-      <reaction metaid="COPASI15" id="reaction_4" name="production2" reversible="false" sboTerm="SBO:0000393">
+      <reaction id="reaction_4" metaid="COPASI15" name="production2" reversible="false" sboTerm="SBO:0000393">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -446,11 +452,11 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-        <listOfProducts>
-          <speciesReference species="species_2"/>
+              <listOfProducts>
+          <speciesReference metaid="_525803c5-680f-4c8e-abff-915b41ba9e53" species="species_2"/>
         </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="_79c16d02-bf8d-459c-a0a2-cfb07fb26cc5">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> compartment_1 </ci>
@@ -460,9 +466,9 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
               </apply>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
-      <reaction metaid="COPASI16" id="reaction_5" name="degradation1" reversible="false" sboTerm="SBO:0000179">
+      <reaction id="reaction_5" metaid="COPASI16" name="degradation1" reversible="false" sboTerm="SBO:0000179">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -476,14 +482,14 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-        <listOfReactants>
-          <speciesReference species="species_3"/>
+              <listOfReactants>
+          <speciesReference metaid="_84efbbcb-0446-46e1-87c6-abbe8eba7ad0" species="species_3"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="species_5"/>
+          <speciesReference metaid="_8edbdbd5-baa1-4a54-bd6d-7afb1b59355b" species="species_5"/>
         </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="_46fb26f1-5e35-4e05-96cd-5ac932898796">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> compartment_1 </ci>
@@ -491,9 +497,9 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
               <ci> species_3 </ci>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
-      <reaction metaid="COPASI17" id="reaction_6" name="degradation2" reversible="false" sboTerm="SBO:0000179">
+      <reaction id="reaction_6" metaid="COPASI17" name="degradation2" reversible="false" sboTerm="SBO:0000179">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -507,14 +513,14 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-        <listOfReactants>
-          <speciesReference species="species_4"/>
+              <listOfReactants>
+          <speciesReference metaid="_715ad609-74aa-45fe-87a3-0a4066cf5d63" species="species_4"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="species_5"/>
+          <speciesReference metaid="aef0fe76-c566-4315-825f-c8b9c82d507e" species="species_5"/>
         </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="d671b0ab-eb20-47a0-97e7-ed810720270d">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> compartment_1 </ci>
@@ -522,9 +528,9 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
               <ci> species_4 </ci>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
-      <reaction metaid="COPASI18" id="reaction_7" name="dilution1" reversible="false" sboTerm="SBO:0000179">
+      <reaction id="reaction_7" metaid="COPASI18" name="dilution1" reversible="false" sboTerm="SBO:0000179">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -538,11 +544,11 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-        <listOfReactants>
-          <speciesReference species="species_1"/>
+              <listOfReactants>
+          <speciesReference metaid="_9c608939-534c-4e90-810c-e947bab7a348" species="species_1"/>
         </listOfReactants>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="_3274469c-ee92-4cc4-968d-da5b115f5839">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> compartment_1 </ci>
@@ -550,9 +556,9 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
               <ci> species_1 </ci>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
-      <reaction metaid="COPASI19" id="reaction_8" name="dilution2" reversible="false" sboTerm="SBO:0000179">
+      <reaction id="reaction_8" metaid="COPASI19" name="dilution2" reversible="false" sboTerm="SBO:0000179">
         <annotation>
           <COPASI xmlns="http://www.copasi.org/static/sbml">
             <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -566,11 +572,11 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
             </rdf:RDF>
           </COPASI>
         </annotation>
-        <listOfReactants>
-          <speciesReference species="species_2"/>
+              <listOfReactants>
+          <speciesReference metaid="b968680f-931f-40f3-aa20-236981fcbab0" species="species_2"/>
         </listOfReactants>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="b9dc82ba-6353-41f5-ab75-fd99ad2daf3e">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> compartment_1 </ci>
@@ -578,7 +584,7 @@ To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pub
               <ci> species_2 </ci>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
     </listOfReactions>
   </model>

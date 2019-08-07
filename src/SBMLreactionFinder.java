@@ -69,7 +69,7 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 	 */
 	private static final long serialVersionUID = 1L;
 	public static SBMLreactionFinder finder;
-	public String version = "1.2.1";
+	public String version = "2.0.0";
 	public URI ReactionCollectionURL = URI.create("http://www.bhi.washington.edu/research/SemBioProcess/SBML/BioModelsReactions.owl");
 	public static File rxnsrcfile = new File("resources/BioModelsReactions.owl");
 	public static Set<String> taxons = new HashSet<String>();

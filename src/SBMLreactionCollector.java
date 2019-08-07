@@ -4,7 +4,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLDecoder;
@@ -84,7 +83,6 @@ public class SBMLreactionCollector {
 		
 		
 		while(GOscan.hasNext()) {
-			System.out.println("HERE");
 			String id;
 			ArrayList<String> prefandsyn = new ArrayList<String>();
 			String line = GOscan.nextLine();
@@ -93,7 +91,6 @@ public class SBMLreactionCollector {
 			if(ctoken.hasMoreTokens()) { // If ID present
 				id = ctoken.nextToken();
 				id = id.substring(id.lastIndexOf("/")+1, id.length());
-				System.out.println(id);
 				if(ctoken.hasMoreTokens()) { // If preferred label present
 					prefandsyn.add(ctoken.nextToken());
 					

@@ -34,8 +34,8 @@ public class LocalSBMLRepositoryUpdater {
 		SBMLreactionFinder.msgarea.setText("Updating models...0% complete");		
 
 		Arrays.sort(idarray);
-//		for(int x=0; x<idarray.length; x++){
-		for(int x=0; x<1; x++){
+		for(int x=0; x<idarray.length; x++){
+//		for(int x=0; x<1; x++){
 			File newfile = new File("resources/curated_models/" + idarray[x] + ".xml");
 			writer = new PrintWriter(new FileWriter(newfile));
 			System.out.println(idarray[x]);

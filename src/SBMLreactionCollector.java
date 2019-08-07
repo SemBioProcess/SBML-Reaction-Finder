@@ -319,8 +319,9 @@ public class SBMLreactionCollector {
 															// If it's a GO annotation
 															if(ann.contains("urn:miriam:obo.go:") || ann.contains("//identifiers.org/go/")){
 																hasGOannotation = true;
-																System.out.println(ann);
-																ann = ann.substring(ann.indexOf("GO:"),ann.length());
+																
+																if(ann.contains("GO:"))
+																	ann = ann.substring(ann.indexOf("GO:"),ann.length());
 															}
 															// Use BRENDA web service to get the GO xref for ec-code annotations
 // 															else if(ann.contains("urn:miriam:ec-code:") || ann.contains("//identifiers.org/ec-code")){

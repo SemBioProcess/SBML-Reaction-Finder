@@ -6,8 +6,5 @@
 	<classpathentry kind="lib" path="O:/git/SBML-Reaction-Finder/thirdParty/jdom.jar"/>
 	<classpathentry kind="lib" path="O:/git/SBML-Reaction-Finder/thirdParty/owlapi-bin.jar"/>
 	<classpathentry kind="lib" path="O:/git/SBML-Reaction-Finder/thirdParty/jsbml-1.4-with-dependencies.jar"/>
-	<classpathentry kind="lib" path="O:/git/SBML-Reaction-Finder/thirdParty/jackson-annotations-2.2.3.jar"/>
-	<classpathentry kind="lib" path="O:/git/SBML-Reaction-Finder/thirdParty/jackson-core-2.2.3.jar"/>
-	<classpathentry kind="lib" path="O:/git/SBML-Reaction-Finder/thirdParty/jackson-databind-2.2.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

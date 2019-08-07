@@ -90,11 +90,11 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 	public static JPanel searchpanel = new JPanel();
 	public static JPanel searchtoppanel;
 	public static String[] taxonarray = new String[]{};
-	public static JComboBox taxoncombo;
+	public static JComboBox<String> taxoncombo;
 	public static JPanel limitsearchpanel = new JPanel();
 	public static JPanel resultspanel = new JPanel();
 	public static JPanel reactionviewer = new JPanel();
-	public static JComboBox findbox;
+	public static JComboBox<String> findbox;
 	public static JPanel panelinside = new JPanel();
 	public static JPanel reactionpanelinside = new JPanel();
 	public static JScrollPane resultsscroller;
@@ -148,10 +148,6 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 
 		this.title = title;
 		this.setTitle(title);
-		File libsbmlfile = null;
-		if(WINDOWS) libsbmlfile = new File("./resources/sbmlj.dll");
-		else if(MACOSX) libsbmlfile = new File("./resources/libsbmlj.jnilib");
-		else if(LINUXorUNIX) libsbmlfile = new File("./resources/libsbmlj.so");
 	}
 	
 	
@@ -181,13 +177,13 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 		
 		searchlabel = new JLabel("Enter search term");
 		 
-		findbox = new JComboBox(new String[]{});
+		findbox = new JComboBox<String>(new String[]{});
 		//findbox.setBounds(50,50,100,21);
 		findbox.setPreferredSize(new Dimension(300,30));
 		findbox.setForeground(Color.blue);
 		findbox.setEnabled(false);
 		
-		taxoncombo = new JComboBox();
+		taxoncombo = new JComboBox<String>();
 		searchbutton = new JButton("Search");
 		searchbutton.setEnabled(false);
 		

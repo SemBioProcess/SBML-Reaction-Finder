@@ -22,6 +22,7 @@ import org.sbml.jsbml.SBMLDocument;
 import org.sbml.jsbml.SBMLException;
 import org.sbml.jsbml.SBMLReader;
 import org.sbml.jsbml.SBMLWriter;
+import org.sbml.jsbml.SBase;
 import org.sbml.jsbml.Species;
 import org.sbml.jsbml.SpeciesReference;
 import org.sbml.jsbml.Unit;
@@ -93,28 +94,19 @@ public class ReactionExtractor {
 		timestamp = timestamp.replace("-", "_");
 		
 		// Deal with namespaces, collect all from source model
-//		XMLNamespaces newnamespaces = new XMLNamespaces();
-//		newnamespaces.add("http://www.w3.org/1999/xhtml", "html");
 		int level = model.getLevel();
 		String versionnote = "";
-		if(level>2){level = 2; 
-			versionnote = " NOTE: The source model was encoded with a level/version classification beyond level 2, version 3." +
-				" Complete fidelity between this model and its source is not guaranteed.";
-			}
 		int version = model.getVersion();
-		if(level==2 && version >3){version = 3;
-			versionnote = " NOTE: The source model was encoded with a level/version classification beyond level 2, version 3." +
-			" Complete fidelity between this model and its source is not guaranteed.";
-			}
 
 		newmodel.getSBMLDocument().setLevelAndVersion(level, version);
 		System.out.println(newmodel.getSBMLDocument().getLevel());
 		System.out.println(newmodel.getSBMLDocument().getVersion());
 		System.out.println(newmodel.getSBMLDocument().getDeclaredNamespaces());
 		
-		//newmodel.getParentSBMLObject().
 		if(model.getSBMLDocument().getDeclaredNamespaces()!=null){
+			
 			for(String nsindex : model.getSBMLDocument().getDeclaredNamespaces().keySet()){
+				
 				if(! nsindex.equals("")
 						&& ! model.getSBMLDocument().getDeclaredNamespaces().get(nsindex).equals("")){
 					newmodel.getSBMLDocument().getDeclaredNamespaces().put(nsindex, model.getSBMLDocument().getDeclaredNamespaces().get(nsindex));
@@ -161,6 +153,8 @@ public class ReactionExtractor {
 //		
 //		newmodel.setAnnotation(taxonomynode);
 		//model.getAnnotation().getChild(0).getChild(0);
+		
+		// Copy over reactions
 		ListOf<Reaction> rxnlist = sbmlmodel.getListOfReactions();
 		for(int x=0; x<rxnlist.size(); x++){
 			Reaction rxn = sbmlmodel.getReaction(x);
@@ -171,27 +165,35 @@ public class ReactionExtractor {
 				newrxn.setId(rxn.getId());
 				newrxn.setFast(rxn.getFast());
 				KineticLaw newkinlaw = newrxn.createKineticLaw();
-				newkinlaw = createKineticLaw(newkinlaw, rxn.getKineticLaw());
+				newkinlaw = createKineticLaw(newkinlaw, rxn.getKineticLaw(), newmodel);
 				newrxn.setMetaId(rxn.getMetaId());
 				newrxn.setName(rxn.getName());
-				newrxn.setNotes(rxn.getNotes());
-				newrxn.setNotes(rxn.getNotesString());
+				
+				if(rxn.isSetNotes())
+					newrxn.setNotes(rxn.getNotes());
+				
+//				newrxn.setNotes(rxn.getNotesString());
+				
 				newrxn.setReversible(rxn.getReversible());
 				newrxn.setAnnotation(rxn.getAnnotation());
-				newrxn.setAnnotation(rxn.getAnnotationString());
+//				newrxn.setAnnotation(rxn.getAnnotationString());
 				
 				// Copy over info about the modifiers in the reaction
 				for(int m=0; m<rxn.getListOfModifiers().size(); m++){
 					ModifierSpeciesReference mod = rxn.getModifier(m);
 					ModifierSpeciesReference newmod = newrxn.createModifier();
 					newmod.setAnnotation(mod.getAnnotation());
-					newmod.setAnnotation(mod.getAnnotationString());
 					newmod.setId(mod.getId());
 					newmod.setMetaId(mod.getMetaId());
 					newmod.setName(mod.getName());
-					newmod.setNotes(mod.getNotes());
-					newmod.setNotes(mod.getNotesString());
-					newmod.setSBOTerm(mod.getSBOTerm());
+					
+					if(mod.isSetNotes())
+						newmod.setNotes(mod.getNotes());
+					
+//					newmod.setNotes(mod.getNotesString());
+					
+					processSBOterm(newmodel, mod, newmod);
+					
 					newmod.setSpecies(mod.getSpecies());
 					if(!mod.getSpecies().equals("")){
 						newmodel = createSpecies(newmodel, sbmlmodel, sbmlmodel.getSpecies(mod.getSpecies()));
@@ -202,14 +204,18 @@ public class ReactionExtractor {
 					SpeciesReference reactant = rxn.getReactant(r);
 					SpeciesReference newreactant = newrxn.createReactant();
 					newreactant.setAnnotation(reactant.getAnnotation());
-					newreactant.setAnnotation(reactant.getAnnotationString());
+//					newreactant.setAnnotation(reactant.getAnnotationString());
 					newreactant.setId(reactant.getId());
 					newreactant.setDenominator(reactant.getDenominator());
 					newreactant.setMetaId(reactant.getMetaId());
 					newreactant.setName(reactant.getName());
-					newreactant.setNotes(reactant.getNotes());
-					newreactant.setNotes(reactant.getNotesString());
-					newreactant.setSBOTerm(reactant.getSBOTerm());
+					
+					if(reactant.isSetNotes())
+						newreactant.setNotes(reactant.getNotes());
+//					newreactant.setNotes(reactant.getNotesString());
+					
+					processSBOterm(newmodel, reactant, newreactant);
+					
 					newreactant.setSpecies(reactant.getSpecies());
 					if(!reactant.getSpecies().equals("")){
 						newmodel = createSpecies(newmodel, sbmlmodel, sbmlmodel.getSpecies(reactant.getSpecies()));
@@ -222,14 +228,18 @@ public class ReactionExtractor {
 					SpeciesReference product = rxn.getProduct(p);
 					SpeciesReference newproduct = newrxn.createProduct();
 					newproduct.setAnnotation(product.getAnnotation());
-					newproduct.setAnnotation(product.getAnnotationString());
+//					newproduct.setAnnotation(product.getAnnotationString());
 					newproduct.setId(product.getId());
 					newproduct.setDenominator(product.getDenominator());
 					newproduct.setMetaId(product.getMetaId());
 					newproduct.setName(product.getName());
-					newproduct.setNotes(product.getNotes());
-					newproduct.setNotes(product.getNotesString());
-					newproduct.setSBOTerm(product.getSBOTerm());
+					
+					if(product.isSetNotes())
+						newproduct.setNotes(product.getNotes());
+//					newproduct.setNotes(product.getNotesString());
+					
+					processSBOterm(newmodel, product, newproduct);
+					
 					newproduct.setSpecies(product.getSpecies());
 					if(!product.getSpecies().equals("")){
 						newmodel = createSpecies(newmodel, sbmlmodel, sbmlmodel.getSpecies(product.getSpecies()));
@@ -243,29 +253,39 @@ public class ReactionExtractor {
 					Parameter par = sbmlmodel.getParameter(pr);
 					Parameter newpar = newmodel.createParameter();
 					newpar.setAnnotation(par.getAnnotation());
-					newpar.setAnnotation(par.getAnnotationString());
+//					newpar.setAnnotation(par.getAnnotationString());
 					newpar.setConstant(par.getConstant());
 					newpar.setId(par.getId());
 					newpar.setMetaId(par.getMetaId());
 					newpar.setName(par.getName());
-					newpar.setNotes(par.getNotes());
-					newpar.setNotes(par.getNotesString());
-					newpar.setSBOTerm(par.getSBOTerm());
-					newpar.setUnits(par.getUnits());
-					if(!newpar.getUnits().equals("")){
-						//System.out.println("Global par " + newpar.getId() + " has units " + newpar.getUnits());
-						if(newpar.getDerivedUnitDefinition()!=null && !newpar.getDerivedUnitDefinition().getId().equals("")){
-							newmodel = createUnitDefinition(newmodel, sbmlmodel, newpar.getDerivedUnitDefinition());
-						}
-						else{
-							if(sbmlmodel.getUnitDefinition(newpar.getUnits())!=null){
-								newmodel = createUnitDefinition(newmodel, sbmlmodel, sbmlmodel.getUnitDefinition(newpar.getUnits()));
-							}
-							else{
-								System.out.println(newpar.getId() + " had a null derived unit definition");
-							}
-						}
+					
+					if(par.isSetNotes())
+						newpar.setNotes(par.getNotes());
+//					newpar.setNotes(par.getNotesString());
+					
+					processSBOterm(newmodel, par, newpar);
+					
+					if(par.isSetUnits()) {
+						newmodel = createUnitDefinition(newmodel, sbmlmodel, par.getDerivedUnitDefinition());
+						newpar.setUnits(par.getUnits());
 					}
+					
+					
+//					if(!newpar.getUnits().equals("")){
+//						//System.out.println("Global par " + newpar.getId() + " has units " + newpar.getUnits());
+//						if(newpar.getDerivedUnitDefinition()!=null && !newpar.getDerivedUnitDefinition().getId().equals("")){
+//							newmodel = createUnitDefinition(newmodel, sbmlmodel, newpar.getDerivedUnitDefinition());
+//						}
+//						else{
+//							if(sbmlmodel.getUnitDefinition(newpar.getUnits())!=null){
+//								newmodel = createUnitDefinition(newmodel, sbmlmodel, sbmlmodel.getUnitDefinition(newpar.getUnits()));
+//							}
+//							else{
+//								System.out.println(newpar.getId() + " had a null derived unit definition");
+//							}
+//						}
+//					}
+					
 					newpar.setValue(par.getValue());
 				}
 				
@@ -276,15 +296,17 @@ public class ReactionExtractor {
 					if(rxn.getKineticLaw().getFormula().contains(funcid)){
 						FunctionDefinition newfuncdef = newmodel.createFunctionDefinition();
 						newfuncdef.setAnnotation(funcdef.getAnnotation());
-						newfuncdef.setAnnotation(funcdef.getAnnotationString());
+//						newfuncdef.setAnnotation(funcdef.getAnnotationString());
 						newfuncdef.setId(funcdef.getId());
 						newfuncdef.setMath(funcdef.getMath());
 						newfuncdef.setMetaId(funcdef.getMetaId());
 						newfuncdef.setName(funcdef.getName());
-						newfuncdef.setNotes(funcdef.getNotes());
-						newfuncdef.setNotes(funcdef.getNotesString());
-						//newfuncdef.setSBMLDocument(funcdef.getSBMLDocument());
-						newfuncdef.setSBOTerm(funcdef.getSBOTerm());
+						
+						if(funcdef.isSetNotes())
+							newfuncdef.setNotes(funcdef.getNotes());
+//						newfuncdef.setNotes(funcdef.getNotesString());
+						
+						processSBOterm(newmodel, funcdef, newfuncdef);
 					}
 				}
 				
@@ -293,29 +315,40 @@ public class ReactionExtractor {
 					LocalParameter kpar = rxn.getKineticLaw().getParameter(kpr);
 					LocalParameter newkpar = newkinlaw.createLocalParameter();
 					newkpar.setAnnotation(kpar.getAnnotation());
-					newkpar.setAnnotation(kpar.getAnnotationString());
+//					newkpar.setAnnotation(kpar.getAnnotationString());
 					//newkpar.setExplicitlyConstant(kpar.getConstant());
 					newkpar.setId(kpar.getId());
 					newkpar.setMetaId(kpar.getMetaId());
 					newkpar.setName(kpar.getName());
-					newkpar.setNotes(kpar.getNotes());
-					newkpar.setNotes(kpar.getNotesString());
-					newkpar.setSBOTerm(kpar.getSBOTerm());
-					newkpar.setUnits(kpar.getUnits());
-					if(!kpar.getUnits().equals("")){
-						//System.out.println("Kinetic par " + kpar.getId() + " has units " + kpar.getUnits());
-						if(kpar.getDerivedUnitDefinition()!=null && !kpar.getDerivedUnitDefinition().getId().equals("")){
-							newmodel = createUnitDefinition(newmodel, sbmlmodel, kpar.getDerivedUnitDefinition());
-						}
-						else{
-							if(sbmlmodel.getUnitDefinition(kpar.getUnits())!=null){
-								newmodel = createUnitDefinition(newmodel, sbmlmodel, sbmlmodel.getUnitDefinition(kpar.getUnits()));
-							}
-							else{
-								System.out.println(kpar.getId() + " had a null derived unit definition");
-							}
-						}
+					
+					if(kpar.isSetNotes())
+						newkpar.setNotes(kpar.getNotes());
+					
+//					newkpar.setNotes(kpar.getNotesString());
+					
+					processSBOterm(newmodel, kpar, newkpar);
+					
+					if(kpar.isSetUnits()) {
+						newmodel = createUnitDefinition(newmodel, sbmlmodel, kpar.getDerivedUnitDefinition());
+						newkpar.setUnits(kpar.getUnits());
 					}
+					
+					
+//					
+//					if(!kpar.getUnits().equals("")){
+//						//System.out.println("Kinetic par " + kpar.getId() + " has units " + kpar.getUnits());
+//						if(kpar.getDerivedUnitDefinition()!=null && !kpar.getDerivedUnitDefinition().getId().equals("")){
+//							newmodel = createUnitDefinition(newmodel, sbmlmodel, kpar.getDerivedUnitDefinition());
+//						}
+//						else{
+//							if(sbmlmodel.getUnitDefinition(kpar.getUnits())!=null){
+//								newmodel = createUnitDefinition(newmodel, sbmlmodel, sbmlmodel.getUnitDefinition(kpar.getUnits()));
+//							}
+//							else{
+//								System.out.println(kpar.getId() + " had a null derived unit definition");
+//							}
+//						}
+//					}
 					newkpar.setValue(kpar.getValue());
 				}
 			}
@@ -333,7 +366,7 @@ public class ReactionExtractor {
 		if(newmodel.getSpecies(origsp.getId())==null){
 			Species newsp = newmodel.createSpecies();
 			newsp.setAnnotation(origsp.getAnnotation());
-			newsp.setAnnotation(origsp.getAnnotationString());
+//			newsp.setAnnotation(origsp.getAnnotationString());
 			newsp.setBoundaryCondition(origsp.getBoundaryCondition());
 			newsp.setCharge(origsp.getCharge());
 			newsp.setCompartment(origsp.getCompartment());
@@ -344,29 +377,43 @@ public class ReactionExtractor {
 			newsp.setInitialConcentration(origsp.getInitialConcentration());
 			newsp.setMetaId(origsp.getMetaId());
 			newsp.setName(origsp.getName());
-			newsp.setNotes(origsp.getNotes());
-			newsp.setNotes(origsp.getNotesString());
-			newsp.setSBOTerm(origsp.getSBOTerm());
+			
+			if(origsp.isSetNotes())
+				newsp.setNotes(origsp.getNotes());
+			
+//			newsp.setNotes(origsp.getNotes());
+//			newsp.setNotes(origsp.getNotesString());
+			
+			processSBOterm(newmodel, origsp, newsp);
+			
 			newsp.setSpatialSizeUnits(origsp.getSpatialSizeUnits());
-			newsp.setSpeciesType(origsp.getSpeciesType());
+			
+			if(newmodel.getLevel()==2 && newmodel.getVersion()>=2 && newmodel.getVersion()<=4)
+				newsp.setSpeciesType(origsp.getSpeciesType());
+			
 			newsp.setSubstanceUnits(origsp.getSubstanceUnits());
-			newsp.setUnits(origsp.getUnits());
-			if(!origsp.getUnits().equals("")){
-				if(!origsp.getUnits().equals("")){
-					if(origsp.getDerivedUnitDefinition()!=null && !origsp.getDerivedUnitDefinition().getId().equals("")){
-						newmodel = createUnitDefinition(newmodel, origmodel, origsp.getDerivedUnitDefinition());
-					}
-					else{
-						if(origmodel.getUnitDefinition(origsp.getUnits())!=null){
-							newmodel = createUnitDefinition(newmodel, origmodel, origmodel.getUnitDefinition(origsp.getUnits()));
-						}
-						else{
-							System.out.println(origsp.getId() + " had a null derived unit definition");
-						}
-					}
-				}
+			
+			if(origsp.isSetUnits()) {
+				newmodel = createUnitDefinition(newmodel, origmodel, origsp.getDerivedUnitDefinition());
+				newsp.setUnits(origsp.getUnits());
 			}
-			if(!origsp.getCompartment().equals("")){
+			
+//			newsp.setUnits(origsp.getUnits());
+//			if(!origsp.getUnits().equals("")){
+//				if(origsp.getDerivedUnitDefinition()!=null && !origsp.getDerivedUnitDefinition().getId().equals("")){
+//					newmodel = createUnitDefinition(newmodel, origmodel, origsp.getDerivedUnitDefinition());
+//				}
+//				else{
+//					if(origmodel.getUnitDefinition(origsp.getUnits())!=null){
+//						newmodel = createUnitDefinition(newmodel, origmodel, origmodel.getUnitDefinition(origsp.getUnits()));
+//					}
+//					else{
+//						System.out.println(origsp.getId() + " had a null derived unit definition");
+//					}
+//				}
+//			}
+			
+			if( ! origsp.getCompartment().equals("")){
 				createCompartment(newmodel, origmodel, origsp.getCompartment());
 			}
 		}
@@ -400,34 +447,45 @@ public class ReactionExtractor {
 	
 	public Compartment setCompartmentData(Compartment newcp, Compartment cp, Model newmodel, Model origmodel) throws XMLStreamException{
 		newcp.setAnnotation(cp.getAnnotation());
-		newcp.setAnnotation(cp.getAnnotationString());
 		newcp.setCompartmentType(cp.getCompartmentType());
 		newcp.setConstant(cp.getConstant());
 		newcp.setId(cp.getId());
 		newcp.setMetaId(cp.getMetaId());
 		newcp.setName(cp.getName());
-		newcp.setNotes(cp.getNotes());
-		newcp.setNotes(cp.getNotesString());
+		
+		if(cp.isSetNotes())
+			newcp.setNotes(cp.getNotes());
+		
+//		newcp.setNotes(cp.getNotes());
+//		newcp.setNotes(cp.getNotesString());
+		
 		newcp.setOutside(cp.getOutside());
-		newcp.setSBOTerm(cp.getSBOTerm());
+		
+		processSBOterm(newmodel, cp, newcp);
+		
 		newcp.setSize(cp.getSize());
 		newcp.setSpatialDimensions(cp.getSpatialDimensions());
-		newcp.setUnits(cp.getUnits());
-		if(!cp.getUnits().equals("")){
-			if(cp.getDerivedUnitDefinition()!=null && !cp.getDerivedUnitDefinition().getId().equals("")){
-				System.out.println("Compartment " + cp.getId() + " has UnitDefinition " + cp.getDerivedUnitDefinition().getId());
-				newmodel = createUnitDefinition(newmodel, origmodel, cp.getDerivedUnitDefinition());
-			}
-			else{
-				if(origmodel.getUnitDefinition(cp.getUnits())!=null){
-					newmodel = createUnitDefinition(newmodel, origmodel, origmodel.getUnitDefinition(cp.getUnits()));
-				}
-				else{
-					System.out.println(cp.getId() + " had a null derived unit definition");
-				}
-			}
+		
+		if(cp.isSetUnits()) {
+			newmodel = createUnitDefinition(newmodel, origmodel, cp.getDerivedUnitDefinition());
+			newcp.setUnits(cp.getUnits());
 		}
-		newcp.setVolume(cp.getVolume());
+		
+//		if(!cp.getUnits().equals("")){
+//			if(cp.getDerivedUnitDefinition()!=null && !cp.getDerivedUnitDefinition().getId().equals("")){
+//				System.out.println("Compartment " + cp.getId() + " has UnitDefinition " + cp.getDerivedUnitDefinition().getId());
+//				newmodel = createUnitDefinition(newmodel, origmodel, cp.getDerivedUnitDefinition());
+//			}
+//			else{
+//				if(origmodel.getUnitDefinition(cp.getUnits())!=null){
+//					newmodel = createUnitDefinition(newmodel, origmodel, origmodel.getUnitDefinition(cp.getUnits()));
+//				}
+//				else{
+//					System.out.println(cp.getId() + " had a null derived unit definition");
+//				}
+//			}
+//		}
+		//newcp.setVolume(cp.getVolume());
 		return newcp;
 	}
 	
@@ -439,13 +497,21 @@ public class ReactionExtractor {
 			UnitDefinition newud = newmodel.createUnitDefinition();
 			//System.out.println("Creating new units " + ud.getId());
 			newud.setAnnotation(ud.getAnnotation());
-			newud.setAnnotation(ud.getAnnotationString());
+			//newud.setAnnotation(ud.getAnnotationString());
 			newud.setId(ud.getId());
-			newud.setMetaId(ud.getMetaId());
+			
+			if(ud.isSetMetaId())
+				newud.setMetaId(ud.getMetaId());
+			
 			newud.setName(ud.getName());
-			newud.setNotes(ud.getNotes());
-			newud.setNotes(ud.getNotesString());
-			newud.setSBOTerm(ud.getSBOTerm());
+			
+			if(ud.isSetNotes())
+				newud.setNotes(ud.getNotes());
+			
+//			newud.setNotes(ud.getNotesString());
+			
+			processSBOterm(newmodel, ud, newud);
+			
 			for(int u=0; u<ud.getListOfUnits().size(); u++){
 				newmodel = createUnits(newmodel, newud, ud, u);
 			}
@@ -461,20 +527,30 @@ public class ReactionExtractor {
 		newun.setExponent(un.getExponent());
 		//newun.setId(un.getId());
 		newun.setKind(un.getKind());
-		newun.setMetaId(un.getMetaId());
+		
+		if(un.isSetMetaId())
+			newun.setMetaId(un.getMetaId());
+		
 		newun.setMultiplier(un.getMultiplier());
 		//newun.setName(un.getName());
-		newun.setNotes(un.getNotes());
+		
+		if(un.isSetNotes())
+			newun.setNotes(un.getNotes());
+		
 		//newun.setNotes(un.getNotesString());
-		newun.setOffset(un.getOffset());
-		newun.setSBOTerm(un.getSBOTerm());
+		
+		if(newmodel.getLevel()==2 && newmodel.getVersion()==1)
+			newun.setOffset(un.getOffset());
+		
+		processSBOterm(newmodel, un, newun);
+		
 		newun.setScale(un.getScale());
 		return newmodel;
 	}
 	
 	
 	
-	public KineticLaw createKineticLaw(KineticLaw newlaw, KineticLaw oldlaw){
+	public KineticLaw createKineticLaw(KineticLaw newlaw, KineticLaw oldlaw, Model newmodel){
 		newlaw.setAnnotation(oldlaw.getAnnotation());
 		//newlaw.setAnnotation(oldlaw.getAnnotationString());
 		//newlaw.setFormula(oldlaw.getFormula());
@@ -482,11 +558,33 @@ public class ReactionExtractor {
 		newlaw.setMath(oldlaw.getMath());
 		newlaw.setMetaId(oldlaw.getMetaId());
 		//newlaw.setName(oldlaw.getName());
-		newlaw.setNotes(oldlaw.getNotes());
+		
+		if(oldlaw.isSetNotes())
+			newlaw.setNotes(oldlaw.getNotes());
+		
 		//newlaw.setNotes(oldlaw.getNotesString());
-		newlaw.setSBOTerm(oldlaw.getSBOTerm());
-		newlaw.setSubstanceUnits(oldlaw.getSubstanceUnits());
-		newlaw.setTimeUnits(oldlaw.getTimeUnits());
+		
+		processSBOterm(newmodel, oldlaw, newlaw);
+		
+		if(oldlaw.isSetSubstanceUnits())
+			newlaw.setSubstanceUnits(oldlaw.getSubstanceUnits());
+		
+		if(oldlaw.isSetTimeUnits())
+			newlaw.setTimeUnits(oldlaw.getTimeUnits());
+		
 		return newlaw;
+	}
+	
+	
+	
+	// ------------------- Helper methods -------------------
+	
+	public void processSBOterm(Model newmodel, SBase oldsb, SBase newsb) {
+		if(newmodel.getLevel()>=2) {
+			if(newmodel.getLevel()==2 && newmodel.getVersion()>=3 && oldsb.isSetSBOTerm()) {
+				if(oldsb.getSBOTerm()>=0 && oldsb.getSBOTerm()<=9999999)
+					newsb.setSBOTerm(oldsb.getSBOTerm());
+			}
+		}
 	}
 }

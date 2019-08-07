@@ -51,6 +51,10 @@ import uk.ac.ebi.biomodels.BioModelsWSException;
 
 
 public class ReactionView extends JPanel implements ActionListener, MouseListener{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public Object modelidentifier;
 	public String rxnid;
 	public String biomodID;

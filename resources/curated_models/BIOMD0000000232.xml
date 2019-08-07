@@ -1,1046 +1,1027 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" metaid="_094924" version="4">
-  <model id="Nazaret2009_TCA_RC_ATP" metaid="metaid_nazaret" name="Nazaret2009_TCA_RC_ATP">
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model metaid="metaid_nazaret" id="Nazaret2009_TCA_RC_ATP" name="Nazaret2009_TCA_RC_ATP">
     <notes>
       <body xmlns="http://www.w3.org/1999/xhtml">
-        <p>This a model from the article:      <br/>
-        <strong>Mitochondrial energetic metabolism: a simplified model of TCA cycle with ATP production.</strong>
+        <p>
+      This a model from the article:
+      <br/>
+        <strong> Mitochondrial energetic metabolism: a simplified model of TCA cycle with ATP production. 
+</strong>
         <br/>
-          Nazaret C, Heiske M, Thurley K, Mazat JP      <em>J. Theor. Biol.</em>
-          2009 Jun;258(3):455-64      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19007794">19007794</a>
-          ,      <br/>
+Nazaret C, Heiske M, Thurley K, Mazat JP 
+      <em>J. Theor. Biol.</em>2009 Jun;258(3):455-64 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19007794">19007794</a>,
+      <br/>
         <strong>Abstract:</strong>
         <br/>
-          Mitochondria play a central role in cellular energetic metabolism. The essential parts of this metabolism are the tricarboxylic acid (TCA) cycle, the respiratory chain and the adenosine triphosphate (ATP) synthesis machinery. Here a simplified model of these three metabolic components with a limited set of differential equations is presented. The existence of a steady state is demonstrated and results of numerical simulations are presented. The relevance of a simple model to represent actual in vivo behavior is discussed.      </p>
+Mitochondria play a central role in cellular energetic metabolism. The essential parts of this metabolism are the tricarboxylic acid (TCA) cycle, the respiratory chain and the adenosine triphosphate (ATP) synthesis machinery. Here a simplified model of these three metabolic components with a limited set of differential equations is presented. The existence of a steady state is demonstrated and results of numerical simulations are presented. The relevance of a simple model to represent actual in vivo behavior is discussed.
+   </p>
+        <p>To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p>
+        <p>In summary, you are entitled to use this encoded model in absolutely any manner you deem suitable, verbatim, or with modification, alone or embedded it in a larger context, redistribute it, commercially or not, in a restricted way or not.</p>
+        <p>To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pubmed/20587024" target="_blank">Li C, Donizelli M, Rodriguez N, Dharuri H, Endler L, Chelliah V, Li L, He E, Henry A, Stefan MI, Snoep JL, Hucka M, Le Novère N, Laibe C (2010) BioModels Database: An enhanced, curated and annotated resource for published quantitative kinetic models. BMC Syst Biol., 4:92.</a>
+      </p>
     </body>
   </notes>
-    <annotation>
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-        <rdf:Description rdf:about="#metaid_nazaret">
-	<dc:creator>
-	<rdf:Bag>
-	<rdf:li rdf:parseType="Resource">
-	<vCard:N rdf:parseType="Resource">
-	<vCard:Family>Chelliah</vCard:Family>
-	<vCard:Given>Vijayalakshmi</vCard:Given>
-	</vCard:N>
-	<vCard:EMAIL>viji@ebi.ac.uk</vCard:EMAIL>
-	<vCard:ORG rdf:parseType="Resource">
-	<vCard:Orgname>EMBL-EBI</vCard:Orgname>
-	</vCard:ORG>
-	</rdf:li>
-	<rdf:li rdf:parseType="Resource">
-	<vCard:N rdf:parseType="Resource">
-	<vCard:Family>Smallbone</vCard:Family>
-	<vCard:Given>Kieran</vCard:Given>
-	</vCard:N>
-	<vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
-	<vCard:ORG rdf:parseType="Resource">
-	<vCard:Orgname>University of Manchester</vCard:Orgname>
-	</vCard:ORG>
-	</rdf:li>
-	</rdf:Bag>
-	</dc:creator>
-	<dcterms:created rdf:parseType="Resource">
-	<dcterms:W3CDTF>2009-09-10T00:00:00Z</dcterms:W3CDTF>
-	</dcterms:created>
-	<dcterms:modified rdf:parseType="Resource">
-	<dcterms:W3CDTF>2010-01-22T15:30:56Z</dcterms:W3CDTF>
-	</dcterms:modified>
-	<bqmodel:is>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL2594602728"/>
-	</rdf:Bag>
-	</bqmodel:is>
-	<bqmodel:is>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/BIOMD0000000232"/>
-	</rdf:Bag>
-	</bqmodel:is>
-	<bqmodel:isDescribedBy>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/pubmed/19007794"/>
-	</rdf:Bag>
-	</bqmodel:isDescribedBy>
-	<bqbiol:hasTaxon>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/taxonomy/9606"/>
-	</rdf:Bag>
-	</bqbiol:hasTaxon>
-	<bqbiol:hasVersion>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006099"/>
-	<rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0070469"/>
-	<rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006754"/>
-	</rdf:Bag>
-	</bqbiol:hasVersion>
-	<bqbiol:isPartOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/reactome/REACT_6305"/>
-	<rdf:li rdf:resource="http://identifiers.org/reactome/REACT_1785"/>
-	<rdf:li rdf:resource="http://identifiers.org/reactome/REACT_2124"/>
-	</rdf:Bag>
-	</bqbiol:isPartOf>
-	<bqbiol:hasVersion>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.pathway/hsa00020"/>
-	</rdf:Bag>
-	</bqbiol:hasVersion>
-	</rdf:Description>
-	
+  <annotation>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+      <rdf:Description rdf:about="#metaid_nazaret">
+        <dc:creator>
+          <rdf:Bag>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Chelliah</vCard:Family>
+                <vCard:Given>Vijayalakshmi</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL>viji@ebi.ac.uk</vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname>EMBL-EBI</vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+            <rdf:li rdf:parseType="Resource">
+              <vCard:N rdf:parseType="Resource">
+                <vCard:Family>Smallbone</vCard:Family>
+                <vCard:Given>Kieran</vCard:Given>
+              </vCard:N>
+              <vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
+              <vCard:ORG rdf:parseType="Resource">
+                <vCard:Orgname>University of Manchester</vCard:Orgname>
+              </vCard:ORG>
+            </rdf:li>
+          </rdf:Bag>
+        </dc:creator>
+        <dcterms:created rdf:parseType="Resource">
+          <dcterms:W3CDTF>2009-09-10T00:00:00Z</dcterms:W3CDTF>
+        </dcterms:created>
+        <dcterms:modified rdf:parseType="Resource">
+          <dcterms:W3CDTF>2010-01-22T15:30:56Z</dcterms:W3CDTF>
+        </dcterms:modified>
+        <bqmodel:is>
+          <rdf:Bag>
+            <rdf:li rdf:resource="urn:miriam:biomodels.db:BIOMD0000000232"/>
+          </rdf:Bag>
+        </bqmodel:is>
+        <bqmodel:is>
+          <rdf:Bag>
+            <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL2594602728"/>
+          </rdf:Bag>
+        </bqmodel:is>
+        <bqmodel:isDescribedBy>
+          <rdf:Bag>
+            <rdf:li rdf:resource="urn:miriam:pubmed:19007794"/>
+          </rdf:Bag>
+        </bqmodel:isDescribedBy>
+        <bqbiol:occursIn>
+          <rdf:Bag>
+            <rdf:li rdf:resource="urn:miriam:taxonomy:9606"/>
+          </rdf:Bag>
+        </bqbiol:occursIn>
+        <bqbiol:hasVersion>
+          <rdf:Bag>
+            <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006099"/>
+            <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0070469"/>
+            <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006754"/>
+          </rdf:Bag>
+        </bqbiol:hasVersion>
+        <bqbiol:isPartOf>
+          <rdf:Bag>
+            <rdf:li rdf:resource="urn:miriam:reactome:REACT_6305"/>
+            <rdf:li rdf:resource="urn:miriam:reactome:REACT_1785"/>
+            <rdf:li rdf:resource="urn:miriam:reactome:REACT_2124"/>
+          </rdf:Bag>
+        </bqbiol:isPartOf>
+        <bqbiol:hasVersion>
+          <rdf:Bag>
+            <rdf:li rdf:resource="urn:miriam:kegg.pathway:hsa00020"/>
+          </rdf:Bag>
+        </bqbiol:hasVersion>
+      </rdf:Description>
     </rdf:RDF>
   </annotation>
-      <listOfUnitDefinitions>
-      <unitDefinition id="substance" metaid="_094936">
-        <listOfUnits>
-          <unit kind="mole" metaid="_094948" scale="-3"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="C_per_mol" metaid="_094960" name="coulomb per mole">
-        <listOfUnits>
-          <unit kind="coulomb" metaid="_094972" scale="1"/>
-          <unit exponent="-1" kind="mole" metaid="_094984" scale="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="mJ_per_mol_per_K" metaid="_094996" name="milliJoule per mole per Kelvin">
-        <listOfUnits>
-          <unit kind="joule" metaid="_095008" scale="-3"/>
-          <unit exponent="-1" kind="mole" metaid="_095020" scale="1"/>
-          <unit exponent="-1" kind="kelvin" metaid="_095033" scale="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="mJ_per_mol" metaid="_095045" name="milliJoules per mole">
-        <listOfUnits>
-          <unit kind="joule" metaid="_095058" scale="-3"/>
-          <unit exponent="-1" kind="mole" metaid="_095070" scale="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="mM" metaid="_095082" name="millimolar">
-        <listOfUnits>
-          <unit kind="mole" metaid="_095094" scale="-3"/>
-          <unit exponent="-1" kind="litre" metaid="_095106" scale="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="mM_per_mV" metaid="_095118" name="millimolar per millivolt">
-        <listOfUnits>
-          <unit kind="mole" metaid="_095130" scale="-3"/>
-          <unit exponent="-1" kind="litre" metaid="_095142" scale="1"/>
-          <unit exponent="-1" kind="volt" metaid="_095154" scale="-3"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="mM_per_s" metaid="_095166" name="millimolar per second">
-        <listOfUnits>
-          <unit kind="mole" metaid="_095178" scale="-3"/>
-          <unit exponent="-1" kind="litre" metaid="_095190" scale="1"/>
-          <unit exponent="-1" kind="second" metaid="_095202" scale="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="mM_per_s_per_mV" metaid="_095214" name="millimolar per second per millivolt">
-        <listOfUnits>
-          <unit kind="mole" metaid="_095226" scale="-3"/>
-          <unit exponent="-1" kind="litre" metaid="_095238" scale="1"/>
-          <unit exponent="-1" kind="second" metaid="_095250" scale="1"/>
-          <unit exponent="-1" kind="volt" metaid="_095262" scale="-3"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="mV" metaid="_095274" name="millivolt">
-        <listOfUnits>
-          <unit kind="volt" metaid="_095286" scale="-3"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="per_mM" metaid="_095299" name="per mM">
-        <listOfUnits>
-          <unit exponent="-1" kind="mole" metaid="_095311" scale="-3"/>
-          <unit kind="litre" metaid="_095324" scale="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="per_mM_per_s" metaid="_095336" name="per millimolar per second">
-        <listOfUnits>
-          <unit exponent="-1" kind="mole" metaid="_095348" scale="-3"/>
-          <unit kind="litre" metaid="_095360" scale="1"/>
-          <unit exponent="-1" kind="second" metaid="_095372" scale="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="per_mM_squared_per_s" metaid="_095384" name="per millimolar squared per second">
-        <listOfUnits>
-          <unit exponent="-2" kind="mole" metaid="_095396" scale="-3"/>
-          <unit exponent="2" kind="litre" metaid="_095408" scale="1"/>
-          <unit exponent="-1" kind="second" metaid="_095420" scale="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="per_mV" metaid="_095433" name="per millivolt">
-        <listOfUnits>
-          <unit exponent="-1" kind="volt" metaid="_095445" scale="-3"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="per_s" metaid="_095457" name="per second">
-        <listOfUnits>
-          <unit exponent="-1" kind="second" metaid="_095469" scale="1"/>
-        </listOfUnits>
-      </unitDefinition>
-    </listOfUnitDefinitions>
-    <listOfCompartments>
-      <compartment id="cytoplasm" metaid="metaid_cytoplasm" name="cytoplasm" sboTerm="SBO:0000290" size="1">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_cytoplasm">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005737"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+  <listOfUnitDefinitions>
+    <unitDefinition id="substance">
+      <listOfUnits>
+        <unit kind="mole" scale="-3"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="C_per_mol" name="coulomb per mole">
+      <listOfUnits>
+        <unit kind="coulomb" scale="1"/>
+        <unit kind="mole" exponent="-1" scale="1"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="mJ_per_mol_per_K" name="milliJoule per mole per Kelvin">
+      <listOfUnits>
+        <unit kind="joule" scale="-3"/>
+        <unit kind="mole" exponent="-1" scale="1"/>
+        <unit kind="kelvin" exponent="-1" scale="1"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="mJ_per_mol" name="milliJoules per mole">
+      <listOfUnits>
+        <unit kind="joule" scale="-3"/>
+        <unit kind="mole" exponent="-1" scale="1"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="mM" name="millimolar">
+      <listOfUnits>
+        <unit kind="mole" scale="-3"/>
+        <unit kind="litre" exponent="-1" scale="1"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="mM_per_mV" name="millimolar per millivolt">
+      <listOfUnits>
+        <unit kind="mole" scale="-3"/>
+        <unit kind="litre" exponent="-1" scale="1"/>
+        <unit kind="volt" exponent="-1" scale="-3"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="mM_per_s" name="millimolar per second">
+      <listOfUnits>
+        <unit kind="mole" scale="-3"/>
+        <unit kind="litre" exponent="-1" scale="1"/>
+        <unit kind="second" exponent="-1" scale="1"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="mM_per_s_per_mV" name="millimolar per second per millivolt">
+      <listOfUnits>
+        <unit kind="mole" scale="-3"/>
+        <unit kind="litre" exponent="-1" scale="1"/>
+        <unit kind="second" exponent="-1" scale="1"/>
+        <unit kind="volt" exponent="-1" scale="-3"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="mV" name="millivolt">
+      <listOfUnits>
+        <unit kind="volt" scale="-3"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="per_mM" name="per mM">
+      <listOfUnits>
+        <unit kind="mole" exponent="-1" scale="-3"/>
+        <unit kind="litre" scale="1"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="per_mM_per_s" name="per millimolar per second">
+      <listOfUnits>
+        <unit kind="mole" exponent="-1" scale="-3"/>
+        <unit kind="litre" scale="1"/>
+        <unit kind="second" exponent="-1" scale="1"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="per_mM_squared_per_s" name="per millimolar squared per second">
+      <listOfUnits>
+        <unit kind="mole" exponent="-2" scale="-3"/>
+        <unit kind="litre" exponent="2" scale="1"/>
+        <unit kind="second" exponent="-1" scale="1"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="per_mV" name="per millivolt">
+      <listOfUnits>
+        <unit kind="volt" exponent="-1" scale="-3"/>
+      </listOfUnits>
+    </unitDefinition>
+    <unitDefinition id="per_s" name="per second">
+      <listOfUnits>
+        <unit kind="second" exponent="-1" scale="1"/>
+      </listOfUnits>
+    </unitDefinition>
+  </listOfUnitDefinitions>
+  <listOfCompartments>
+    <compartment metaid="metaid_cytoplasm" id="cytoplasm" name="cytoplasm" size="1" sboTerm="SBO:0000290">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_cytoplasm">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0005737"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </compartment>
-      <compartment id="mitochondrion" metaid="metaid_mitochondrion" name="mitochondrial matrix" sboTerm="SBO:0000290" size="1">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_mitochondrion">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005759"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </compartment>
+    <compartment metaid="metaid_mitochondrion" id="mitochondrion" name="mitochondrial matrix" size="1" sboTerm="SBO:0000290">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_mitochondrion">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0005759"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </compartment>
-    </listOfCompartments>
-    <listOfSpecies>
-      <species boundaryCondition="true" compartment="mitochondrion" id="ADP" metaid="metaid_ADP" name="ADP" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_ADP">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:16761"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00008"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </compartment>
+  </listOfCompartments>
+  <listOfSpecies>
+    <species metaid="metaid_ADP" id="ADP" name="ADP" compartment="mitochondrion" boundaryCondition="true" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_ADP">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16761"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00008"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species compartment="mitochondrion" id="ATP" initialConcentration="3.536" metaid="metaid_ATP" name="ATP" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_ATP">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:15422"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_ATP" id="ATP" name="ATP" compartment="mitochondrion" initialConcentration="3.536" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_ATP">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15422"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00002"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species boundaryCondition="true" compartment="mitochondrion" constant="true" id="H" initialConcentration="1" metaid="metaid_H" name="H+" sboTerm="SBO:0000327">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_H">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:24636"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00080"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_H" id="H" name="H+" compartment="mitochondrion" initialConcentration="1" boundaryCondition="true" constant="true" sboTerm="SBO:0000327">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_H">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A24636"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00080"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species boundaryCondition="true" compartment="cytoplasm" constant="true" id="He" initialConcentration="1" metaid="metaid_He" name="H+" sboTerm="SBO:0000327">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_He">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:24636"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00080"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_He" id="He" name="H+" compartment="cytoplasm" initialConcentration="1" boundaryCondition="true" constant="true" sboTerm="SBO:0000327">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_He">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A24636"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00080"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species compartment="mitochondrion" id="NAD" initialConcentration="0.856" metaid="metaid_NAD" name="NAD(+)" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_NAD">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:15846"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00003"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_NAD" id="NAD" name="NAD(+)" compartment="mitochondrion" initialConcentration="0.856" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_NAD">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15846"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00003"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species boundaryCondition="true" compartment="mitochondrion" id="NADH" metaid="metaid_NADH" name="NADH" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_NADH">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:16908"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00004"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_NADH" id="NADH" name="NADH" compartment="mitochondrion" boundaryCondition="true" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_NADH">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16908"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00004"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species compartment="mitochondrion" id="AcCoA" initialConcentration="0.063" metaid="metaid_AcCoA" name="acetyl-CoA" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_AcCoA">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:15351"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00024"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_AcCoA" id="AcCoA" name="acetyl-CoA" compartment="mitochondrion" initialConcentration="0.063" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_AcCoA">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15351"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00024"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species compartment="mitochondrion" id="KG" initialConcentration="0.225" metaid="metaid_KG" name="alpha-ketoglutarate" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_KG">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:16810"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00026"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_KG" id="KG" name="alpha-ketoglutarate" compartment="mitochondrion" initialConcentration="0.225" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_KG">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16810"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00026"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species compartment="mitochondrion" id="Cit" initialConcentration="0.44" metaid="metaid_Cit" name="citrate" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_Cit">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:16947"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00158"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_Cit" id="Cit" name="citrate" compartment="mitochondrion" initialConcentration="0.44" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_Cit">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16947"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00158"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species compartment="mitochondrion" id="OAA" initialConcentration="0.005" metaid="metaid_OAA" name="oxaloacetate" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_OAA">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:16452"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00036"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_OAA" id="OAA" name="oxaloacetate" compartment="mitochondrion" initialConcentration="0.005" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_OAA">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16452"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00036"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species boundaryCondition="true" compartment="mitochondrion" constant="true" id="O2" initialConcentration="1" metaid="metaid_O2" name="oxygen" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_O2">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:15379"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00007"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_O2" id="O2" name="oxygen" compartment="mitochondrion" initialConcentration="1" boundaryCondition="true" constant="true" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_O2">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15379"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00007"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species boundaryCondition="true" compartment="mitochondrion" constant="true" id="iP" initialConcentration="2.44" metaid="metaid_iP" name="phosphate" sboTerm="SBO:0000327">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_iP">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:18367"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00009"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_iP" id="iP" name="phosphate" compartment="mitochondrion" initialConcentration="2.44" boundaryCondition="true" constant="true" sboTerm="SBO:0000327">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_iP">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A18367"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00009"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species compartment="mitochondrion" id="Pyr" initialConcentration="0.154" metaid="metaid_Pyr" name="pyruvate" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_Pyr">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:15361"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00022"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_Pyr" id="Pyr" name="pyruvate" compartment="mitochondrion" initialConcentration="0.154" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_Pyr">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15361"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00022"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-      <species boundaryCondition="true" compartment="mitochondrion" constant="true" id="H2O" initialConcentration="1" metaid="metaid_H2O" name="water" sboTerm="SBO:0000247">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#metaid_H2O">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:15377"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00001"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+    </species>
+    <species metaid="metaid_H2O" id="H2O" name="water" compartment="mitochondrion" initialConcentration="1" boundaryCondition="true" constant="true" sboTerm="SBO:0000247">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#metaid_H2O">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15377"/>
+                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00001"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-            </species>
-    </listOfSpecies>
-    <listOfParameters>
-      <parameter constant="false" id="ATPcrit" metaid="_304773" units="mM"/>
-      <parameter id="At" metaid="_304776" units="mM" value="4.16"/>
-      <parameter id="C" metaid="_304779" units="mM_per_mV" value="6.75E-6"/>
-      <parameter constant="false" id="DeltaGtransport" metaid="_304782" units="mJ_per_mol"/>
-      <parameter constant="false" id="DeltaPsi" metaid="_304785" units="mV"/>
-      <parameter id="DeltaPsim" metaid="_304788" units="mV" value="150"/>
-      <parameter id="F" metaid="_304791" name="Faraday constant" units="C_per_mol" value="96485"/>
-      <parameter constant="false" id="JANT" metaid="_304794" units="mM_per_s"/>
-      <parameter constant="false" id="JATP" metaid="_304797" units="mM_per_s"/>
-      <parameter constant="false" id="Jleak" metaid="_304800" units="mM_per_s"/>
-      <parameter constant="false" id="Jresp" metaid="_304803" units="mM_per_s"/>
-      <parameter id="K" metaid="_304806" units="mM" value="2"/>
-      <parameter id="Kapp" metaid="_304809" units="per_mM" value="4.4E-9"/>
-      <parameter id="Nt" metaid="_304812" units="mM" value="1.07"/>
-      <parameter id="R" metaid="_304815" name="gas constant" units="mJ_per_mol_per_K" value="8314"/>
-      <parameter id="T" metaid="_304818" name="absolute temperature" units="kelvin" value="298"/>
-      <parameter id="a" metaid="_304821" units="per_mV" value="0.1"/>
-      <parameter id="b" metaid="_304824" units="per_mM" value="0.004"/>
-      <parameter id="kANT" metaid="_304827" units="per_s" value="0.05387"/>
-      <parameter id="kATP" metaid="_304830" units="mM_per_s" value="131.9"/>
-      <parameter id="kleak" metaid="_304833" units="mM_per_s_per_mV" value="0.000426"/>
-      <parameter id="kresp" metaid="_304836" units="mM_per_s" value="2.5"/>
-    </listOfParameters>
-    <listOfInitialAssignments>
-      <initialAssignment metaid="_095481" symbol="DeltaPsi">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
-          <cn type="integer"> 150 </cn>
-        </math>
-            </initialAssignment>
-    </listOfInitialAssignments>
-    <listOfRules>
-      <assignmentRule metaid="_304747" variable="JANT">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+    </species>
+  </listOfSpecies>
+  <listOfParameters>
+    <parameter metaid="_304773" id="ATPcrit" units="mM" constant="false"/>
+    <parameter metaid="_304776" id="At" value="4.16" units="mM"/>
+    <parameter metaid="_304779" id="C" value="6.75e-06" units="mM_per_mV"/>
+    <parameter metaid="_304782" id="DeltaGtransport" units="mJ_per_mol" constant="false"/>
+    <parameter metaid="_304785" id="DeltaPsi" units="mV" constant="false"/>
+    <parameter metaid="_304788" id="DeltaPsim" value="150" units="mV"/>
+    <parameter metaid="_304791" id="F" name="Faraday constant" value="96485" units="C_per_mol"/>
+    <parameter metaid="_304794" id="JANT" units="mM_per_s" constant="false"/>
+    <parameter metaid="_304797" id="JATP" units="mM_per_s" constant="false"/>
+    <parameter metaid="_304800" id="Jleak" units="mM_per_s" constant="false"/>
+    <parameter metaid="_304803" id="Jresp" units="mM_per_s" constant="false"/>
+    <parameter metaid="_304806" id="K" value="2" units="mM"/>
+    <parameter metaid="_304809" id="Kapp" value="4.4e-09" units="per_mM"/>
+    <parameter metaid="_304812" id="Nt" value="1.07" units="mM"/>
+    <parameter metaid="_304815" id="R" name="gas constant" value="8314" units="mJ_per_mol_per_K"/>
+    <parameter metaid="_304818" id="T" name="absolute temperature" value="298" units="kelvin"/>
+    <parameter metaid="_304821" id="a" value="0.1" units="per_mV"/>
+    <parameter metaid="_304824" id="b" value="0.004" units="per_mM"/>
+    <parameter metaid="_304827" id="kANT" value="0.05387" units="per_s"/>
+    <parameter metaid="_304830" id="kATP" value="131.9" units="mM_per_s"/>
+    <parameter metaid="_304833" id="kleak" value="0.000426" units="mM_per_s_per_mV"/>
+    <parameter metaid="_304836" id="kresp" value="2.5" units="mM_per_s"/>
+  </listOfParameters>
+  <listOfInitialAssignments>
+    <initialAssignment symbol="DeltaPsi">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <cn type="integer"> 150 </cn>
+      </math>
+    </initialAssignment>
+  </listOfInitialAssignments>
+  <listOfRules>
+    <assignmentRule metaid="_304747" variable="JANT">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <ci> kANT </ci>
+          <ci> ATP </ci>
+        </apply>
+      </math>
+    </assignmentRule>
+    <assignmentRule metaid="_304750" variable="Jleak">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <ci> kleak </ci>
+          <ci> DeltaPsi </ci>
+        </apply>
+      </math>
+    </assignmentRule>
+    <rateRule metaid="_304753" variable="DeltaPsi">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
           <apply>
-            <times/>
-            <ci> kANT </ci>
-            <ci> ATP </ci>
-          </apply>
-        </math>
-            </assignmentRule>
-      <assignmentRule metaid="_304750" variable="Jleak">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
-          <apply>
-            <times/>
-            <ci> kleak </ci>
-            <ci> DeltaPsi </ci>
-          </apply>
-        </math>
-            </assignmentRule>
-      <rateRule metaid="_304753" variable="DeltaPsi">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
-          <apply>
-            <divide/>
+            <minus/>
             <apply>
               <minus/>
               <apply>
                 <minus/>
                 <apply>
-                  <minus/>
-                  <apply>
-                    <times/>
-                    <cn type="integer"> 10 </cn>
-                    <ci> Jresp </ci>
-                  </apply>
-                  <apply>
-                    <times/>
-                    <cn type="integer"> 3 </cn>
-                    <ci> JATP </ci>
-                  </apply>
+                  <times/>
+                  <cn type="integer"> 10 </cn>
+                  <ci> Jresp </ci>
                 </apply>
-                <ci> Jleak </ci>
-              </apply>
-              <ci> JANT </ci>
-            </apply>
-            <ci> C </ci>
-          </apply>
-        </math>
-            </rateRule>
-      <assignmentRule metaid="_304756" variable="Jresp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
-          <apply>
-            <divide/>
-            <apply>
-              <times/>
-              <ci> kresp </ci>
-              <apply>
-                <divide/>
-                <apply>
-                  <minus/>
-                  <ci> Nt </ci>
-                  <ci> NAD </ci>
-                </apply>
-                <apply>
-                  <minus/>
-                  <apply>
-                    <plus/>
-                    <ci> K </ci>
-                    <ci> Nt </ci>
-                  </apply>
-                  <ci> NAD </ci>
-                </apply>
-              </apply>
-            </apply>
-            <apply>
-              <plus/>
-              <cn type="integer"> 1 </cn>
-              <apply>
-                <exp/>
                 <apply>
                   <times/>
-                  <ci> a </ci>
-                  <apply>
-                    <minus/>
-                    <ci> DeltaPsi </ci>
-                    <ci> DeltaPsim </ci>
-                  </apply>
+                  <cn type="integer"> 3 </cn>
+                  <ci> JATP </ci>
                 </apply>
               </apply>
+              <ci> Jleak </ci>
             </apply>
+            <ci> JANT </ci>
           </apply>
-        </math>
-            </assignmentRule>
-      <assignmentRule metaid="_304759" variable="JATP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <ci> C </ci>
+        </apply>
+      </math>
+    </rateRule>
+    <assignmentRule metaid="_304756" variable="Jresp">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
           <apply>
             <times/>
-            <ci> kATP </ci>
+            <ci> kresp </ci>
             <apply>
-              <minus/>
+              <divide/>
               <apply>
-                <divide/>
-                <cn type="integer"> 2 </cn>
+                <minus/>
+                <ci> Nt </ci>
+                <ci> NAD </ci>
+              </apply>
+              <apply>
+                <minus/>
                 <apply>
                   <plus/>
-                  <cn type="integer"> 1 </cn>
-                  <apply>
-                    <exp/>
-                    <apply>
-                      <times/>
-                      <ci> b </ci>
-                      <apply>
-                        <minus/>
-                        <ci> ATP </ci>
-                        <ci> ATPcrit </ci>
-                      </apply>
-                    </apply>
-                  </apply>
+                  <ci> K </ci>
+                  <ci> Nt </ci>
                 </apply>
+                <ci> NAD </ci>
               </apply>
-              <cn type="integer"> 1 </cn>
             </apply>
           </apply>
-        </math>
-            </assignmentRule>
-      <assignmentRule metaid="_304762" variable="ATPcrit">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <apply>
-            <divide/>
-            <ci> At </ci>
+            <plus/>
+            <cn type="integer"> 1 </cn>
             <apply>
-              <plus/>
-              <cn type="integer"> 1 </cn>
+              <exp/>
               <apply>
-                <divide/>
+                <times/>
+                <ci> a </ci>
+                <apply>
+                  <minus/>
+                  <ci> DeltaPsi </ci>
+                  <ci> DeltaPsim </ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </apply>
+      </math>
+    </assignmentRule>
+    <assignmentRule metaid="_304759" variable="JATP">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <ci> kATP </ci>
+          <apply>
+            <minus/>
+            <apply>
+              <divide/>
+              <cn type="integer"> 2 </cn>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
                 <apply>
                   <exp/>
                   <apply>
-                    <divide/>
+                    <times/>
+                    <ci> b </ci>
                     <apply>
-                      <times/>
-                      <cn type="integer"> -3 </cn>
-                      <ci> DeltaGtransport </ci>
-                    </apply>
-                    <apply>
-                      <times/>
-                      <ci> R </ci>
-                      <ci> T </ci>
+                      <minus/>
+                      <ci> ATP </ci>
+                      <ci> ATPcrit </ci>
                     </apply>
                   </apply>
                 </apply>
+              </apply>
+            </apply>
+            <cn type="integer"> 1 </cn>
+          </apply>
+        </apply>
+      </math>
+    </assignmentRule>
+    <assignmentRule metaid="_304762" variable="ATPcrit">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
+          <ci> At </ci>
+          <apply>
+            <plus/>
+            <cn type="integer"> 1 </cn>
+            <apply>
+              <divide/>
+              <apply>
+                <exp/>
                 <apply>
-                  <times/>
-                  <ci> Kapp </ci>
-                  <ci> iP </ci>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -3 </cn>
+                    <ci> DeltaGtransport </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> R </ci>
+                    <ci> T </ci>
+                  </apply>
                 </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> Kapp </ci>
+                <ci> iP </ci>
               </apply>
             </apply>
           </apply>
-        </math>
-            </assignmentRule>
-      <assignmentRule metaid="_304765" variable="DeltaGtransport">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+        </apply>
+      </math>
+    </assignmentRule>
+    <assignmentRule metaid="_304765" variable="DeltaGtransport">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <cn> 1.2 </cn>
+          <ci> F </ci>
+          <ci> DeltaPsi </ci>
+        </apply>
+      </math>
+    </assignmentRule>
+    <assignmentRule metaid="_304768" variable="ADP">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <minus/>
+          <ci> At </ci>
+          <ci> ATP </ci>
+        </apply>
+      </math>
+    </assignmentRule>
+    <assignmentRule metaid="_304771" variable="NADH">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <minus/>
+          <ci> Nt </ci>
+          <ci> NAD </ci>
+        </apply>
+      </math>
+    </assignmentRule>
+  </listOfRules>
+  <listOfReactions>
+    <reaction metaid="_304703" id="v1" name="v1" reversible="false" sboTerm="SBO:0000185">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304703">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006848"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
+        </rdf:RDF>
+      </annotation>
+      <listOfProducts>
+        <speciesReference species="Pyr"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <times/>
-            <cn> 1.2 </cn>
-            <ci> F </ci>
-            <ci> DeltaPsi </ci>
+            <ci> mitochondrion </ci>
+            <ci> k1 </ci>
           </apply>
         </math>
-            </assignmentRule>
-      <assignmentRule metaid="_304768" variable="ADP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+        <listOfParameters>
+          <parameter metaid="_304731" id="k1" value="0.038" units="mM_per_s"/>
+        </listOfParameters>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304704" id="v2" name="v2" reversible="false" sboTerm="SBO:0000399">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304704">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:kegg.reaction:R00209"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
+        </rdf:RDF>
+      </annotation>
+      <listOfReactants>
+        <speciesReference species="Pyr"/>
+        <speciesReference species="NAD"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference species="AcCoA"/>
+        <speciesReference species="NADH"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
-            <minus/>
-            <ci> At </ci>
-            <ci> ATP </ci>
-          </apply>
-        </math>
-            </assignmentRule>
-      <assignmentRule metaid="_304771" variable="NADH">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
-          <apply>
-            <minus/>
-            <ci> Nt </ci>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> k2 </ci>
+            <ci> Pyr </ci>
             <ci> NAD </ci>
           </apply>
         </math>
-            </assignmentRule>
-    </listOfRules>
-    <listOfReactions>
-      <reaction id="v1" metaid="_304703" name="v1" reversible="false" sboTerm="SBO:0000185">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304703">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006848"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+        <listOfParameters>
+          <parameter metaid="_304733" id="k2" value="0.152" units="per_mM_per_s"/>
+        </listOfParameters>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304705" id="v3" name="v3" reversible="false" sboTerm="SBO:0000210">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304705">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:kegg.reaction:R00351"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-              <listOfProducts>
-          <speciesReference metaid="_095493" species="Pyr"/>
-        </listOfProducts>
-        <kineticLaw metaid="_095505">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
-            <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> k1 </ci>
-            </apply>
-          </math>
-                  <listOfParameters>
-            <parameter id="k1" metaid="_304731" units="mM_per_s" value="0.038"/>
-          </listOfParameters>
-        </kineticLaw>
-      </reaction>
-      <reaction id="v2" metaid="_304704" name="v2" reversible="false" sboTerm="SBO:0000399">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304704">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00209"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+      <listOfReactants>
+        <speciesReference species="OAA"/>
+        <speciesReference species="AcCoA"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference species="Cit"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> k3 </ci>
+            <ci> OAA </ci>
+            <ci> AcCoA </ci>
+          </apply>
+        </math>
+        <listOfParameters>
+          <parameter metaid="_304734" id="k3" value="57.142" units="per_mM_per_s"/>
+        </listOfParameters>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304706" id="v4" name="v4" reversible="false" sboTerm="SBO:0000399">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304706">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:kegg.reaction:R00709"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-              <listOfReactants>
-          <speciesReference metaid="_095517" species="Pyr"/>
-          <speciesReference metaid="_095529" species="NAD"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference metaid="_095541" species="AcCoA"/>
-          <speciesReference metaid="_095553" species="NADH"/>
-        </listOfProducts>
-        <kineticLaw metaid="_095565">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
-            <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> k2 </ci>
-              <ci> Pyr </ci>
-              <ci> NAD </ci>
-            </apply>
-          </math>
-                  <listOfParameters>
-            <parameter id="k2" metaid="_304733" units="per_mM_per_s" value="0.152"/>
-          </listOfParameters>
-        </kineticLaw>
-      </reaction>
-      <reaction id="v3" metaid="_304705" name="v3" reversible="false" sboTerm="SBO:0000210">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304705">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00351"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+      <listOfReactants>
+        <speciesReference species="Cit"/>
+        <speciesReference species="NAD"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference species="KG"/>
+        <speciesReference species="NADH"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> k4 </ci>
+            <ci> Cit </ci>
+            <ci> NAD </ci>
+          </apply>
+        </math>
+        <listOfParameters>
+          <parameter metaid="_304735" id="k4" value="0.053" units="per_mM_per_s"/>
+        </listOfParameters>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304709" id="v5" name="v5" reversible="false" sboTerm="SBO:0000399">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304709">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:kegg.reaction:R00355"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-              <listOfReactants>
-          <speciesReference metaid="_095577" species="OAA"/>
-          <speciesReference metaid="_095589" species="AcCoA"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference metaid="_095601" species="Cit"/>
-        </listOfProducts>
-        <kineticLaw metaid="_095613">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+      <listOfReactants>
+        <speciesReference species="KG"/>
+        <speciesReference species="ADP"/>
+        <speciesReference species="NAD" stoichiometry="2"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference species="OAA"/>
+        <speciesReference species="ATP"/>
+        <speciesReference species="NADH" stoichiometry="2"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> k5 </ci>
+            <ci> KG </ci>
+            <ci> NAD </ci>
             <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> k3 </ci>
-              <ci> OAA </ci>
-              <ci> AcCoA </ci>
-            </apply>
-          </math>
-                  <listOfParameters>
-            <parameter id="k3" metaid="_304734" units="per_mM_per_s" value="57.142"/>
-          </listOfParameters>
-        </kineticLaw>
-      </reaction>
-      <reaction id="v4" metaid="_304706" name="v4" reversible="false" sboTerm="SBO:0000399">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304706">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00709"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-        </rdf:RDF>
-      </annotation>
-              <listOfReactants>
-          <speciesReference metaid="_095625" species="Cit"/>
-          <speciesReference metaid="_095637" species="NAD"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference metaid="_095648" species="KG"/>
-          <speciesReference metaid="_095660" species="NADH"/>
-        </listOfProducts>
-        <kineticLaw metaid="_095672">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
-            <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> k4 </ci>
-              <ci> Cit </ci>
-              <ci> NAD </ci>
-            </apply>
-          </math>
-                  <listOfParameters>
-            <parameter id="k4" metaid="_304735" units="per_mM_per_s" value="0.053"/>
-          </listOfParameters>
-        </kineticLaw>
-      </reaction>
-      <reaction id="v5" metaid="_304709" name="v5" reversible="false" sboTerm="SBO:0000399">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304709">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00355"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-        </rdf:RDF>
-      </annotation>
-              <listOfReactants>
-          <speciesReference metaid="_095684" species="KG"/>
-          <speciesReference metaid="_095696" species="ADP"/>
-          <speciesReference metaid="_095708" species="NAD" stoichiometry="2"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference metaid="_095720" species="OAA"/>
-          <speciesReference metaid="_095732" species="ATP"/>
-          <speciesReference metaid="_095744" species="NADH" stoichiometry="2"/>
-        </listOfProducts>
-        <kineticLaw metaid="_095756">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
-            <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> k5 </ci>
-              <ci> KG </ci>
-              <ci> NAD </ci>
-              <apply>
-                <minus/>
-                <ci> At </ci>
-                <ci> ATP </ci>
-              </apply>
-            </apply>
-          </math>
-                  <listOfParameters>
-            <parameter id="k5" metaid="_304737" units="per_mM_squared_per_s" value="0.082361"/>
-          </listOfParameters>
-        </kineticLaw>
-      </reaction>
-      <reaction id="v6" metaid="_304712" name="v6" sboTerm="SBO:0000403">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304712">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00355"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-        </rdf:RDF>
-      </annotation>
-              <listOfReactants>
-          <speciesReference metaid="_095768" species="OAA"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference metaid="_095780" species="KG"/>
-        </listOfProducts>
-        <kineticLaw metaid="_095792">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
-            <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> k6 </ci>
-              <apply>
-                <minus/>
-                <ci> OAA </ci>
-                <apply>
-                  <divide/>
-                  <ci> KG </ci>
-                  <ci> Keq </ci>
-                </apply>
-              </apply>
-            </apply>
-          </math>
-                  <listOfParameters>
-            <parameter id="k6" metaid="_304738" units="per_s" value="0.0032"/>
-            <parameter id="Keq" metaid="_304739" sboTerm="SBO:0000281" units="dimensionless" value="0.3975"/>
-          </listOfParameters>
-        </kineticLaw>
-      </reaction>
-      <reaction id="v7" metaid="_304715" name="v7" reversible="false" sboTerm="SBO:0000210">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304715">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00344"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-        </rdf:RDF>
-      </annotation>
-              <listOfReactants>
-          <speciesReference metaid="_095804" species="Pyr"/>
-          <speciesReference metaid="_095816" species="ATP"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference metaid="_095828" species="OAA"/>
-          <speciesReference metaid="_095840" species="ADP"/>
-        </listOfProducts>
-        <kineticLaw metaid="_095852">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
-            <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> k7 </ci>
-              <ci> Pyr </ci>
+              <minus/>
+              <ci> At </ci>
               <ci> ATP </ci>
             </apply>
-          </math>
-                  <listOfParameters>
-            <parameter id="k7" metaid="_304740" units="per_mM_per_s" value="0.04"/>
-          </listOfParameters>
-        </kineticLaw>
-      </reaction>
-      <reaction id="v8" metaid="_304718" name="v8" reversible="false" sboTerm="SBO:0000185">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304718">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0015729"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+          </apply>
+        </math>
+        <listOfParameters>
+          <parameter metaid="_304737" id="k5" value="0.082361" units="per_mM_squared_per_s"/>
+        </listOfParameters>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304712" id="v6" name="v6" sboTerm="SBO:0000403">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304712">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:kegg.reaction:R00355"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-              <listOfReactants>
-          <speciesReference metaid="_095864" species="OAA"/>
-        </listOfReactants>
-        <kineticLaw metaid="_095876">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+      <listOfReactants>
+        <speciesReference species="OAA"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference species="KG"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> k6 </ci>
             <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> k8 </ci>
+              <minus/>
               <ci> OAA </ci>
+              <apply>
+                <divide/>
+                <ci> KG </ci>
+                <ci> Keq </ci>
+              </apply>
             </apply>
-          </math>
-                  <listOfParameters>
-            <parameter id="k8" metaid="_304742" units="per_s" value="3.6"/>
-          </listOfParameters>
-        </kineticLaw>
-      </reaction>
-      <reaction id="vresp" metaid="_304721" name="vresp" reversible="false" sboTerm="SBO:0000201">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304721">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R07171"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+          </apply>
+        </math>
+        <listOfParameters>
+          <parameter metaid="_304738" id="k6" value="0.0032" units="per_s"/>
+          <parameter metaid="_304739" id="Keq" value="0.3975" units="dimensionless" sboTerm="SBO:0000281"/>
+        </listOfParameters>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304715" id="v7" name="v7" reversible="false" sboTerm="SBO:0000210">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304715">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:kegg.reaction:R00344"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-              <listOfReactants>
-          <speciesReference metaid="_095888" species="NADH"/>
-          <speciesReference metaid="_095901" species="O2" stoichiometry="0.5"/>
-          <speciesReference metaid="_095913" species="H" stoichiometry="11"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference metaid="_095925" species="NAD"/>
-          <speciesReference metaid="_095937" species="H2O"/>
-          <speciesReference metaid="_095949" species="He" stoichiometry="10"/>
-        </listOfProducts>
-        <kineticLaw metaid="_095961">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
-            <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> Jresp </ci>
-            </apply>
-          </math>
-                </kineticLaw>
-      </reaction>
-      <reaction id="vATP" metaid="_304724" name="vATP" sboTerm="SBO:0000216">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304724">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R05227"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+      <listOfReactants>
+        <speciesReference species="Pyr"/>
+        <speciesReference species="ATP"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference species="OAA"/>
+        <speciesReference species="ADP"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> k7 </ci>
+            <ci> Pyr </ci>
+            <ci> ATP </ci>
+          </apply>
+        </math>
+        <listOfParameters>
+          <parameter metaid="_304740" id="k7" value="0.04" units="per_mM_per_s"/>
+        </listOfParameters>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304718" id="v8" name="v8" reversible="false" sboTerm="SBO:0000185">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304718">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0015729"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-              <listOfReactants>
-          <speciesReference metaid="_095973" species="ADP"/>
-          <speciesReference metaid="_095985" species="iP"/>
-          <speciesReference metaid="_095997" species="He" stoichiometry="3"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference metaid="_096009" species="ATP"/>
-          <speciesReference metaid="_096021" species="H2O"/>
-          <speciesReference metaid="_096033" species="H" stoichiometry="3"/>
-        </listOfProducts>
-        <kineticLaw metaid="_096045">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
-            <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> JATP </ci>
-            </apply>
-          </math>
-                </kineticLaw>
-      </reaction>
-      <reaction id="vANT" metaid="_304727" name="vANT" reversible="false" sboTerm="SBO:0000330">
-        <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_304727">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00086"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
+      <listOfReactants>
+        <speciesReference species="OAA"/>
+      </listOfReactants>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> k8 </ci>
+            <ci> OAA </ci>
+          </apply>
+        </math>
+        <listOfParameters>
+          <parameter metaid="_304742" id="k8" value="3.6" units="per_s"/>
+        </listOfParameters>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304721" id="vresp" name="vresp" reversible="false" sboTerm="SBO:0000201">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304721">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:kegg.reaction:R07171"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
         </rdf:RDF>
       </annotation>
-              <listOfReactants>
-          <speciesReference metaid="_096058" species="ATP"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference metaid="_096071" species="ADP"/>
-        </listOfProducts>
-        <kineticLaw metaid="_096083">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
-            <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> JANT </ci>
-            </apply>
-          </math>
-                </kineticLaw>
-      </reaction>
-      <reaction id="vleak" metaid="_304730" name="vleak" reversible="false" sboTerm="SBO:0000185">
-        <listOfReactants>
-          <speciesReference metaid="_096095" species="He"/>
-        </listOfReactants>
-        <listOfProducts>
-          <speciesReference metaid="_096107" species="H"/>
-        </listOfProducts>
-        <kineticLaw metaid="_096119">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
-            <apply>
-              <times/>
-              <ci> mitochondrion </ci>
-              <ci> Jleak </ci>
-            </apply>
-          </math>
-                </kineticLaw>
-      </reaction>
-    </listOfReactions>
-  </model>
+      <listOfReactants>
+        <speciesReference species="NADH"/>
+        <speciesReference species="O2" stoichiometry="0.5"/>
+        <speciesReference species="H" stoichiometry="11"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference species="NAD"/>
+        <speciesReference species="H2O"/>
+        <speciesReference species="He" stoichiometry="10"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> Jresp </ci>
+          </apply>
+        </math>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304724" id="vATP" name="vATP" sboTerm="SBO:0000216">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304724">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:kegg.reaction:R05227"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
+        </rdf:RDF>
+      </annotation>
+      <listOfReactants>
+        <speciesReference species="ADP"/>
+        <speciesReference species="iP"/>
+        <speciesReference species="He" stoichiometry="3"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference species="ATP"/>
+        <speciesReference species="H2O"/>
+        <speciesReference species="H" stoichiometry="3"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> JATP </ci>
+          </apply>
+        </math>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304727" id="vANT" name="vANT" reversible="false" sboTerm="SBO:0000330">
+      <annotation>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:Description rdf:about="#_304727">
+            <bqbiol:isVersionOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="urn:miriam:kegg.reaction:R00086"/>
+              </rdf:Bag>
+            </bqbiol:isVersionOf>
+          </rdf:Description>
+        </rdf:RDF>
+      </annotation>
+      <listOfReactants>
+        <speciesReference species="ATP"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference species="ADP"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> JANT </ci>
+          </apply>
+        </math>
+      </kineticLaw>
+    </reaction>
+    <reaction metaid="_304730" id="vleak" name="vleak" reversible="false" sboTerm="SBO:0000185">
+      <listOfReactants>
+        <speciesReference species="He"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference species="H"/>
+      </listOfProducts>
+      <kineticLaw>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> mitochondrion </ci>
+            <ci> Jleak </ci>
+          </apply>
+        </math>
+      </kineticLaw>
+    </reaction>
+  </listOfReactions>
+</model>
 </sbml>

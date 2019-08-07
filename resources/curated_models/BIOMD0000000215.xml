@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<sbml xmlns="http://www.sbml.org/sbml/level2/version3" level="2" metaid="metaid_0000001" version="3">
-  <model id="Schulz2009_Th1_differentiation" metaid="_750006" name="Schulz2009_Th1_differentiation">
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version3" metaid="metaid_0000001" level="2" version="3">
+  <model metaid="_750006" id="Schulz2009_Th1_differentiation" name="Schulz2009_Th1_differentiation">
     <notes>
       <body xmlns="http://www.w3.org/1999/xhtml">
         <p>
@@ -28,75 +28,77 @@ schulz@drfz.de
 Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenstrasse 42, 10115 Berlin, Germany.
       <br/>
           <br/></p>
-          <p>This model originates from BioModels Database: A Database of Annotated Published Models. It is copyright (c) 2005-2009 The BioModels Team.<br/>For more information see the <a href="http://www.ebi.ac.uk/biomodels/legal.html" target="_blank">terms of use</a>.<br/>To cite BioModels Database, please use <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pubmed&amp;pubmedid=16381960" target="_blank"> Le Novère N., Bornstein B., Broicher A., Courtot M., Donizelli M., Dharuri H., Li L., Sauro H., Schilstra M., Shapiro B., Snoep J.L., Hucka M. (2006) BioModels Database: A Free, Centralized Database of Curated, Published, Quantitative Kinetic Models of Biochemical and Cellular Systems Nucleic Acids Res., 34: D689-D691.</a>
+          <p>This model originates from BioModels Database: A Database of Annotated Published Models. It is copyright (c) 2005-2009 The BioModels Team.<br/>To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p>
+          <p>In summary, you are entitled to use this encoded model in absolutely any manner you deem suitable, verbatim, or with modification, alone or embedded it in a larger context, redistribute it, commercially or not, in a restricted way or not..<br/>
+          <br/>
+To cite BioModels Database, please use <a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pubmed&amp;pubmedid=16381960" target="_blank"> Le Novère N., Bornstein B., Broicher A., Courtot M., Donizelli M., Dharuri H., Li L., Sauro H., Schilstra M., Shapiro B., Snoep J.L., Hucka M. (2006) BioModels Database: A Free, Centralized Database of Curated, Published, Quantitative Kinetic Models of Biochemical and Cellular Systems Nucleic Acids Res., 34: D689-D691.</a>
         </p>
       </body>
     </notes>
     <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
         <rdf:Description rdf:about="#_750006">
-	<dc:creator>
-	<rdf:Bag>
-	<rdf:li rdf:parseType="Resource">
-	<vCard:N rdf:parseType="Resource">
-	<vCard:Family>Chelliah</vCard:Family>
-	<vCard:Given>Vijayalakshmi</vCard:Given>
-	</vCard:N>
-	<vCard:EMAIL>viji@ebi.ac.uk</vCard:EMAIL>
-	<vCard:ORG rdf:parseType="Resource">
-	<vCard:Orgname>EMBL-EBI</vCard:Orgname>
-	</vCard:ORG>
-	</rdf:li>
-	<rdf:li rdf:parseType="Resource">
-	<vCard:N rdf:parseType="Resource">
-	<vCard:Family>Schulz</vCard:Family>
-	<vCard:Given>Edda</vCard:Given>
-	</vCard:N>
-	<vCard:EMAIL>schulz@drfz.de</vCard:EMAIL>
-	<vCard:ORG rdf:parseType="Resource">
-	<vCard:Orgname>Humboldt Universität</vCard:Orgname>
-	</vCard:ORG>
-	</rdf:li>
-	</rdf:Bag>
-	</dc:creator>
-	<dcterms:created rdf:parseType="Resource">
-	<dcterms:W3CDTF>2009-06-10T14:32:34Z</dcterms:W3CDTF>
-	</dcterms:created>
-	<dcterms:modified rdf:parseType="Resource">
-	<dcterms:W3CDTF>2014-10-10T10:51:58Z</dcterms:W3CDTF>
-	</dcterms:modified>
-	<bqmodel:is>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL9284712021"/>
-	</rdf:Bag>
-	</bqmodel:is>
-	<bqmodel:is>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/BIOMD0000000215"/>
-	</rdf:Bag>
-	</bqmodel:is>
-	<bqmodel:isDescribedBy>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/pubmed/19409816"/>
-	</rdf:Bag>
-	</bqmodel:isDescribedBy>
-	<bqbiol:hasTaxon>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/taxonomy/10090"/>
-	</rdf:Bag>
-	</bqbiol:hasTaxon>
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0030217"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-      <listOfFunctionDefinitions>
-      <functionDefinition id="function_1" metaid="_750086" name="Rate Law for Tbet IFNg dependent transcription">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <dc:creator rdf:parseType="Resource">
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Chelliah</vCard:Family>
+                  <vCard:Given>Vijayalakshmi</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>viji@ebi.ac.uk</vCard:EMAIL>
+                <vCard:ORG>
+                  <vCard:Orgname>EMBL-EBI</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Schulz</vCard:Family>
+                  <vCard:Given>Edda</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>schulz@drfz.de</vCard:EMAIL>
+                <vCard:ORG>
+                  <vCard:Orgname>Humboldt Universität</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2009-06-10T14:32:34Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2011-09-08T12:14:34Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:biomodels.db:BIOMD0000000215"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL9284712021"/>
+            </rdf:Bag>
+          </bqmodel:is>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:pubmed:19409816"/>
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+          <bqbiol:occursIn>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:taxonomy:10090"/>
+            </rdf:Bag>
+          </bqbiol:occursIn>
+          <bqbiol:isVersionOf>
+            <rdf:Bag>
+              <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0030217"/>
+            </rdf:Bag>
+          </bqbiol:isVersionOf>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+    <listOfFunctionDefinitions>
+      <functionDefinition metaid="_750086" id="function_1" name="Rate Law for Tbet IFNg dependent transcription">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
               <ci> Ag </ci>
@@ -137,9 +139,9 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
             </apply>
           </lambda>
         </math>
-            </functionDefinition>
-      <functionDefinition id="function_3" metaid="_750087" name="Rate Law for Tbet basal expression">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+      </functionDefinition>
+      <functionDefinition metaid="_750087" id="function_3" name="Rate Law for Tbet basal expression">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
               <ci> a1 </ci>
@@ -147,9 +149,9 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
             <ci> a1 </ci>
           </lambda>
         </math>
-            </functionDefinition>
-      <functionDefinition id="function_2" metaid="_750088" name="Rate Law for Rec dependent transcription of TBet">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+      </functionDefinition>
+      <functionDefinition metaid="_750088" id="function_2" name="Rate Law for Rec dependent transcription of TBet">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
               <ci> a3 </ci>
@@ -164,9 +166,9 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
             </apply>
           </lambda>
         </math>
-            </functionDefinition>
-      <functionDefinition id="function_4" metaid="_750091" name="Translation rate law">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+      </functionDefinition>
+      <functionDefinition metaid="_750091" id="function_4" name="Translation rate law">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
               <ci> b </ci>
@@ -181,9 +183,9 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
             </apply>
           </lambda>
         </math>
-            </functionDefinition>
-      <functionDefinition id="function_5" metaid="_750094" name="Rate Law for Rec Transcription">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+      </functionDefinition>
+      <functionDefinition metaid="_750094" id="function_5" name="Rate Law for Rec Transcription">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
               <ci> a4 </ci>
@@ -213,9 +215,9 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
             </apply>
           </lambda>
         </math>
-            </functionDefinition>
-      <functionDefinition id="function_6" metaid="_750095" name="Rate Law for IFN transcription">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+      </functionDefinition>
+      <functionDefinition metaid="_750095" id="function_6" name="Rate Law for IFN transcription">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
               <ci> a5 </ci>
@@ -271,155 +273,144 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
             </apply>
           </lambda>
         </math>
-            </functionDefinition>
+      </functionDefinition>
     </listOfFunctionDefinitions>
     <listOfUnitDefinitions>
-      <unitDefinition id="time" metaid="metaid_0000052">
+      <unitDefinition metaid="metaid_0000052" id="time">
         <listOfUnits>
-          <unit kind="second" metaid="_77a35408-b434-4352-908f-04d1f5815bce" multiplier="3600"/>
+          <unit kind="second" multiplier="3600"/>
         </listOfUnits>
       </unitDefinition>
     </listOfUnitDefinitions>
     <listOfCompartments>
-      <compartment id="compartment" metaid="_750008" name="compartment" sboTerm="SBO:0000290" size="1">
+      <compartment metaid="_750008" id="compartment" name="compartment" size="1" sboTerm="SBO:0000290">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750008">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0005623"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-            </compartment>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0005623"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
     </listOfCompartments>
     <listOfSpecies>
-      <species compartment="compartment" id="Tbet_mRNA" initialConcentration="0.0440000000000001" metaid="_750009" name="Tbet_mRNA" sboTerm="SBO:0000278">
+      <species metaid="_750009" id="Tbet_mRNA" name="Tbet_mRNA" compartment="compartment" initialConcentration="0.0440000000000001" sboTerm="SBO:0000278">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750009">
               <bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33699"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00046"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	
-	<bqbiol:encodes>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q9JKD8"/>
-	</rdf:Bag>
-	</bqbiol:encodes>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-            </species>
-      <species compartment="compartment" id="Ifn_mRNA" initialConcentration="0" metaid="_750010" name="Ifn_mRNA" sboTerm="SBO:0000278">
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A33699"/>
+                  <rdf:li rdf:resource="urn:miriam:kegg.compound:C00046"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+              <bqbiol:encodes>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:uniprot:Q9JKD8"/>
+                </rdf:Bag>
+              </bqbiol:encodes>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_750010" id="Ifn_mRNA" name="Ifn_mRNA" compartment="compartment" initialConcentration="0" sboTerm="SBO:0000278">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750010">
               <bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33699"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00046"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	
-	<bqbiol:encodes>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/uniprot/P01580"/>
-	</rdf:Bag>
-	</bqbiol:encodes>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-            </species>
-      <species boundaryCondition="true" compartment="compartment" id="Ag" initialConcentration="1" metaid="_750011" name="Ag">
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A33699"/>
+                  <rdf:li rdf:resource="urn:miriam:kegg.compound:C00046"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+              <bqbiol:encodes>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:uniprot:P01580"/>
+                </rdf:Bag>
+              </bqbiol:encodes>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_750011" id="Ag" name="Ag" compartment="compartment" initialConcentration="1" boundaryCondition="true">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750011">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0050862"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-            </species>
-      <species compartment="compartment" id="Ifn_Prot" initialConcentration="0" metaid="_750012" name="Ifn_Prot" sboTerm="SBO:0000252">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0050862"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_750012" id="Ifn_Prot" name="Ifn_Prot" compartment="compartment" initialConcentration="0" sboTerm="SBO:0000252">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750012">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/uniprot/P01580"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-            </species>
-      <species compartment="compartment" id="Rec_Prot" initialConcentration="0" metaid="_750015" name="Rec_Prot" sboTerm="SBO:0000252">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:uniprot:P01580"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_750015" id="Rec_Prot" name="Rec_Prot" compartment="compartment" initialConcentration="0" sboTerm="SBO:0000252">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750015">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/uniprot/P97378"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-            </species>
-      <species compartment="compartment" id="Tbet_Prot" initialConcentration="44.0000000000001" metaid="_750016" name="Tbet_Prot" sboTerm="SBO:0000252">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:uniprot:P97378"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_750016" id="Tbet_Prot" name="Tbet_Prot" compartment="compartment" initialConcentration="44.0000000000001" sboTerm="SBO:0000252">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750016">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/uniprot/Q9JKD8"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-            </species>
-      <species compartment="compartment" id="Rec_mRNA" initialConcentration="0" metaid="_750019" name="Rec_mRNA" sboTerm="SBO:0000278">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:uniprot:Q9JKD8"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_750019" id="Rec_mRNA" name="Rec_mRNA" compartment="compartment" initialConcentration="0" sboTerm="SBO:0000278">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750019">
               <bqbiol:encodes>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/uniprot/P97378"/>
-	</rdf:Bag>
-	</bqbiol:encodes>
-	
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33699"/>
-	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00046"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-            </species>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:uniprot:P97378"/>
+                </rdf:Bag>
+              </bqbiol:encodes>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A33699"/>
+                  <rdf:li rdf:resource="urn:miriam:kegg.compound:C00046"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
     </listOfSpecies>
     <listOfRules>
       <assignmentRule metaid="_750084" variable="Ag">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <minus/>
             <cn> 1 </cn>
@@ -446,32 +437,31 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
             </apply>
           </apply>
         </math>
-            </assignmentRule>
+      </assignmentRule>
     </listOfRules>
     <listOfReactions>
-      <reaction id="vtrnldeg" metaid="_750020" name="Tbet IFN dependend transcription" reversible="false" sboTerm="SBO:0000183">
+      <reaction metaid="_750020" id="vtrnldeg" name="Tbet IFN dependend transcription" reversible="false" sboTerm="SBO:0000183">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750020">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0003700"/>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0009299"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfProducts>
-          <speciesReference metaid="f30759da-c826-4442-88c7-45518bf07b5a" species="Tbet_mRNA"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0003700"/>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0009299"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="Tbet_mRNA"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference metaid="ef0bdd2d-0b20-467a-9a81-5b0316acd20f" species="Ag"/>
-          <modifierSpeciesReference metaid="_01bdaf17-b074-4ed5-ac6a-0da06f048bf7" species="Ifn_Prot"/>
+          <modifierSpeciesReference species="Ag"/>
+          <modifierSpeciesReference species="Ifn_Prot"/>
         </listOfModifiers>
-        <kineticLaw metaid="ac7cf80a-b891-44ef-a1a5-0544165cd3f9">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -485,35 +475,34 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               </apply>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="K1" metaid="_750052" sboTerm="SBO:0000363" value="0.46"/>
-            <parameter id="K2" metaid="_750053" sboTerm="SBO:0000363" value="2.1"/>
-            <parameter id="a2" metaid="_750054" sboTerm="SBO:0000048" value="0.42"/>
+          <listOfParameters>
+            <parameter metaid="_750052" id="K1" value="0.46" sboTerm="SBO:0000363"/>
+            <parameter metaid="_750053" id="K2" value="2.1" sboTerm="SBO:0000363"/>
+            <parameter metaid="_750054" id="a2" value="0.42" sboTerm="SBO:0000048"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_1" metaid="_750021" name="Tbet Receptor dependent transcription" reversible="false" sboTerm="SBO:0000183">
+      <reaction metaid="_750021" id="reaction_1" name="Tbet Receptor dependent transcription" reversible="false" sboTerm="SBO:0000183">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750021">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0003700"/>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0009299"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfProducts>
-          <speciesReference metaid="_9b034a66-6b60-424d-8dcd-98737920f866" species="Tbet_mRNA"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0003700"/>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0009299"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="Tbet_mRNA"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference metaid="c3cb18d5-4694-4474-8723-cd9b007dc589" species="Rec_Prot"/>
+          <modifierSpeciesReference species="Rec_Prot"/>
         </listOfModifiers>
-        <kineticLaw metaid="a50488a2-8f80-4cb4-acaf-bde5720a6c07">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -524,29 +513,28 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               </apply>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="a3" metaid="_750055" value="0.00051"/>
+          <listOfParameters>
+            <parameter metaid="_750055" id="a3" value="0.00051"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_2" metaid="_750022" name="Tbet basal expression" reversible="false" sboTerm="SBO:0000183">
+      <reaction metaid="_750022" id="reaction_2" name="Tbet basal expression" reversible="false" sboTerm="SBO:0000183">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750022">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0009299"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfProducts>
-          <speciesReference metaid="_8d2bd3d3-6ea9-4214-988f-96e6d22cfd7d" species="Tbet_mRNA"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0009299"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="Tbet_mRNA"/>
         </listOfProducts>
-        <kineticLaw metaid="_7df3558a-11ca-400d-9c0b-8e7b8280ce14">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -556,29 +544,28 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               </apply>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="a1" metaid="_750057" value="0.044"/>
+          <listOfParameters>
+            <parameter metaid="_750057" id="a1" value="0.044"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_3" metaid="_750023" name="Tbet mRNA degradation" reversible="false" sboTerm="SBO:0000179">
+      <reaction metaid="_750023" id="reaction_3" name="Tbet mRNA degradation" reversible="false" sboTerm="SBO:0000179">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750023">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006402"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfReactants>
-          <speciesReference metaid="_73392bd8-a627-428f-b129-eee9ad1743a0" species="Tbet_mRNA"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006402"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Tbet_mRNA"/>
         </listOfReactants>
-        <kineticLaw metaid="_116d71d4-9519-4347-b3bc-b9b0a2519925">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -586,29 +573,28 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               <ci> Tbet_mRNA </ci>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="gamma_Tbet" metaid="_750059" value="1"/>
+          <listOfParameters>
+            <parameter metaid="_750059" id="gamma_Tbet" value="1"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_4" metaid="_750026" name="Tbet protein degradation" reversible="false" sboTerm="SBO:0000179">
+      <reaction metaid="_750026" id="reaction_4" name="Tbet protein degradation" reversible="false" sboTerm="SBO:0000179">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750026">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0030163"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfReactants>
-          <speciesReference metaid="_83711fd8-c9ad-4583-82e0-1ad54945cbfc" species="Tbet_Prot"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0030163"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Tbet_Prot"/>
         </listOfReactants>
-        <kineticLaw metaid="_16985698-ef31-45ba-b582-ac7150b260dd">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -616,29 +602,28 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               <ci> Tbet_Prot </ci>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="delta_Tbet" metaid="_750060" value="0.1"/>
+          <listOfParameters>
+            <parameter metaid="_750060" id="delta_Tbet" value="0.1"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_5" metaid="_750029" name="Rec_mRNA degradation" reversible="false" sboTerm="SBO:0000179">
+      <reaction metaid="_750029" id="reaction_5" name="Rec_mRNA degradation" reversible="false" sboTerm="SBO:0000179">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750029">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006402"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfReactants>
-          <speciesReference metaid="_21a88229-a5b6-4217-880c-499b546fcdb9" species="Rec_mRNA"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006402"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Rec_mRNA"/>
         </listOfReactants>
-        <kineticLaw metaid="_8535f47f-01f6-472c-a651-9596caf0daec">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -646,29 +631,28 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               <ci> Rec_mRNA </ci>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="gamma_Rec" metaid="_750062" value="1"/>
+          <listOfParameters>
+            <parameter metaid="_750062" id="gamma_Rec" value="1"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_6" metaid="_750032" name="Rec_Prot degradation" reversible="false" sboTerm="SBO:0000179">
+      <reaction metaid="_750032" id="reaction_6" name="Rec_Prot degradation" reversible="false" sboTerm="SBO:0000179">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750032">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0030163"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfReactants>
-          <speciesReference metaid="cebbb3af-9abe-4eb3-8b7b-c6c5d3e28bde" species="Rec_Prot"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0030163"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Rec_Prot"/>
         </listOfReactants>
-        <kineticLaw metaid="_5ca78be0-8bc6-450a-a8bb-afcdb40083cf">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -676,29 +660,28 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               <ci> Rec_Prot </ci>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="delta_Rec" metaid="_750063" value="0.1"/>
+          <listOfParameters>
+            <parameter metaid="_750063" id="delta_Rec" value="0.1"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_7" metaid="_750035" name="IFN_mRNA degradation" reversible="false" sboTerm="SBO:0000179">
+      <reaction metaid="_750035" id="reaction_7" name="IFN_mRNA degradation" reversible="false" sboTerm="SBO:0000179">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750035">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006402"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfReactants>
-          <speciesReference metaid="_5322fb83-f810-486a-baaa-c0bcd2d55059" species="Ifn_mRNA"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006402"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Ifn_mRNA"/>
         </listOfReactants>
-        <kineticLaw metaid="_8b92278a-2a07-42ea-8c2f-f30438dc9e84">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -706,29 +689,28 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               <ci> Ifn_mRNA </ci>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="gamma_IFN" metaid="_750065" value="1"/>
+          <listOfParameters>
+            <parameter metaid="_750065" id="gamma_IFN" value="1"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_8" metaid="_750038" name="IFN_Prot degradation" reversible="false" sboTerm="SBO:0000179">
+      <reaction metaid="_750038" id="reaction_8" name="IFN_Prot degradation" reversible="false" sboTerm="SBO:0000179">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750038">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0030163"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfReactants>
-          <speciesReference metaid="_5f3ab52a-7f6e-4db8-83e1-06434bad3c2a" species="Ifn_Prot"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0030163"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Ifn_Prot"/>
         </listOfReactants>
-        <kineticLaw metaid="e3373d41-5edb-4df2-a562-992eda03cc98">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -736,32 +718,31 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               <ci> Ifn_Prot </ci>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="delta_IFN" metaid="_750066" value="1"/>
+          <listOfParameters>
+            <parameter metaid="_750066" id="delta_IFN" value="1"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_9" metaid="_750041" name="Tbet Translation" reversible="false" sboTerm="SBO:0000184">
+      <reaction metaid="_750041" id="reaction_9" name="Tbet Translation" reversible="false" sboTerm="SBO:0000184">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750041">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006412"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfProducts>
-          <speciesReference metaid="_83b0547b-cf6d-45f2-96e4-d2f8b2e9133e" species="Tbet_Prot"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006412"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="Tbet_Prot"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference metaid="c047c2e8-1f94-4a0a-9040-32863534f583" species="Tbet_mRNA"/>
+          <modifierSpeciesReference species="Tbet_mRNA"/>
         </listOfModifiers>
-        <kineticLaw metaid="_6b3fee5f-35e2-45f4-9238-cc9b27188250">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -772,32 +753,31 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               </apply>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="b" metaid="_750068" value="100"/>
+          <listOfParameters>
+            <parameter metaid="_750068" id="b" value="100"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_10" metaid="_750042" name="IFN tranlation" reversible="false" sboTerm="SBO:0000184">
+      <reaction metaid="_750042" id="reaction_10" name="IFN tranlation" reversible="false" sboTerm="SBO:0000184">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750042">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006412"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfProducts>
-          <speciesReference metaid="_4590346d-69a6-4895-836a-0da0942955a6" species="Ifn_Prot"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006412"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="Ifn_Prot"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference metaid="b35867a0-c36e-41c9-87a0-6593d558f2a4" species="Ifn_mRNA"/>
+          <modifierSpeciesReference species="Ifn_mRNA"/>
         </listOfModifiers>
-        <kineticLaw metaid="_2e099a4c-e2f3-41f3-9461-b5fe7c537cc9">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -808,32 +788,31 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               </apply>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="b" metaid="_750069" value="100"/>
+          <listOfParameters>
+            <parameter metaid="_750069" id="b" value="100"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_11" metaid="_750045" name="Rec translation" reversible="false" sboTerm="SBO:0000184">
+      <reaction metaid="_750045" id="reaction_11" name="Rec translation" reversible="false" sboTerm="SBO:0000184">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750045">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006412"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfProducts>
-          <speciesReference metaid="ad21dda4-dea6-4f00-9a26-33d0e54031e3" species="Rec_Prot"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006412"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="Rec_Prot"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference metaid="bad5d6d9-7a08-49dc-8177-e543f89e42f8" species="Rec_mRNA"/>
+          <modifierSpeciesReference species="Rec_mRNA"/>
         </listOfModifiers>
-        <kineticLaw metaid="aff271fc-df16-4842-acda-2c8ac383a6ba">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -844,33 +823,32 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               </apply>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="b" metaid="_750071" value="100"/>
+          <listOfParameters>
+            <parameter metaid="_750071" id="b" value="100"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_12" metaid="_750048" name="Rec Transcription" reversible="false" sboTerm="SBO:0000183">
+      <reaction metaid="_750048" id="reaction_12" name="Rec Transcription" reversible="false" sboTerm="SBO:0000183">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750048">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006351"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfProducts>
-          <speciesReference metaid="_5353bac9-28c0-4024-874c-7e62fbc16088" species="Rec_mRNA"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006350"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="Rec_mRNA"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference metaid="_8a7e84f6-35f5-4d03-a60d-11a2d7453345" species="Tbet_Prot"/>
-          <modifierSpeciesReference metaid="_9fce44bd-19b0-474c-8402-ddf8234c998c" species="Ag"/>
+          <modifierSpeciesReference species="Tbet_Prot"/>
+          <modifierSpeciesReference species="Ag"/>
         </listOfModifiers>
-        <kineticLaw metaid="_986986bc-b492-48d6-83da-9ed8cb2afafd">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -883,35 +861,34 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               </apply>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="a4" metaid="_750072" value="0.0028"/>
-            <parameter id="K4" metaid="_750073" value="0.013"/>
+          <listOfParameters>
+            <parameter metaid="_750072" id="a4" value="0.0028"/>
+            <parameter metaid="_750073" id="K4" value="0.013"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
-      <reaction id="reaction_13" metaid="_750051" name="IFN transcription" reversible="false" sboTerm="SBO:0000183">
+      <reaction metaid="_750051" id="reaction_13" name="IFN transcription" reversible="false" sboTerm="SBO:0000183">
         <annotation>
-	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_750051">
-	<bqbiol:isVersionOf>
-	<rdf:Bag>
-	<rdf:li rdf:resource="http://identifiers.org/go/GO:0006351"/>
-	</rdf:Bag>
-	</bqbiol:isVersionOf>
-	</rdf:Description>
-	
-	</rdf:RDF>
-	</annotation>
-              <listOfProducts>
-          <speciesReference metaid="_15e51e3f-10a0-43da-a140-761088fd35f5" species="Ifn_mRNA"/>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0006350"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="Ifn_mRNA"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference metaid="_11f17121-2a1c-4769-8983-1f25bb0c4c1f" species="Tbet_Prot"/>
-          <modifierSpeciesReference metaid="_3c8d8c6a-7da1-4dc4-8a02-36be049b7734" species="Rec_Prot"/>
-          <modifierSpeciesReference metaid="c0d4e59a-93d5-4ccd-811d-f01d2ecf49a2" species="Ag"/>
+          <modifierSpeciesReference species="Tbet_Prot"/>
+          <modifierSpeciesReference species="Rec_Prot"/>
+          <modifierSpeciesReference species="Ag"/>
         </listOfModifiers>
-        <kineticLaw metaid="a498e8fb-8a93-47c1-923e-ef09f45124b9">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> compartment </ci>
@@ -927,11 +904,11 @@ Theoretical Biophysics, Institute of Biology, Humboldt Universität, Invalidenst
               </apply>
             </apply>
           </math>
-                  <listOfParameters>
-            <parameter id="a5" metaid="_750075" value="3.7"/>
-            <parameter id="K5" metaid="_750076" value="0.029"/>
-            <parameter id="K6" metaid="_750079" value="66"/>
-            <parameter id="K7" metaid="_750082" value="0.014"/>
+          <listOfParameters>
+            <parameter metaid="_750075" id="a5" value="3.7"/>
+            <parameter metaid="_750076" id="K5" value="0.029"/>
+            <parameter metaid="_750079" id="K6" value="66"/>
+            <parameter metaid="_750082" id="K7" value="0.014"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>

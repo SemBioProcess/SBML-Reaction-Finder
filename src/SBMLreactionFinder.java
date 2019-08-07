@@ -406,7 +406,7 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 				for(OWLClassExpression unanncls : unannparent.getSubClasses(rxnont)){
 					String srcmodel = OWLMethods.getClsValueObjectProperty(rxnont, unanncls.asOWLClass().getIRI().toString(), base + "hasSourceModel").toArray(new String[]{})[0];
 					String stringtosearch = "";
-					stringtosearch = stringtosearch + OWLMethods.getRDFLabels(rxnont, factory.getOWLClass(IRI.create(srcmodel)))[0] + " ";
+					//stringtosearch = stringtosearch + OWLMethods.getRDFLabels(rxnont, factory.getOWLClass(IRI.create(srcmodel)))[0] + " ";
 					//System.out.println(stringtosearch);
 //					if(!OWLMethods.getClsValueDataProperties(rxnont, srcmodel, base + "hasNotes").isEmpty()){
 //						stringtosearch = OWLMethods.getClsValueDataProperties(rxnont, srcmodel, base + "hasNotes").toArray(new String[]{})[0] + " ";
@@ -414,13 +414,14 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 					Set<String> idsandnames = new HashSet<String>();
 					idsandnames.addAll(OWLMethods.getClsValueDataProperties(rxnont, unanncls.asOWLClass().getIRI().toString(), base + "hasName"));
 					idsandnames.addAll(OWLMethods.getClsValueDataProperties(rxnont, unanncls.asOWLClass().getIRI().toString(), base + "hasId"));
-					idsandnames.add(unanncls.asOWLClass().getIRI().getFragment());
+					//idsandnames.add(unanncls.asOWLClass().getIRI().getFragment());
+					
 					String taxonomy = "";
 					for(String text : idsandnames){stringtosearch = stringtosearch + text + " ";}
 					if(!OWLMethods.getClsValueObjectProperty(rxnont, srcmodel, base + "occursInOrganism").isEmpty()){
 						String taxuri = OWLMethods.getClsValueObjectProperty(rxnont, srcmodel, base + "occursInOrganism").toArray(new String[]{})[0];
 						taxonomy = OWLMethods.getRDFLabels(rxnont, factory.getOWLClass(IRI.create(taxuri)))[0];
-						stringtosearch = stringtosearch + taxonomy + " ";
+						//stringtosearch = stringtosearch + taxonomy + " ";
 						Set<String> othernames = OWLMethods.getClsValueDataProperties(rxnont, taxuri, base + "hasOtherName");
 						for(String othername : othernames){
 							stringtosearch = stringtosearch + othername + " ";
@@ -471,7 +472,7 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 						String stringtosearch = basestringtosearch;
 						if(!OWLMethods.getClsValueObjectProperty(rxnont, reaction.asOWLClass().getIRI().toString(), base + "hasSourceModel").isEmpty()){
 							srcmodel = OWLMethods.getClsValueObjectProperty(rxnont, reaction.asOWLClass().getIRI().toString(), base + "hasSourceModel").toArray(new String[]{})[0];
-							stringtosearch = stringtosearch + OWLMethods.getRDFLabels(rxnont, factory.getOWLClass(IRI.create(srcmodel)))[0] + " ";
+							//stringtosearch = stringtosearch + OWLMethods.getRDFLabels(rxnont, factory.getOWLClass(IRI.create(srcmodel)))[0] + " ";
 //							if(!OWLMethods.getClsValueDataProperties(rxnont, srcmodel, base + "hasNotes").isEmpty()){
 //								basestringtosearch = basestringtosearch + OWLMethods.getClsValueDataProperties(rxnont, srcmodel, base + "hasNotes").toArray(new String[]{})[0] + " ";
 //							}
@@ -483,7 +484,7 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 						Set<String> idsandnames = new HashSet<String>();
 						idsandnames.addAll(OWLMethods.getClsValueDataProperties(rxnont, reaction.asOWLClass().getIRI().toString(), base + "hasName"));
 						idsandnames.addAll(OWLMethods.getClsValueDataProperties(rxnont, reaction.asOWLClass().getIRI().toString(), base + "hasId"));
-						idsandnames.add(reaction.asOWLClass().getIRI().getFragment());
+						//idsandnames.add(reaction.asOWLClass().getIRI().getFragment());
 						
 						String extratext = "";
 						for(String text : idsandnames){extratext = extratext + text + " ";}
@@ -496,14 +497,12 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 								&& !OWLMethods.getClsValueObjectProperty(rxnont, srcmodel, base + "occursInOrganism").isEmpty()){
 							String taxuri = OWLMethods.getClsValueObjectProperty(rxnont, srcmodel, base + "occursInOrganism").toArray(new String[]{})[0];
 							taxonomy = OWLMethods.getRDFLabels(rxnont, factory.getOWLClass(IRI.create(taxuri)))[0];
-							stringtosearch = stringtosearch + taxonomy + " ";
+							//stringtosearch = stringtosearch + taxonomy + " ";
 							Set<String> othernames = OWLMethods.getClsValueDataProperties(rxnont, taxuri, base + "hasOtherName");
 							for(String othername : othernames){
 								stringtosearch = stringtosearch + othername + " ";
 							}
 						}
-						
-						//System.out.println(stringtosearch);
 						
 						Boolean match = false;
 
@@ -524,8 +523,7 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 						}
 						if(match){
 							matchingclasses.add(reaction.asOWLClass());
-							//System.out.println(stringtosearch);
-							}
+						}
 					}					
 					remainingclasses = remainingclasses -1;
 					msgbar.setValue((int) (100*(totclasses-remainingclasses)/totclasses));

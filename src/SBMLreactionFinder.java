@@ -29,6 +29,7 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import javax.swing.BorderFactory;
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -579,6 +580,7 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 				msgbar.setValue((int) (100*(totclasses-remainingclasses)/totclasses));
 				msgarea.setText("Collecting data on matching reactions..." + (int) (100*(totclasses-remainingclasses)/totclasses) + "% complete");
 			}
+			panelinside.add(Box.createVerticalGlue());
 			
 			if(matchingclasses.isEmpty()){
 				JTextField noresults = new JTextField("No matches");

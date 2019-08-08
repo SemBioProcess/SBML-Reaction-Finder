@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Set;
 
 import javax.swing.BorderFactory;
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -56,6 +57,9 @@ public class SearchResult extends JPanel implements MouseListener{
 		taxonlabel.setOpaque(false);
 		taxonlabel.setBorder(BorderFactory.createEmptyBorder(0,3,3,3));
 		this.add(taxonlabel);
+		
+		this.add(Box.createHorizontalGlue());
+		
 		
 		this.setBorder(BorderFactory.createEmptyBorder(2, 2, 2, 2));
 		this.setBackground(color);

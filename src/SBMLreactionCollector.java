@@ -62,6 +62,8 @@ public class SBMLreactionCollector {
 //	static final ObjectMapper mapper = new ObjectMapper();
 	static final String API_KEY = "24e0ee9a-54e0-11e0-9d7b-005056aa3316";
 	public static Map<String,ArrayList<String>> GOidLabelMap = new HashMap<String,ArrayList<String>>();
+	public static Map<String,String> ECid2GOmap = new HashMap<String,String>();
+
 
 	public static void collectReactions() throws JDOMException, IOException, OWLException, XMLStreamException{
 
@@ -107,6 +109,34 @@ public class SBMLreactionCollector {
 			}
 		}
 		GOscan.close();
+		
+		// Create EC-GO mappings
+		Scanner EC2GO = new Scanner(new File("./resources/ec2go.txt"));
+		EC2GO.nextLine(); // bypass header
+		
+		while(EC2GO.hasNext()) {
+			String id;
+			String line = EC2GO.nextLine();
+			StringTokenizer ctoken = new StringTokenizer(line, " > ");
+			
+			if(ctoken.hasMoreTokens()) { // If ID present
+				id = ctoken.nextToken();
+				id = id.replace("EC:","");
+				
+				if(ctoken.hasMoreTokens()) { // If preferred label present
+					String labelandGOid = ctoken.nextToken();
+					StringTokenizer bartoken = new StringTokenizer(labelandGOid,";");
+					
+					if(bartoken.hasMoreTokens()) bartoken.nextToken(); // skip GO label
+					
+					if(bartoken.hasMoreTokens()) {
+						String GOid = bartoken.nextToken();
+						ECid2GOmap.put(id, GOid);
+					}
+				}
+			}
+		}
+		EC2GO.close();
 		
 		
 		File[] SBMLmodels = modeldir.listFiles();
@@ -251,19 +281,21 @@ public class SBMLreactionCollector {
 									if(cvres.contains("GO:"))
 										cvres = cvres.substring(cvres.indexOf("GO:"),cvres.length());
 								}
-								// Use BRENDA web service to get the GO xref for ec-code annotations
-//										else if(ann.contains("urn:miriam:ec-code:") || ann.contains("//identifiers.org/ec-code")){
-//										
-//										ann = ann.substring(ann.lastIndexOf(":")+1,ann.length());
-//										ArrayList<String> GOxrefs = BRENDAwebservice.getGOxrefsFromID(ann);
-//										// If there is a GO xref 
-//										if( ! GOxrefs.isEmpty()){
-//											if( ! GOxrefs.get(0).equals("0")){
-//												hasGOannotation = true;
-//												ann = GOxrefs.get(0);
-//											}
-//										}
-//									}
+								// Use EC2GO mappings from https://www.ebi.ac.uk/GOA/EC2GO to lookup GO term if ec-code annotation used
+								else if(cvres.contains("urn:miriam:ec-code:") || cvres.contains("//identifiers.org/ec-code")){
+									
+									if(cvres.contains(":")) cvres = cvres.substring(cvres.lastIndexOf(":")+1,cvres.length());
+									if(cvres.contains("/")) cvres = cvres.substring(cvres.lastIndexOf("/")+1, cvres.length());
+									
+									if(ECid2GOmap.containsKey(cvres)) {
+										
+										cvres = ECid2GOmap.get(cvres);
+										
+										if(cvres!=null && ! cvres.equals("")) 
+											hasGOannotation = true;
+									}
+								}
+								
 								// If we've found a GO annotation, add the GO class and the reaction to the KB, unless already there
 								if(hasGOannotation){
 									annenc = cvres.replace(":", "_");

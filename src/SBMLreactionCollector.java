@@ -441,7 +441,7 @@ public class SBMLreactionCollector {
 		SAXBuilder newbuilder = new SAXBuilder();
 		Document docu = new Document();
 		try {
-			URL url = new URL("http://www.uniprot.org/taxonomy/"+id+".rdf");
+			URL url = new URL("https://www.uniprot.org/taxonomy/"+id+".rdf");
 			System.out.println(url.toString());
 			URLConnection yc = url.openConnection();
 			yc.setReadTimeout(60000); // Tiemout after a minute

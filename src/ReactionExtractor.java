@@ -117,7 +117,10 @@ public class ReactionExtractor {
 			System.out.println("Namespaces were null");
 		}
 	
-		newmodel.setId(model.getName().replace(" ", "_") + "_" + ID + "_" + timestamp);
+		String modelid = model.getName().replace(" ", "_") + "_" + ID + "_" + timestamp;
+		modelid = modelid.replaceAll("\\W","_");
+		
+		newmodel.setId(modelid);
 		newmodel.setMetaId("metaid_" + timestamp);
 		newmodel.setName(model.getName() + " " + ID + " " + timestamp);
 		newmodel.setNotes("<body xmlns=\"http://www.w3.org/1999/xhtml\"> This is a single-reaction model that was auto-extracted from " + model.getName() + 

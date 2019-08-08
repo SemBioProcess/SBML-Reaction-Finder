@@ -24,6 +24,8 @@ import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.Namespace;
 import org.jdom.input.SAXBuilder;
+import org.sbml.jsbml.CVTerm;
+import org.sbml.jsbml.CVTerm.Qualifier;
 import org.sbml.jsbml.Model;
 import org.sbml.jsbml.SBMLDocument;
 import org.sbml.jsbml.SBMLReader;
@@ -77,10 +79,7 @@ public class SBMLreactionCollector {
 		
 		// Read in locally-stored GO class info
 		Scanner GOscan = new Scanner(new File("./resources/GO.csv"));
-		System.out.println(GOscan.hasNext());
-
 		GOscan.nextLine(); // bypass header
-		
 		
 		while(GOscan.hasNext()) {
 			String id;
@@ -120,15 +119,12 @@ public class SBMLreactionCollector {
 		Document doc = null;
 		
 		Namespace bqbiolns = Namespace.getNamespace("bqbiol","http://biomodels.net/biology-qualifiers/");
-		Namespace bqmodelns = Namespace.getNamespace("bqmodel","http://biomodels.net/model-qualifiers/");
 
+		// For each model in our collection, collect the reactions
 		for(int i=0; i<SBMLmodels.length; i++){
 			if(SBMLmodels[i].getName().startsWith("BIOMD")){ // && i < 4){
 				System.out.println(SBMLmodels[i].getCanonicalPath());
-				try {
-					sbmldoc = new SBMLReader().readSBML(SBMLmodels[i].getAbsolutePath());
-				} catch (Exception e) {e.printStackTrace();}
-				
+				sbmldoc = new SBMLReader().readSBML(SBMLmodels[i].getAbsolutePath());
 				sbmlmodel = sbmldoc.getModel();
 				
 				doc = builder.build(SBMLmodels[i]);
@@ -178,72 +174,33 @@ public class SBMLreactionCollector {
 				
 				// get the taxonomy annotation for this model - could be in "is" or "occursIn" tag
 				String[] taxonandcommonnames = new String[]{""};
-				if(modelnode.getChild("annotation", ns)!=null){
-					Element annotation  = modelnode.getChild("annotation", ns);
-					//if(!sbmlmodel.getNotes().equals("")){
-					//	OWLMethods.setClsDatatypeProperty(ontology, onemodelclass.getIRI().toString(), base + "hasNotes", sbmlmodel.getNotesString(), manager);
-					//}
-					if(annotation.getChild("RDF",rdfns)!=null){
-						Element rdfchild = annotation.getChild("RDF",rdfns);
-						if(rdfchild.getChild("Description",rdfns)!=null){
-							Element description = rdfchild.getChild("Description", rdfns);
-							Iterator<Element> propit = null;
-							ArrayList<Element> proplist = new ArrayList<Element>();
-							// Looks like sometimes (as in 000000236) - there are multiple isVersionOf tags instead of multiple li tags
-							if((description.getChildren("is",bqbiolns)!=null && description.getChildren("is",bqbiolns).size()!=0)
-									|| (description.getChildren("is",bqmodelns)!=null && description.getChildren("is",bqmodelns).size()!=0)
-									|| (description.getChildren("occursIn",bqbiolns)!=null && description.getChildren("occursIn", bqbiolns).size()!=0)){
-								if((description.getChildren("is",bqbiolns)!=null && description.getChildren("is",bqbiolns).size()!=0)){
-									proplist.addAll(description.getChildren("is",bqbiolns));
-//									propit = description.getChildren("is",bqbiolns).iterator();
-								}
-								// Sometimes the "is" qualifier is used with the bqmodel namespace to set the taxonomic information 
-								if((description.getChildren("is",bqmodelns)!=null && description.getChildren("is",bqmodelns).size()!=0)){
-									proplist.addAll(description.getChildren("is",bqmodelns));
-								}
-								// "occursIn" overrides "is" annotation, if present
-								if((description.getChildren("occursIn",bqbiolns)!=null && description.getChildren("occursIn", bqbiolns).size()!=0)){
-									proplist.addAll(description.getChildren("occursIn",bqbiolns));
-								}
-								propit = proplist.iterator();
-								while(propit.hasNext()){
-									Element versionof = propit.next();
-									if(versionof.getChild("Bag",rdfns)!=null){
-										Element bag = versionof.getChild("Bag",rdfns);
-										if(bag.getChildren("li", rdfns)!=null){
-											List<Element> references = bag.getChildren("li", rdfns);
-											Iterator<Element> refit = references.iterator();
-											while(refit.hasNext()){
-												String ann = refit.next().getAttributeValue("resource", rdfns);
-												if(ann.contains("urn:miriam:taxonomy:")){
-													taxonandcommonnames = queryUniProtTaxonomyAndProcess(ann.replace("urn:miriam:taxonomy:",""));
-													if(!taxonandcommonnames[0].equals("")){
-														System.out.println(taxonandcommonnames[0]);
-														OWLClass taxonclass = factory.getOWLClass(IRI.create(base + OWLMethods.URIencoding(taxonandcommonnames[0])));
-														if(!ontology.containsClassInSignature(taxonclass.getIRI())){
-															OWLClass taxontoadd = factory.getOWLClass(IRI.create(base + OWLMethods.URIencoding(taxonandcommonnames[0])));
-															OWLMethods.addClass(ontology, taxontoadd, taxonparent, manager);
-															OWLMethods.setRDFLabel(ontology, taxontoadd, taxonandcommonnames[0], manager);
-															for(int y=1; y<taxonandcommonnames.length; y++){
-																OWLMethods.setClsDatatypeProperty(ontology, taxontoadd.getIRI().toString(), base + "hasOtherName", taxonandcommonnames[y], manager);
-																System.out.println(taxonandcommonnames[y]);
-															}
-														}
-														OWLMethods.setClsObjectProperty(ontology, onemodelclass, taxonclass, base + "occursInOrganism", "", false, manager);
-													}
-												}
-											}
-										}
-									}
+				
+				for(CVTerm cv : sbmlmodel.getCVTerms()) {
+					if(cv.getBiologicalQualifierType()==Qualifier.BQB_HAS_TAXON) {
+						String cvres = cv.getResource(0);
+						
+						taxonandcommonnames = queryUniProtTaxonomyAndProcess(cvres.substring(cvres.lastIndexOf("/")+1, cvres.length()));
+						if( ! taxonandcommonnames[0].equals("")){
+							System.out.println(taxonandcommonnames[0]);
+							OWLClass taxonclass = factory.getOWLClass(IRI.create(base + OWLMethods.URIencoding(taxonandcommonnames[0])));
+							
+							if( ! ontology.containsClassInSignature(taxonclass.getIRI())){
+								OWLClass taxontoadd = factory.getOWLClass(IRI.create(base + OWLMethods.URIencoding(taxonandcommonnames[0])));
+								OWLMethods.addClass(ontology, taxontoadd, taxonparent, manager);
+								OWLMethods.setRDFLabel(ontology, taxontoadd, taxonandcommonnames[0], manager);
+								
+								for(int y=1; y<taxonandcommonnames.length; y++){
+									OWLMethods.setClsDatatypeProperty(ontology, taxontoadd.getIRI().toString(), base + "hasOtherName", taxonandcommonnames[y], manager);
+									System.out.println(taxonandcommonnames[y]);
 								}
 							}
+							OWLMethods.setClsObjectProperty(ontology, onemodelclass, taxonclass, base + "occursInOrganism", "", false, manager);
 						}
 					}
 				}
 				
 				
-				
-				
+				// Process the reactions in the model
 				if(modelnode.getChild("listOfReactions", ns)!=null){
 					Element rxnsnode = modelnode.getChild("listOfReactions", ns);
 					List<Element> rxns  = rxnsnode.getChildren("reaction", ns);
@@ -377,7 +334,7 @@ public class SBMLreactionCollector {
 												}
 											}	
 										}
-										if(!hasGOannotation){
+										if( ! hasGOannotation){
 											// If no annotations can be linked to a GO term, store as an unannotated reaction
 											numunannotatedrxns++;
 											OWLMethods.addClass(ontology, rxnclass, unannotatedrxn, manager);

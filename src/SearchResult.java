@@ -26,6 +26,7 @@ public class SearchResult extends JPanel implements MouseListener{
 	public String BiomodelsID;
 	public String SBMLID;
 	public Color color;
+	
 	public SearchResult(Set<String> srcURIs, String SBMLID, String GOstring, String srcmodelname, String taxon){
 		this.srcURIs = srcURIs;
 		this.GOstring = GOstring;
@@ -85,7 +86,7 @@ public class SearchResult extends JPanel implements MouseListener{
 		}
 	}
 	public void mouseEntered(MouseEvent arg0) {
-		this.setBackground(new Color(240, 150, 150));
+		this.setBackground(new Color(255, 204, 229));
 	}
 	public void mouseExited(MouseEvent arg0) {
 		this.setBackground(Color.white);		

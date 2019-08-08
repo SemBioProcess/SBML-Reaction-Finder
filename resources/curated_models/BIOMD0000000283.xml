@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sbml xmlns="http://www.sbml.org/sbml/level2/version4" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" level="2" version="4">
-  <model metaid="metaid_chance" id="chance" name="Chance1943_Peroxidase_ES_Kinetics">
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" metaid="c1903738-4fd3-4336-8cad-21144960a02e" version="4" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+  <model id="chance" metaid="metaid_chance" name="Chance1943_Peroxidase_ES_Kinetics">
     <notes>
       <body xmlns="http://www.w3.org/1999/xhtml">
         <p>Default parameter values are those in the right hand panel of Fig 12. The other panels may be obtained by setting X to 1, 2 or 4, and K3 to 0, 1/2 or 1.</p>
@@ -15,253 +15,261 @@ Under the narrow range of experimental conditions, and at a temperature of appro
         <p>
 This model is the one described in the appendix of the article. It reproduces, amongst others, figure 12. The parameters and concentrations used are rescaled as stated in the article. K2 and K3 stand for k2 and k3, respectively, divided by k1.
 </p>
-        <p>To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p>
-        <p>In summary, you are entitled to use this encoded model in absolutely any manner you deem suitable, verbatim, or with modification, alone or embedded it in a larger context, redistribute it, commercially or not, in a restricted way or not.</p>
-        <p>To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pubmed/20587024" target="_blank">Li C, Donizelli M, Rodriguez N, Dharuri H, Endler L, Chelliah V, Li L, He E, Henry A, Stefan MI, Snoep JL, Hucka M, Le Novère N, Laibe C (2010) BioModels Database: An enhanced, curated and annotated resource for published quantitative kinetic models. BMC Syst Biol., 4:92.</a>
-      </p>
-    </body>
-  </notes>
-  <annotation>
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#metaid_chance">
-        <dc:creator>
-          <rdf:Bag>
-            <rdf:li rdf:parseType="Resource">
-              <vCard:N rdf:parseType="Resource">
-                <vCard:Family>Endler</vCard:Family>
-                <vCard:Given>Lukas</vCard:Given>
-              </vCard:N>
-              <vCard:EMAIL>lukas@ebi.ac.uk</vCard:EMAIL>
-              <vCard:ORG rdf:parseType="Resource">
-                <vCard:Orgname>EMBL-EBI</vCard:Orgname>
-              </vCard:ORG>
-            </rdf:li>
-            <rdf:li rdf:parseType="Resource">
-              <vCard:N rdf:parseType="Resource">
-                <vCard:Family>Smallbone</vCard:Family>
-                <vCard:Given>Kieran</vCard:Given>
-              </vCard:N>
-              <vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
-              <vCard:ORG rdf:parseType="Resource">
-                <vCard:Orgname>University of Manchester</vCard:Orgname>
-              </vCard:ORG>
-            </rdf:li>
-          </rdf:Bag>
-        </dc:creator>
-        <dcterms:created rdf:parseType="Resource">
-          <dcterms:W3CDTF>2010-10-10T10:10:10Z</dcterms:W3CDTF>
-        </dcterms:created>
-        <dcterms:modified rdf:parseType="Resource">
-          <dcterms:W3CDTF>2012-01-20T11:42:59Z</dcterms:W3CDTF>
-        </dcterms:modified>
-        <bqmodel:is>
-          <rdf:Bag>
-            <rdf:li rdf:resource="urn:miriam:biomodels.db:BIOMD0000000283"/>
-          </rdf:Bag>
-        </bqmodel:is>
-        <bqmodel:is>
-          <rdf:Bag>
-            <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL1010190000"/>
-          </rdf:Bag>
-        </bqmodel:is>
-        <bqmodel:isDescribedBy>
-          <rdf:Bag>
-            <rdf:li rdf:resource="urn:miriam:pubmed:10218104"/>
-          </rdf:Bag>
-        </bqmodel:isDescribedBy>
-        <bqbiol:occursIn>
-          <rdf:Bag>
-            <rdf:li rdf:resource="urn:miriam:taxonomy:3704"/>
-          </rdf:Bag>
-        </bqbiol:occursIn>
-        <bqbiol:hasVersion>
-          <rdf:Bag>
-            <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0004601"/>
-          </rdf:Bag>
-        </bqbiol:hasVersion>
-      </rdf:Description>
-    </rdf:RDF>
-  </annotation>
-  <listOfUnitDefinitions>
-    <unitDefinition id="substance">
-      <listOfUnits>
-        <unit kind="dimensionless"/>
-      </listOfUnits>
-    </unitDefinition>
-    <unitDefinition id="time">
-      <listOfUnits>
-        <unit kind="dimensionless"/>
-      </listOfUnits>
-    </unitDefinition>
-    <unitDefinition id="volume">
-      <listOfUnits>
-        <unit kind="dimensionless"/>
-      </listOfUnits>
-    </unitDefinition>
-  </listOfUnitDefinitions>
-  <listOfCompartments>
-    <compartment metaid="metaid_cell" id="cell" name="cell" size="1" sboTerm="SBO:0000290">
-      <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-          <rdf:Description rdf:about="#metaid_cell">
-            <bqbiol:is>
-              <rdf:Bag>
-                <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0005623"/>
-              </rdf:Bag>
-            </bqbiol:is>
-          </rdf:Description>
-        </rdf:RDF>
-      </annotation>
-    </compartment>
-  </listOfCompartments>
-  <listOfSpecies>
-    <species metaid="_750270" id="X" name="X" compartment="cell" initialConcentration="8" sboTerm="SBO:0000247">
-      <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-          <rdf:Description rdf:about="#_750270">
-            <bqbiol:is>
-              <rdf:Bag>
-                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16240"/>
-              </rdf:Bag>
-            </bqbiol:is>
-            <bqbiol:is>
-              <rdf:Bag>
-                <rdf:li rdf:resource="urn:miriam:kegg.compound:C00027"/>
-              </rdf:Bag>
-            </bqbiol:is>
-          </rdf:Description>
-        </rdf:RDF>
-      </annotation>
-    </species>
-    <species metaid="_750273" id="E" name="E" compartment="cell" initialConcentration="1" sboTerm="SBO:0000252">
-      <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-          <rdf:Description rdf:about="#_750273">
-            <bqbiol:isVersionOf>
-              <rdf:Bag>
-                <rdf:li rdf:resource="urn:miriam:uniprot:P00433"/>
-                <rdf:li rdf:resource="urn:miriam:uniprot:P15233"/>
-                <rdf:li rdf:resource="urn:miriam:uniprot:P15232"/>
-              </rdf:Bag>
-            </bqbiol:isVersionOf>
-            <bqbiol:isVersionOf>
-              <rdf:Bag>
-                <rdf:li rdf:resource="urn:miriam:interpro:IPR000823"/>
-              </rdf:Bag>
-            </bqbiol:isVersionOf>
-          </rdf:Description>
-        </rdf:RDF>
-      </annotation>
-    </species>
-    <species metaid="_750276" id="P" name="P" compartment="cell" initialConcentration="0" sboTerm="SBO:0000297">
-      <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-          <rdf:Description rdf:about="#_750276">
-            <bqbiol:hasVersion>
-              <rdf:Bag>
-                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16240"/>
-                <rdf:li rdf:resource="urn:miriam:interpro:IPR000823"/>
-              </rdf:Bag>
-            </bqbiol:hasVersion>
-          </rdf:Description>
-        </rdf:RDF>
-      </annotation>
-    </species>
-    <species metaid="_750279" id="Q" name="Q" compartment="cell" initialConcentration="0" sboTerm="SBO:0000247">
-      <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-          <rdf:Description rdf:about="#_750279">
-            <bqbiol:is>
-              <rdf:Bag>
-                <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15377"/>
-              </rdf:Bag>
-            </bqbiol:is>
-          </rdf:Description>
-        </rdf:RDF>
-      </annotation>
-    </species>
-  </listOfSpecies>
-  <listOfParameters>
-    <parameter metaid="_750286" id="K2" value="0" units="dimensionless"/>
-    <parameter metaid="_750289" id="K3" value="0.5" units="dimensionless"/>
-  </listOfParameters>
-  <listOfReactions>
-    <reaction metaid="_750280" id="r1" name="r1" sboTerm="SBO:0000177">
-      <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-          <rdf:Description rdf:about="#_750280">
-            <bqbiol:isPartOf>
-              <rdf:Bag>
-                <rdf:li rdf:resource="urn:miriam:ec-code:1.11.1.7"/>
-              </rdf:Bag>
-            </bqbiol:isPartOf>
-          </rdf:Description>
-        </rdf:RDF>
-      </annotation>
-      <listOfReactants>
-        <speciesReference species="X"/>
-        <speciesReference species="E"/>
-      </listOfReactants>
-      <listOfProducts>
-        <speciesReference species="P"/>
-      </listOfProducts>
-      <kineticLaw>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> cell </ci>
+      </body>
+    </notes>
+    <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#metaid_chance">
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Endler</vCard:Family>
+	<vCard:Given>Lukas</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>lukas@ebi.ac.uk</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>EMBL-EBI</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Smallbone</vCard:Family>
+	<vCard:Given>Kieran</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>University of Manchester</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2010-10-10T10:10:10Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2014-04-07T01:31:17Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1010190000"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/BIOMD0000000283"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	<bqmodel:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/10218104"/>
+	</rdf:Bag>
+	</bqmodel:isDescribedBy>
+	<bqbiol:hasTaxon>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/taxonomy/3704"/>
+	</rdf:Bag>
+	</bqbiol:hasTaxon>
+	<bqbiol:hasVersion>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0004601"/>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0050790"/>
+	</rdf:Bag>
+	</bqbiol:hasVersion>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+      <listOfUnitDefinitions>
+      <unitDefinition id="substance" metaid="_9ad46354-d8ce-4073-8b19-58b96878ce1a">
+        <listOfUnits>
+          <unit kind="dimensionless" metaid="a3309d6a-02fa-4226-9211-30fd94041516"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="time" metaid="_1a98368f-fb78-4dc2-8226-e5f5f1c24c8e">
+        <listOfUnits>
+          <unit kind="dimensionless" metaid="_4b6a54f9-a769-4e86-a192-d98d81d72ba9"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="volume" metaid="eeed8327-c7a4-4451-b400-7e2ae97af7ab">
+        <listOfUnits>
+          <unit kind="dimensionless" metaid="_3384e91b-ac80-426f-9740-f49a07c6b919"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="cell" metaid="metaid_cell" name="cell" sboTerm="SBO:0000290" size="1">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_cell">
+	<bqbiol:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0005623"/>
+	</rdf:Bag>
+	</bqbiol:is>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+            </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species compartment="cell" id="X" initialConcentration="8" metaid="_750270" name="X" sboTerm="SBO:0000247">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#_750270">
+              <bqbiol:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16240"/>
+	</rdf:Bag>
+	</bqbiol:is>
+	
+	<bqbiol:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00027"/>
+	</rdf:Bag>
+	</bqbiol:is>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species compartment="cell" id="E" initialConcentration="1" metaid="_750273" name="E" sboTerm="SBO:0000252">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#_750273">
+              <bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P00433"/>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P15233"/>
+	<rdf:li rdf:resource="http://identifiers.org/uniprot/P15232"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR000823"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species compartment="cell" id="P" initialConcentration="0" metaid="_750276" name="P" sboTerm="SBO:0000297">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#_750276">
+	<bqbiol:hasVersion>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16240"/>
+	<rdf:li rdf:resource="http://identifiers.org/interpro/IPR000823"/>
+	</rdf:Bag>
+	</bqbiol:hasVersion>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+            </species>
+      <species compartment="cell" id="Q" initialConcentration="0" metaid="_750279" name="Q" sboTerm="SBO:0000247">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#_750279">
+	<bqbiol:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15377"/>
+	</rdf:Bag>
+	</bqbiol:is>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+            </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="K2" metaid="_750286" units="dimensionless" value="0"/>
+      <parameter id="K3" metaid="_750289" units="dimensionless" value="0.5"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="r1" metaid="_750280" name="r1" sboTerm="SBO:0000177">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#_750280">
+	<bqbiol:isPartOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/ec-code/1.11.1.7"/>
+	</rdf:Bag>
+	</bqbiol:isPartOf>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference metaid="_95ec006b-abee-40ef-bc1d-81790410496a" species="X"/>
+          <speciesReference metaid="c8247dd8-c0a8-434b-a3e8-e4fac973139f" species="E"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="_17c7d1b0-d415-47c6-897d-c415343d1916" species="P"/>
+        </listOfProducts>
+        <kineticLaw metaid="e64d0ab9-ab79-44eb-81b7-c79870b3eaa6">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
-              <minus/>
+              <times/>
+              <ci> cell </ci>
               <apply>
-                <times/>
-                <ci> E </ci>
-                <ci> X </ci>
-              </apply>
-              <apply>
-                <times/>
-                <ci> K2 </ci>
-                <ci> P </ci>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> E </ci>
+                  <ci> X </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> K2 </ci>
+                  <ci> P </ci>
+                </apply>
               </apply>
             </apply>
-          </apply>
-        </math>
-      </kineticLaw>
-    </reaction>
-    <reaction metaid="_750283" id="r2" name="r2" reversible="false" sboTerm="SBO:0000200">
-      <annotation>
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-          <rdf:Description rdf:about="#_750283">
-            <bqbiol:isPartOf>
-              <rdf:Bag>
-                <rdf:li rdf:resource="urn:miriam:ec-code:1.11.1.7"/>
-              </rdf:Bag>
-            </bqbiol:isPartOf>
-            <bqbiol:isVersionOf>
-              <rdf:Bag>
-                <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0042744"/>
-              </rdf:Bag>
-            </bqbiol:isVersionOf>
-          </rdf:Description>
-        </rdf:RDF>
-      </annotation>
-      <listOfReactants>
-        <speciesReference species="P"/>
-      </listOfReactants>
-      <listOfProducts>
-        <speciesReference species="E"/>
-        <speciesReference species="Q"/>
-      </listOfProducts>
-      <kineticLaw>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> cell </ci>
-            <ci> K3 </ci>
-            <ci> P </ci>
-          </apply>
-        </math>
-      </kineticLaw>
-    </reaction>
-  </listOfReactions>
-</model>
+          </math>
+                </kineticLaw>
+      </reaction>
+      <reaction id="r2" metaid="_750283" name="r2" reversible="false" sboTerm="SBO:0000200">
+        <annotation>
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#_750283">
+              <bqbiol:isPartOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/ec-code/1.11.1.7"/>
+	</rdf:Bag>
+	</bqbiol:isPartOf>
+	
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/go/GO:0042744"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
+	</rdf:RDF>
+	</annotation>
+              <listOfReactants>
+          <speciesReference metaid="_8bb78dbc-114b-4133-b136-31ca900b4011" species="P"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="_370ac2f2-4bda-4f89-b457-328f40bf044b" species="E"/>
+          <speciesReference metaid="_33d3183f-e9ff-484c-8ec0-f8c0f19a0c52" species="Q"/>
+        </listOfProducts>
+        <kineticLaw metaid="fd0628d5-a0dd-4f20-9430-0ab79ebe32bc">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <ci> K3 </ci>
+              <ci> P </ci>
+            </apply>
+          </math>
+                </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
 </sbml>

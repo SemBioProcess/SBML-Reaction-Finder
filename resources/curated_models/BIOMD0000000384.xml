@@ -1,94 +1,102 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sbml xmlns="http://www.sbml.org/sbml/level2/version4" metaid="metaid_0000001" level="2" version="4">
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" metaid="metaid_0000001" version="4">
   <model metaid="_242608" name="Arnold2011_Medlyn2002_RuBisCO-CalvinCycle">
     <notes>
       <body xmlns="http://www.w3.org/1999/xhtml">
-        <p>                                                                              This model is from the article:                                                  <br/>
-        <strong> A quantitative comparison of Calvin–Benson cycle models           </strong>
-        <br/>                                                                      Anne Arnold, Zoran Nikoloski                                                          <em>Trends in Plant Science</em>2011 Oct 14.                                     <a href="http://www.ncbi.nlm.nih.gov/pubmed/22001849">22001849</a>,              <br/>
-        <strong>Abstract:</strong>
-        <br/>                                                                      The Calvin-Benson cycle (CBC) provides the precursors for biomass synthesis necessary for plant growth. The dynamic behavior and yield of the CBC depend on the environmental conditions and regulation of the cellular state. Accurate quantitative models hold the promise of identifying the key determinants of the tightly regulated CBC function and their effects on the responses in future climates. We provide an integrative analysis of the largest compendium of existing models for photosynthetic processes. Based on the proposed ranking, our framework facilitates the discovery of best-performing models with regard to metabolomics data and of candidates for metabolic engineering.                                                  </p>
-        <p>
-          <b>Note:</b>Model of the Calvin cycle with focus on the RuBisCO reaction by Medlyn et al. (2002, <a href="http://dx.doi.org/10.1046/j.1365-3040.2002.00891.x">DOI:10.1046/j.1365-3040.2002.00891.x</a>).</p> The parameter values are widely taken from Farquhar et al. (1980, <a href="http://dx.doi.org/10.1007/BF00386231">DOI:10.1007/BF00386231</a>). The initial metabolite values are chosen from the data set of Zhu et al. (2007, <a href="http:dx.doi.org/10.1104/pp.107.103713">DOI:10.1104/pp.107.103713)</a>. A detailed description of all modifications is given in the model described by Arnold and Nikoloski (2011, <a href="http://www.ncbi.nlm.nih.gov/pubmed/22001849">PMID:22001849</a>.<p>To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. Please refer to <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Creative Commons CC0">CC0 Public Domain Dedication</a> for more information.</p>
-          <p>In summary, you are entitled to use this encoded model in absolutely any manner you deem suitable, verbatim, or with modification, alone or embedded it in a larger context, redistribute it, commercially or not, in a restricted way or not.</p>
-          <p>To cite BioModels Database, please use: <a href="http://www.ncbi.nlm.nih.gov/pubmed/20587024" target="_blank">Li C, Donizelli M, Rodriguez N, Dharuri H, Endler L, Chelliah V, Li L, He E, Henry A, Stefan MI, Snoep JL, Hucka M, Le Novère N, Laibe C (2010) BioModels Database: An enhanced, curated and annotated resource for published quantitative kinetic models. BMC Syst Biol., 4:92.</a>
-        </p>
-      </body>
+        <p>This model is from the article:      <br/>
+                <strong>A quantitative comparison of Calvin–Benson cycle models</strong>
+                <br/>
+          Anne Arnold, Zoran Nikoloski      <em>Trends in Plant Science</em>
+          2011 Oct 14.      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22001849">22001849</a>
+          ,      <br/>
+                <strong>Abstract:</strong>
+                <br/>
+          The Calvin-Benson cycle (CBC) provides the precursors for biomass synthesis necessary for plant growth. The dynamic behavior and yield of the CBC depend on the environmental conditions and regulation of the cellular state. Accurate quantitative models hold the promise of identifying the key determinants of the tightly regulated CBC function and their effects on the responses in future climates. We provide an integrative analysis of the largest compendium of existing models for photosynthetic processes. Based on the proposed ranking, our framework facilitates the discovery of best-performing models with regard to metabolomics data and of candidates for metabolic engineering.      </p>
+            <p>      <b>Note:</b>
+          Model of the Calvin cycle with focus on the RuBisCO reaction by Medlyn et al. (2002,      <a href="http://dx.doi.org/10.1046/j.1365-3040.2002.00891.x">DOI:10.1046/j.1365-3040.2002.00891.x</a>
+          ).      </p>
+        The parameter values are widely taken from Farquhar et al. (1980,    <a href="http://dx.doi.org/10.1007/BF00386231">DOI:10.1007/BF00386231</a>
+        ). The initial metabolite values are chosen from the data set of Zhu et al. (2007,    <a href="http:dx.doi.org/10.1104/pp.107.103713">DOI:10.1104/pp.107.103713)</a>
+        . A detailed description of all modifications is given in the model described by Arnold and Nikoloski (2011,    <a href="http://www.ncbi.nlm.nih.gov/pubmed/22001849">PMID:22001849</a>
+        .    </body>
+      
     </notes>
     <annotation>
-      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
         <rdf:Description rdf:about="#_242608">
-          <dc:creator>
-            <rdf:Bag>
-              <rdf:li rdf:parseType="Resource">
-                <vCard:N rdf:parseType="Resource">
-                  <vCard:Family>Chelliah</vCard:Family>
-                  <vCard:Given>Vijayalakshmi</vCard:Given>
-                </vCard:N>
-                <vCard:EMAIL>viji@ebi.ac.uk</vCard:EMAIL>
-                <vCard:ORG rdf:parseType="Resource">
-                  <vCard:Orgname>EMBL-EBI</vCard:Orgname>
-                </vCard:ORG>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard:N rdf:parseType="Resource">
-                  <vCard:Family>Arnold</vCard:Family>
-                  <vCard:Given>Anne</vCard:Given>
-                </vCard:N>
-                <vCard:EMAIL>arnold@mpimp-golm.mpg.de</vCard:EMAIL>
-                <vCard:ORG rdf:parseType="Resource">
-                  <vCard:Orgname>Max-Planck-Institute of Molecular Plant Physiology</vCard:Orgname>
-                </vCard:ORG>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard:N rdf:parseType="Resource">
-                  <vCard:Family>Nikoloski</vCard:Family>
-                  <vCard:Given>Zoran</vCard:Given>
-                </vCard:N>
-                <vCard:EMAIL>nikoloski@mpimp-golm.mpg.de</vCard:EMAIL>
-                <vCard:ORG rdf:parseType="Resource">
-                  <vCard:Orgname>Institute  of Biochemistry and Biology, University of Potsdam, 14476 Potsdam, Germany</vCard:Orgname>
-                </vCard:ORG>
-              </rdf:li>
-            </rdf:Bag>
-          </dc:creator>
-          <dcterms:created rdf:parseType="Resource">
-            <dcterms:W3CDTF>2011-10-19T14:50:44Z</dcterms:W3CDTF>
-          </dcterms:created>
-          <dcterms:modified rdf:parseType="Resource">
-            <dcterms:W3CDTF>2012-04-20T19:53:00Z</dcterms:W3CDTF>
-          </dcterms:modified>
-          <bqmodel:is>
-            <rdf:Bag>
-              <rdf:li rdf:resource="urn:miriam:biomodels.db:BIOMD0000000384"/>
-            </rdf:Bag>
-          </bqmodel:is>
-          <bqmodel:is>
-            <rdf:Bag>
-              <rdf:li rdf:resource="urn:miriam:biomodels.db:MODEL1109270000"/>
-            </rdf:Bag>
-          </bqmodel:is>
-          <bqmodel:isDescribedBy>
-            <rdf:Bag>
-              <rdf:li rdf:resource="urn:miriam:pubmed:22001849"/>
-            </rdf:Bag>
-          </bqmodel:isDescribedBy>
-          <bqbiol:encodes>
-            <rdf:Bag>
-              <rdf:li rdf:resource="urn:miriam:obo.go:GO%3A0019253"/>
-            </rdf:Bag>
-          </bqbiol:encodes>
-          <bqbiol:occursIn>
-            <rdf:Bag>
-              <rdf:li rdf:resource="urn:miriam:taxonomy:33090"/>
-            </rdf:Bag>
-          </bqbiol:occursIn>
-        </rdf:Description>
+	<dc:creator>
+	<rdf:Bag>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Chelliah</vCard:Family>
+	<vCard:Given>Vijayalakshmi</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>viji@ebi.ac.uk</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>EMBL-EBI</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Nikoloski</vCard:Family>
+	<vCard:Given>Zoran</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>nikoloski@mpimp-golm.mpg.de</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>Institute  of Biochemistry and Biology, University of Potsdam, 14476 Potsdam, Germany</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	<rdf:li rdf:parseType="Resource">
+	<vCard:N rdf:parseType="Resource">
+	<vCard:Family>Arnold</vCard:Family>
+	<vCard:Given>Anne</vCard:Given>
+	</vCard:N>
+	<vCard:EMAIL>arnold@mpimp-golm.mpg.de</vCard:EMAIL>
+	<vCard:ORG rdf:parseType="Resource">
+	<vCard:Orgname>Max-Planck-Institute of Molecular Plant Physiology</vCard:Orgname>
+	</vCard:ORG>
+	</rdf:li>
+	</rdf:Bag>
+	</dc:creator>
+	<dcterms:created rdf:parseType="Resource">
+	<dcterms:W3CDTF>2011-10-19T14:50:44Z</dcterms:W3CDTF>
+	</dcterms:created>
+	<dcterms:modified rdf:parseType="Resource">
+	<dcterms:W3CDTF>2012-04-20T19:53:00Z</dcterms:W3CDTF>
+	</dcterms:modified>
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1109270000"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	<bqmodel:is>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/biomodels.db/BIOMD0000000384"/>
+	</rdf:Bag>
+	</bqmodel:is>
+	<bqmodel:isDescribedBy>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/pubmed/22001849"/>
+	</rdf:Bag>
+	</bqmodel:isDescribedBy>
+	<bqbiol:encodes>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0019253"/>
+	</rdf:Bag>
+	</bqbiol:encodes>
+	<bqbiol:hasTaxon>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/taxonomy/33090"/>
+	</rdf:Bag>
+	</bqbiol:hasTaxon>
+	</rdf:Description>
+	
       </rdf:RDF>
     </annotation>
-    <listOfFunctionDefinitions>
-      <functionDefinition metaid="metaid_0000003" id="PGA_consumption" name="PGA consumption">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <listOfFunctionDefinitions>
+      <functionDefinition id="PGA_consumption" metaid="metaid_0000003" name="PGA consumption">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <lambda>
             <bvar>
               <ci> S1 </ci>
@@ -121,9 +129,9 @@
             </apply>
           </lambda>
         </math>
-      </functionDefinition>
-      <functionDefinition metaid="metaid_0000004" id="NADPH_production" name="NADPH production">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            </functionDefinition>
+      <functionDefinition id="NADPH_production" metaid="metaid_0000004" name="NADPH production">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <lambda>
             <bvar>
               <ci> j </ci>
@@ -149,9 +157,9 @@
             </apply>
           </lambda>
         </math>
-      </functionDefinition>
-      <functionDefinition metaid="metaid_0000005" id="carboxylation" name="Carboxylation">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            </functionDefinition>
+      <functionDefinition id="carboxylation" metaid="metaid_0000005" name="Carboxylation">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <lambda>
             <bvar>
               <ci> Vc </ci>
@@ -181,9 +189,9 @@
             </apply>
           </lambda>
         </math>
-      </functionDefinition>
-      <functionDefinition metaid="metaid_0000006" id="oxygenation" name="Oxygenation">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            </functionDefinition>
+      <functionDefinition id="oxygenation" metaid="metaid_0000006" name="Oxygenation">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <lambda>
             <bvar>
               <ci> phi </ci>
@@ -220,169 +228,184 @@
             </apply>
           </lambda>
         </math>
-      </functionDefinition>
+            </functionDefinition>
     </listOfFunctionDefinitions>
     <listOfUnitDefinitions>
-      <unitDefinition metaid="metaid_0000007" id="substance">
+      <unitDefinition id="substance" metaid="metaid_0000007">
         <listOfUnits>
-          <unit kind="mole" scale="-3"/>
+          <unit kind="mole" metaid="_995454" scale="-3"/>
         </listOfUnits>
       </unitDefinition>
     </listOfUnitDefinitions>
     <listOfCompartments>
-      <compartment metaid="metaid_0000022" id="chloroplast" name="chloroplast" size="1"/>
+      <compartment id="chloroplast" metaid="metaid_0000022" name="chloroplast" size="1"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species metaid="metaid_0000023" id="RuBP" name="RuBP" compartment="chloroplast" initialConcentration="2" boundaryCondition="true" constant="true">
+      <species boundaryCondition="true" compartment="chloroplast" constant="true" id="RuBP" initialConcentration="2" metaid="metaid_0000023" name="RuBP">
         <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
             <rdf:Description rdf:about="#metaid_0000023">
-              <bqbiol:isVersionOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16710"/>
-                </rdf:Bag>
-              </bqbiol:isVersionOf>
-            </rdf:Description>
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:16710"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
           </rdf:RDF>
         </annotation>
-      </species>
-      <species metaid="metaid_0000024" id="PGA" name="PGA" compartment="chloroplast" initialConcentration="2.4">
+            </species>
+      <species compartment="chloroplast" id="PGA" initialConcentration="2.4" metaid="metaid_0000024" name="PGA">
         <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
             <rdf:Description rdf:about="#metaid_0000024">
-              <bqbiol:isVersionOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A17050"/>
-                </rdf:Bag>
-              </bqbiol:isVersionOf>
-            </rdf:Description>
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:17050"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
           </rdf:RDF>
         </annotation>
-      </species>
-      <species metaid="metaid_0000025" id="NADPH" name="NADPH" compartment="chloroplast" initialConcentration="0.21">
+            </species>
+      <species compartment="chloroplast" id="NADPH" initialConcentration="0.21" metaid="metaid_0000025" name="NADPH">
         <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
             <rdf:Description rdf:about="#metaid_0000025">
-              <bqbiol:isVersionOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16474"/>
-                </rdf:Bag>
-              </bqbiol:isVersionOf>
-            </rdf:Description>
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:16474"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
           </rdf:RDF>
         </annotation>
-      </species>
-      <species metaid="metaid_0000026" id="CO2" name="CO2" compartment="chloroplast" initialConcentration="245" boundaryCondition="true" constant="true">
+            </species>
+      <species boundaryCondition="true" compartment="chloroplast" constant="true" id="CO2" initialConcentration="245" metaid="metaid_0000026" name="CO2">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>0.7* 350 [µbar] (p. 1172)</p>
-          </body>
+                <p>0.7* 350 [µbar] (p. 1172)</p>
+                    </body>
+          
         </notes>
         <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
             <rdf:Description rdf:about="#metaid_0000026">
-              <bqbiol:isVersionOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A16526"/>
-                </rdf:Bag>
-              </bqbiol:isVersionOf>
-            </rdf:Description>
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:16526"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
           </rdf:RDF>
         </annotation>
-      </species>
-      <species metaid="metaid_0000027" id="O2" name="O2" compartment="chloroplast" initialConcentration="210" boundaryCondition="true" constant="true">
+            </species>
+      <species boundaryCondition="true" compartment="chloroplast" constant="true" id="O2" initialConcentration="210" metaid="metaid_0000027" name="O2">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>[mbar]</p>
-          </body>
+                <p>[mbar]</p>
+                    </body>
+          
         </notes>
         <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
             <rdf:Description rdf:about="#metaid_0000027">
-              <bqbiol:isVersionOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A15379"/>
-                </rdf:Bag>
-              </bqbiol:isVersionOf>
-            </rdf:Description>
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:15379"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
           </rdf:RDF>
         </annotation>
-      </species>
-      <species metaid="metaid_0000028" id="NADP" name="NADP" compartment="chloroplast" initialConcentration="0.29" boundaryCondition="true">
+            </species>
+      <species boundaryCondition="true" compartment="chloroplast" id="NADP" initialConcentration="0.29" metaid="metaid_0000028" name="NADP">
         <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
             <rdf:Description rdf:about="#metaid_0000028">
-              <bqbiol:isVersionOf>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="urn:miriam:obo.chebi:CHEBI%3A25523"/>
-                </rdf:Bag>
-              </bqbiol:isVersionOf>
-            </rdf:Description>
+	<bqbiol:isVersionOf>
+	<rdf:Bag>
+	<rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:25523"/>
+	</rdf:Bag>
+	</bqbiol:isVersionOf>
+	</rdf:Description>
+	
           </rdf:RDF>
         </annotation>
-      </species>
+            </species>
     </listOfSpecies>
     <listOfParameters>
-      <parameter metaid="metaid_0000008" id="Rp" name="Rp" value="3.2"/>
-      <parameter metaid="metaid_0000009" id="Nt" name="Nt" value="0.5" sboTerm="SBO:0000009"/>
-      <parameter metaid="metaid_0000010" id="alpha" name="alpha" value="0.3" sboTerm="SBO:0000009">
+      <parameter id="Rp" metaid="metaid_0000008" name="Rp" value="3.2"/>
+      <parameter id="Nt" metaid="metaid_0000009" name="Nt" sboTerm="SBO:0000009" value="0.5"/>
+      <parameter id="alpha" metaid="metaid_0000010" name="alpha" sboTerm="SBO:0000009" value="0.3">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>(p. 1170)</p>
-          </body>
+                <p>(p. 1170)</p>
+                    </body>
+          
         </notes>
       </parameter>
-      <parameter metaid="metaid_0000011" id="Q" name="Q" value="1000" sboTerm="SBO:0000009"/>
-      <parameter metaid="metaid_0000012" id="J" name="J" value="4.8582995951417" constant="false" sboTerm="SBO:0000009">
+      <parameter id="Q" metaid="metaid_0000011" name="Q" sboTerm="SBO:0000009" value="1000"/>
+      <parameter constant="false" id="J" metaid="metaid_0000012" name="J" sboTerm="SBO:0000009" value="4.8582995951417">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>assumed J = 0.9 Jmax (p. 1172); converted into [mM] using Winter et al. (1994) subcellular stroma volume, BioNumbers (ID: 105594)</p>
-          </body>
+                <p>assumed J = 0.9 Jmax (p. 1172); converted into [mM] using Winter et al. (1994) subcellular stroma volume, BioNumbers (ID: 105594)</p>
+                    </body>
+          
         </notes>
       </parameter>
-      <parameter metaid="metaid_0000013" id="Gamma" name="Gamma" value="42.8926627111176" sboTerm="SBO:0000009">
+      <parameter id="Gamma" metaid="metaid_0000013" name="Gamma" sboTerm="SBO:0000009" value="42.8926627111176">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>Bernacchi et al. (2001) Equation (8), Table 1</p>
-          </body>
+                <p>Bernacchi et al. (2001) Equation (8), Table 1</p>
+                    </body>
+          
         </notes>
       </parameter>
-      <parameter metaid="metaid_0000014" id="teta" name="teta" value="0.9" sboTerm="SBO:0000009">
+      <parameter id="teta" metaid="metaid_0000014" name="teta" sboTerm="SBO:0000009" value="0.9">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>(p. 1170)</p>
-          </body>
+                <p>(p. 1170)</p>
+                    </body>
+          
         </notes>
       </parameter>
-      <parameter metaid="metaid_0000015" id="Vcmax" name="Vcmax" value="2.53232284114507" sboTerm="SBO:0000009">
+      <parameter id="Vcmax" metaid="metaid_0000015" name="Vcmax" sboTerm="SBO:0000009" value="2.53232284114507">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>average of corresponding values of Table 2; converted into [mM] using Winter et al. (1994) subcellular stroma volume, BioNumbers (ID: 105594)</p>
-          </body>
+                <p>average of corresponding values of Table 2; converted into [mM] using Winter et al. (1994) subcellular stroma volume, BioNumbers (ID: 105594)</p>
+                    </body>
+          
         </notes>
       </parameter>
-      <parameter metaid="metaid_0000016" id="Vomax" name="Vomax" value="0.531787796640465" constant="false"/>
-      <parameter metaid="metaid_0000017" id="Kc" name="Kc" value="406.066146391504" sboTerm="SBO:0000009">
+      <parameter constant="false" id="Vomax" metaid="metaid_0000016" name="Vomax" value="0.531787796640465"/>
+      <parameter id="Kc" metaid="metaid_0000017" name="Kc" sboTerm="SBO:0000009" value="406.066146391504">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>Bernacchi et al. (2001) Equation (8), Table 1</p>
-          </body>
+                <p>Bernacchi et al. (2001) Equation (8), Table 1</p>
+                    </body>
+          
         </notes>
       </parameter>
-      <parameter metaid="metaid_0000018" id="Ko" name="Ko" value="276.900084789612">
+      <parameter id="Ko" metaid="metaid_0000018" name="Ko" value="276.900084789612">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>Bernacchi et al. (2001) Equation (8), Table 1</p>
-          </body>
+                <p>Bernacchi et al. (2001) Equation (8), Table 1</p>
+                    </body>
+          
         </notes>
       </parameter>
-      <parameter metaid="metaid_0000019" id="Vj" name="Vj" value="0.899589030506691" constant="false" sboTerm="SBO:0000009"/>
-      <parameter metaid="metaid_0000020" id="phi" name="phi" value="0.263964911408408" constant="false" sboTerm="SBO:0000009"/>
-      <parameter metaid="metaid_0000021" id="Vc" name="Vc" value="0.646926785453086" constant="false" sboTerm="SBO:0000009"/>
+      <parameter constant="false" id="Vj" metaid="metaid_0000019" name="Vj" sboTerm="SBO:0000009" value="0.899589030506691"/>
+      <parameter constant="false" id="phi" metaid="metaid_0000020" name="phi" sboTerm="SBO:0000009" value="0.263964911408408"/>
+      <parameter constant="false" id="Vc" metaid="metaid_0000021" name="Vc" sboTerm="SBO:0000009" value="0.646926785453086"/>
     </listOfParameters>
     <listOfRules>
       <assignmentRule metaid="metaid_0000029" variable="J">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <apply>
             <divide/>
             <apply>
@@ -409,9 +432,9 @@
             </apply>
           </apply>
         </math>
-      </assignmentRule>
+            </assignmentRule>
       <assignmentRule metaid="metaid_0000030" variable="Vj">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <apply>
             <divide/>
             <apply>
@@ -434,9 +457,9 @@
             </apply>
           </apply>
         </math>
-      </assignmentRule>
+            </assignmentRule>
       <assignmentRule metaid="metaid_0000031" variable="Vc">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <apply>
             <divide/>
             <apply>
@@ -463,27 +486,27 @@
             </apply>
           </apply>
         </math>
-      </assignmentRule>
+            </assignmentRule>
       <assignmentRule metaid="metaid_0000032" variable="NADP">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <apply>
             <minus/>
             <ci> Nt </ci>
             <ci> NADPH </ci>
           </apply>
         </math>
-      </assignmentRule>
+            </assignmentRule>
       <assignmentRule metaid="metaid_0000033" variable="Vomax">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <apply>
             <times/>
             <cn> 0.21 </cn>
             <ci> Vcmax </ci>
           </apply>
         </math>
-      </assignmentRule>
+            </assignmentRule>
       <assignmentRule metaid="metaid_0000034" variable="phi">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
           <apply>
             <divide/>
             <apply>
@@ -502,20 +525,20 @@
             </apply>
           </apply>
         </math>
-      </assignmentRule>
+            </assignmentRule>
     </listOfRules>
     <listOfReactions>
-      <reaction metaid="metaid_0000035" id="PGA_prod_Vc" name="PGA production - v_c" reversible="false">
+      <reaction id="PGA_prod_Vc" metaid="metaid_0000035" name="PGA production - v_c" reversible="false">
         <listOfReactants>
-          <speciesReference species="RuBP"/>
-          <speciesReference species="CO2"/>
-          <speciesReference species="NADPH" stoichiometry="2"/>
+          <speciesReference metaid="_995466" species="RuBP"/>
+          <speciesReference metaid="_995478" species="CO2"/>
+          <speciesReference metaid="_995490" species="NADPH" stoichiometry="2"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="PGA" stoichiometry="2"/>
+          <speciesReference metaid="_995502" species="PGA" stoichiometry="2"/>
         </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="_995514">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> chloroplast </ci>
@@ -526,19 +549,19 @@
               </apply>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
-      <reaction metaid="metaid_0000036" id="PGA_prod_Vo" name="PGA production - v_o" reversible="false">
+      <reaction id="PGA_prod_Vo" metaid="metaid_0000036" name="PGA production - v_o" reversible="false">
         <listOfReactants>
-          <speciesReference species="RuBP"/>
-          <speciesReference species="O2"/>
-          <speciesReference species="NADPH" stoichiometry="2"/>
+          <speciesReference metaid="_995526" species="RuBP"/>
+          <speciesReference metaid="_995538" species="O2"/>
+          <speciesReference metaid="_995551" species="NADPH" stoichiometry="2"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="PGA" stoichiometry="1.5"/>
+          <speciesReference metaid="_995564" species="PGA" stoichiometry="1.5"/>
         </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="_995576">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> chloroplast </ci>
@@ -550,20 +573,20 @@
               </apply>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
-      <reaction metaid="metaid_0000037" id="PGA_cons" name="PGA consumption" reversible="false">
+      <reaction id="PGA_cons" metaid="metaid_0000037" name="PGA consumption" reversible="false">
         <listOfReactants>
-          <speciesReference species="PGA"/>
+          <speciesReference metaid="_995588" species="PGA"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="RuBP"/>
+          <speciesReference metaid="_995600" species="RuBP"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference species="NADPH"/>
+          <modifierSpeciesReference metaid="_995612" species="NADPH"/>
         </listOfModifiers>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="_995624">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> chloroplast </ci>
@@ -577,17 +600,17 @@
               </apply>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
-      <reaction metaid="metaid_0000038" id="NADPH_prod" name="NADPH production" reversible="false">
+      <reaction id="NADPH_prod" metaid="metaid_0000038" name="NADPH production" reversible="false">
         <listOfReactants>
-          <speciesReference species="NADP"/>
+          <speciesReference metaid="_995636" species="NADP"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="NADPH"/>
+          <speciesReference metaid="_995648" species="NADPH"/>
         </listOfProducts>
-        <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <kineticLaw metaid="_995660">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
             <apply>
               <times/>
               <ci> chloroplast </ci>
@@ -599,7 +622,7 @@
               </apply>
             </apply>
           </math>
-        </kineticLaw>
+                </kineticLaw>
       </reaction>
     </listOfReactions>
   </model>

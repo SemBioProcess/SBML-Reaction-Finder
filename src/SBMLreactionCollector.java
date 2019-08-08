@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
@@ -27,6 +26,7 @@ import org.jdom.input.SAXBuilder;
 import org.sbml.jsbml.CVTerm;
 import org.sbml.jsbml.CVTerm.Qualifier;
 import org.sbml.jsbml.Model;
+import org.sbml.jsbml.Reaction;
 import org.sbml.jsbml.SBMLDocument;
 import org.sbml.jsbml.SBMLReader;
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -118,8 +118,6 @@ public class SBMLreactionCollector {
 		SAXBuilder builder = new SAXBuilder();
 		Document doc = null;
 		
-		Namespace bqbiolns = Namespace.getNamespace("bqbiol","http://biomodels.net/biology-qualifiers/");
-
 		// For each model in our collection, collect the reactions
 		for(int i=0; i<SBMLmodels.length; i++){
 			if(SBMLmodels[i].getName().startsWith("BIOMD")){ // && i < 4){
@@ -201,187 +199,122 @@ public class SBMLreactionCollector {
 				
 				
 				// Process the reactions in the model
-				if(modelnode.getChild("listOfReactions", ns)!=null){
-					Element rxnsnode = modelnode.getChild("listOfReactions", ns);
-					List<Element> rxns  = rxnsnode.getChildren("reaction", ns);
-					Iterator<Element> rxniterator = rxns.iterator();
+				System.out.println(sbmlmodel.getNumReactions() + " reactions in model");
+				
+				for(Reaction rxn : sbmlmodel.getListOfReactions()) {
+					OWLClass GOclass = null;
+
+					Boolean hasGOannotation = false;
 					
-					while(rxniterator.hasNext()){
-						Boolean hasGOannotation = false;
+					String rxnlabel = "";
+					String rxnid = rxn.isSetId() ? rxn.getId() : "";
+					String rxnname = rxn.isSetName() ? rxn.getName() : "";
+					String rxnmetaid = rxn.isSetMetaId() ? rxn.getMetaId() : "";
+					
+					if(rxnid.equals("") && rxnname.equals("") && rxnmetaid.equals("")){
+						System.out.print("Couldn't create unique ID for " + rxn.toString());
+					}
+					else{
+						if( ! rxnid.equals(""))	rxnlabel = OWLMethods.URIencoding(rxnid);
+						else if( ! rxnname.equals("")) rxnlabel = OWLMethods.URIencoding(rxnname);
+						else if( ! rxnmetaid.equals("")) rxnlabel = OWLMethods.URIencoding(rxnmetaid);
+					}
+					
+					OWLClass rxnclass = factory.getOWLClass(IRI.create(base + modelname + "_" + rxnlabel));
+					
+					// Go through the annotations on the reaction and collect GO and EC-CODE terms
+					ArrayList<CVTerm> cvsis = new ArrayList<CVTerm>();
+					ArrayList<CVTerm> cvivo = new ArrayList<CVTerm>();
 
-						Element rxn = rxniterator.next();
-						String rxnlabel = "";
-						String rxnid = "";
-						String rxnname = "";
-						String rxnmetaid = "";
+					for(CVTerm cv : rxn.getCVTerms()) {
+						if(cv.getQualifier()==Qualifier.BQB_IS ) cvsis.add(cv);
+						else if(cv.getQualifier()==Qualifier.BQB_IS_VERSION_OF) cvivo.add(cv);
+					}
 						
-						if(rxn.getAttributeValue("id")!=null){
-							rxnid =  rxn.getAttributeValue("id");
-						}
-						if(rxn.getAttributeValue("name")!=null){
-							rxnname = rxn.getAttributeValue("name");
+					ArrayList<CVTerm> cvstoprocess = new ArrayList<CVTerm>();
+					cvstoprocess.addAll(cvsis); // Prioritize <is> annotations
+					cvstoprocess.addAll(cvivo);
+					
+					for(CVTerm cv : cvstoprocess) {
 							
-						}
-						if(rxn.getAttributeValue("metaid")!=null){
-							rxnmetaid = rxn.getAttributeValue("metaid");
-						}
-						if(rxnid.equals("") && rxnname.equals("") && rxnmetaid.equals("")){
-							System.out.print("Couldn't create unique ID for " + rxn.toString());
-						}
-						else{
-							if(!rxnid.equals("")){
-								rxnlabel = OWLMethods.URIencoding(rxnid);
-							}
-							else if(!rxnname.equals("")){
-								rxnlabel = OWLMethods.URIencoding(rxnname);
-							}
-							else if(!rxnmetaid.equals("")){
-								rxnlabel = OWLMethods.URIencoding(rxnmetaid);
-							}
-						}
-						
-						OWLClass rxnclass = factory.getOWLClass(IRI.create(base + modelname + "_" + rxnlabel));
-						
-						// Get the GO annotation for the reaction
-						OWLClass GOclass = null;
-			                
-						if(rxn.getChild("annotation", ns)!=null){
-							Element annotation  = rxn.getChild("annotation", ns);
-							if(annotation.getChild("RDF",rdfns)!=null){
-								Element rdfchild = annotation.getChild("RDF",rdfns);
-								if(rdfchild.getChild("Description",rdfns)!=null){
-									Element description = rdfchild.getChild("Description", rdfns);
+						for(String cvres : cv.getResources()) {
+							
+							if(cvres.contains("urn:miriam:obo.go:") || cvres.contains("urn:miriam:ec-code:") 
+									|| cvres.contains("//identifiers.org/go/") || cvres.contains("//identifiers.org/ec-code")) {
+								
+								cvres = URLDecoder.decode(cvres, "UTF-8");
+								String annenc = "";
+								// If it's a GO annotation
+								if(cvres.contains("urn:miriam:obo.go:") || cvres.contains("//identifiers.org/go/")){
+									hasGOannotation = true;
 									
-									// Looks like sometimes (as in 000000236) - there are multiple isVersionOf tags instead of multiple li tags
-									if(description.getChildren("isVersionOf",bqbiolns)!=null){
-										Iterator<Element> isversionit = description.getChildren("isVersionOf",bqbiolns).iterator();
-										while(isversionit.hasNext()){
-											Element versionof = isversionit.next();
-											if(versionof.getChild("Bag",rdfns)!=null){
-												Element bag = versionof.getChild("Bag",rdfns);
-												if(bag.getChildren("li", rdfns)!=null){
-													List<Element> references = bag.getChildren("li", rdfns);
-													Iterator<Element> refit = references.iterator();
-													while(refit.hasNext()){
-														String ann = refit.next().getAttributeValue("resource", rdfns);
-														// If the miriam annotation is a GO term or an ec-code (BRENDA)
-														if(ann.contains("urn:miriam:obo.go:") || ann.contains("urn:miriam:ec-code:") 
-																|| ann.contains("//identifiers.org/go/") || ann.contains("//identifiers.org/ec-code")) {
-															
-															ann = URLDecoder.decode(ann, "UTF-8");
-															String annenc = "";
-															// If it's a GO annotation
-															if(ann.contains("urn:miriam:obo.go:") || ann.contains("//identifiers.org/go/")){
-																hasGOannotation = true;
-																
-																if(ann.contains("GO:"))
-																	ann = ann.substring(ann.indexOf("GO:"),ann.length());
-															}
-															// Use BRENDA web service to get the GO xref for ec-code annotations
-// 															else if(ann.contains("urn:miriam:ec-code:") || ann.contains("//identifiers.org/ec-code")){
-//																
-//																ann = ann.substring(ann.lastIndexOf(":")+1,ann.length());
-//																ArrayList<String> GOxrefs = BRENDAwebservice.getGOxrefsFromID(ann);
-//																// If there is a GO xref 
-//																if( ! GOxrefs.isEmpty()){
-//																	if( ! GOxrefs.get(0).equals("0")){
-//																		hasGOannotation = true;
-//																		ann = GOxrefs.get(0);
-//																	}
-//																}
-//															}
-															// If we've found a GO annotation, add the GO class and the reaction to the KB, unless already there
-															if(hasGOannotation){
-																annenc = ann.replace(":", "_");
-																GOclass = factory.getOWLClass(IRI.create(SBMLreactionFinder.GObase + annenc));
-																OWLMethods.addClass(ontology, GOclass, GOparentclass, manager);
-																OWLMethods.addClass(ontology, rxnclass, GOclass, manager);
-																
-																numannotatedrxns++;
-																
-																OWLMethods.setRDFLabel(ontology, rxnclass, rxnlabel, manager);
-																OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "hasName", rxnname, manager);
-																OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "hasId", rxnid, manager);
-																OWLMethods.setClsObjectProperty(ontology, rxnclass, onemodelclass, base + "hasSourceModel", base + "hasReaction", false, manager);
-	
-																//if(!taxon.equals(""))OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "occursInOrganism", taxon, manager);
-																//OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "hasKineticLawFormula", sbmlrxn.getKineticLaw().getFormula(), manager);
-																// Get and store info for the GO class, if not already added, and not already available in the existing reaction ontology
-																String[] labelandsyns = new String[]{};
-																labelandsyns = OWLMethods.getRDFLabelAndSynonyms(SBMLreactionFinder.rxnont, GOclass);
-																if(labelandsyns.length==0){
-																	if( ! GOtermsadded.contains(annenc) && labelandsyns.length==0){
-																		
-																		// Lookup term in local GO table
-																		if(GOidLabelMap.containsKey(annenc)) {
-																			labelandsyns = GOidLabelMap.get(annenc).toArray(new String[] {});
-																			System.out.println("Found term in GO table for " + labelandsyns[0]);
-																		}
-																		
-																		//labelandsyns = queryBioPortalGOAndProcess(annenc);
-																		if(labelandsyns.length>0){
-																			setRDFLabelAndSynonyms(labelandsyns, GOclass, annenc);
-																		}
-																	}
-																}
-																else{
-																	System.out.println("Using existing term from KB for " + labelandsyns[0]);
-																	setRDFLabelAndSynonyms(labelandsyns, GOclass, annenc);
-																}
-															}
-														}
-													}
-												}
-											}	
-										}
-										if( ! hasGOannotation){
-											// If no annotations can be linked to a GO term, store as an unannotated reaction
-											numunannotatedrxns++;
-											OWLMethods.addClass(ontology, rxnclass, unannotatedrxn, manager);
-											OWLMethods.setRDFLabel(ontology, rxnclass, rxnlabel, manager);
-											OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "hasName", rxnname, manager);
-											OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "hasId", rxnid, manager);
-											OWLMethods.setClsObjectProperty(ontology, rxnclass, onemodelclass, base + "hasSourceModel", base + "hasReaction", false, manager);
+									if(cvres.contains("GO:"))
+										cvres = cvres.substring(cvres.indexOf("GO:"),cvres.length());
+								}
+								// Use BRENDA web service to get the GO xref for ec-code annotations
+//										else if(ann.contains("urn:miriam:ec-code:") || ann.contains("//identifiers.org/ec-code")){
+//										
+//										ann = ann.substring(ann.lastIndexOf(":")+1,ann.length());
+//										ArrayList<String> GOxrefs = BRENDAwebservice.getGOxrefsFromID(ann);
+//										// If there is a GO xref 
+//										if( ! GOxrefs.isEmpty()){
+//											if( ! GOxrefs.get(0).equals("0")){
+//												hasGOannotation = true;
+//												ann = GOxrefs.get(0);
+//											}
+//										}
+//									}
+								// If we've found a GO annotation, add the GO class and the reaction to the KB, unless already there
+								if(hasGOannotation){
+									annenc = cvres.replace(":", "_");
+									GOclass = factory.getOWLClass(IRI.create(SBMLreactionFinder.GObase + annenc));
+									OWLMethods.addClass(ontology, GOclass, GOparentclass, manager);
+									OWLMethods.addClass(ontology, rxnclass, GOclass, manager);
+									
+									numannotatedrxns++;
+									
+									OWLMethods.setRDFLabel(ontology, rxnclass, rxnlabel, manager);
+									OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "hasName", rxnname, manager);
+									OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "hasId", rxnid, manager);
+									OWLMethods.setClsObjectProperty(ontology, rxnclass, onemodelclass, base + "hasSourceModel", base + "hasReaction", false, manager);
 
-											//OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "hasSourceModelURL", "http://www.ebi.ac.uk/biomodels/models-main/publ/" + SBMLmodels[i].getName(), manager);
-											//if(!taxon.equals(""))OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "occursInOrganism", taxon, manager);
-
+									// Get and store info for the GO class, if not already added, and not already available in the existing reaction ontology
+									String[] labelandsyns = new String[]{};
+									labelandsyns = OWLMethods.getRDFLabelAndSynonyms(SBMLreactionFinder.rxnont, GOclass);
+									
+									if(labelandsyns.length==0){
+										
+										if( ! GOtermsadded.contains(annenc) && labelandsyns.length==0){
+											
+											// Lookup term in local GO table
+											if(GOidLabelMap.containsKey(annenc)) {
+												labelandsyns = GOidLabelMap.get(annenc).toArray(new String[] {});
+												System.out.println("Found term in GO table for " + labelandsyns[0]);
+											}
+											
+											//labelandsyns = queryBioPortalGOAndProcess(annenc);
+											if(labelandsyns.length>0)
+												setRDFLabelAndSynonyms(labelandsyns, GOclass, annenc);
 										}
 									}
+									else{
+										System.out.println("Using existing term from KB for " + labelandsyns[0]);
+										setRDFLabelAndSynonyms(labelandsyns, GOclass, annenc);
+									}
+									break;
 								}
 							}
 						}
-						
-
-//						Element kinlaw = rxn.getChild("kineticLaw", ns);
-						
-//						if(kinlaw.getChild("listOfParameters", ns)!=null && hasGOannotation){
-//							Element listopars = kinlaw.getChild("listOfParameters", ns);
-//							List<Element> pars = listopars.getChildren("parameter", ns);
-//							Iterator<Element> parit = pars.iterator();
-//							
-//							while(parit.hasNext()){
-//								Element nextpar = parit.next();
-//								String parname = OWLMethods.URIencoding(nextpar.getAttributeValue("id").replace(" ", "_"));
-//								String value = nextpar.getAttributeValue("value");
-//								//System.out.println("  " + parname + " = " + value);
-//								//OWLClass parcls = factory.getOWLClass(IRI.create(base + modelname + "_" + parname));
-//								//OWLMethods.addClass(ontology, parcls, rxnparclass, manager);
-//								OWLMethods.setClsDatatypeProperty(ontology, parcls.getIRI().toString(), base + "hasNumericalValue", value, manager);
-//								if(GOclass!=null){
-//									OWLMethods.setClsObjectProperty(ontology, parcls, GOclass, base + "hasReactionAnnotation", base + "annotationForParameter", false, manager);
-//									OWLMethods.setClsObjectProperty(ontology, parcls, rxnclass, base + "hasAssociatedReaction", base + "hasReactionParameter", true, manager);
-//								}
-//								//OWLMethods.setClsObjectProperty(ontology, parcls.getIRI().toString(), object, rel, invrel, manager)
-//								OWLMethods.setRDFLabel(ontology, parcls, parname, manager);
-//								numpars++;
-//							}
-//						}
-//						else{System.out.println("No parameters for kineticLaw listed");}
-						
+					}
+					if( ! hasGOannotation){ // If no annotations can be linked to a GO term, store as an unannotated reaction
+						numunannotatedrxns++;
+						OWLMethods.addClass(ontology, rxnclass, unannotatedrxn, manager);
+						OWLMethods.setRDFLabel(ontology, rxnclass, rxnlabel, manager);
+						OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "hasName", rxnname, manager);
+						OWLMethods.setClsDatatypeProperty(ontology, rxnclass.getIRI().toString(), base + "hasId", rxnid, manager);
+						OWLMethods.setClsObjectProperty(ontology, rxnclass, onemodelclass, base + "hasSourceModel", base + "hasReaction", false, manager);
 					}
 				}
-				else{System.out.println("No reactions in model " + modelname);}
 			}
 			double pcntprocessed = (100*i)/SBMLmodels.length;
 			SBMLreactionFinder.msgbar.setValue((int) pcntprocessed);
@@ -455,13 +388,14 @@ public class SBMLreactionCollector {
 		
 		// Process XML results from UniProt REST service to get taxonomy info
 		if (docu.hasRootElement()) {
-			System.out.println(docu.getRootElement().toString());
+			
 			if (docu.getRootElement().getChild("Description",rdfns)!=null) {
-				System.out.println(docu.getRootElement().getChild("Description",rdfns));
 				Element descel = docu.getRootElement().getChild("Description",rdfns);
 				String scientificname = "";
+				
 				if(descel.getChild("scientificName",uniprotns)!=null){
 					scientificname = descel.getChild("scientificName",uniprotns).getText();
+					
 					if(!descel.getChildren("commonName",uniprotns).isEmpty()){
 						Iterator<Element> otherit = descel.getChildren("commonName", uniprotns).iterator();
 						taxonandcommonnames = new String[descel.getChildren("commonName", uniprotns).size()+1];

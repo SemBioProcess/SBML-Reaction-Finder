@@ -309,7 +309,7 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 
 		msgbar.setIndeterminate(false);
 		msgbar.setValue(0);
-		msgarea.setText("Loaded and ready");
+		msgarea.setText("Ready");
 	}
 	
 	

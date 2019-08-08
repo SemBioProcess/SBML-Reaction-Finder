@@ -215,8 +215,8 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 		reactionscroller.getVerticalScrollBar().setUnitIncrement(9);
 		reactionscroller.setBackground(Color.white);
 		
-		sp = new JSplitPane(JSplitPane.VERTICAL_SPLIT, resultsscroller, reactionscroller);
-		sp.setDividerLocation(250);
+		sp = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, resultsscroller, reactionscroller);
+		sp.setDividerLocation(490);
 		sp.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 		
 		resultsnumber.setText("0 reactions found");

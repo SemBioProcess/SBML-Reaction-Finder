@@ -766,7 +766,7 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 		} catch (Exception e) {
 			e.printStackTrace();}
 		
-		finder = new SBMLreactionFinder("SBML reaction finder");
+		finder = new SBMLreactionFinder("SBML Reaction Finder");
 		finder.setUpGUI();
 	}
 }

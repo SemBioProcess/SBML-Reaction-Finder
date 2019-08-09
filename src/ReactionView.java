@@ -11,22 +11,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.InputEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Scanner;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
-import javax.swing.JLabel;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -207,7 +199,7 @@ public class ReactionView extends JPanel implements ActionListener, MouseListene
 			reactioninfoarea.append("\nLocal (reaction-specific) parameter values:\n");
 			for(int par=0; par<rxn.getKineticLaw().getNumParameters(); par++){
 				KineticLaw kl = rxn.getKineticLaw();
-				LocalParameter param = kl.getParameter(par);
+				LocalParameter param = kl.getLocalParameter(par);
 				reactioninfoarea.append("    " + param.getId() + " = " + param.getValue() + " " + param.getUnits() + "\n"); 
 			}
 			
@@ -239,7 +231,6 @@ public class ReactionView extends JPanel implements ActionListener, MouseListene
 	
 	
 	public SBMLDocument loadSBMLmodel(String id) throws IOException{
-		//System.out.println(id);
 		SBMLDocument newdoc = null;
 		try {
 			newdoc = new SBMLReader().readSBMLFromString(client.getModelSBMLById(id));
@@ -248,44 +239,6 @@ public class ReactionView extends JPanel implements ActionListener, MouseListene
 		} catch (XMLStreamException e) {
 			  JOptionPane.showMessageDialog(SBMLreactionFinder.finder, e.getMessage());
 		}
-		
-	//	String sbmlmodelstring = "";
-//		if (url.toString().startsWith("http://")) {
-//			System.out.println(url.toString());
-//
-//			Boolean online = true;
-//			
-//			HttpURLConnection.setFollowRedirects(false);
-//			HttpURLConnection httpcon = (HttpURLConnection) url.openConnection();
-//			httpcon.setRequestMethod("HEAD");
-//			try {
-//				httpcon.getResponseCode();
-//			} catch (Exception e) {
-//				JOptionPane.showMessageDialog(this.getParent(), "Server response not detected - please make sure you are connected to the net");
-//				online = false;
-//			}
-//			if (online) {
-//				URLConnection urlcon = url.openConnection();
-//				urlcon.setDoInput(true);
-//				urlcon.setUseCaches(false);
-//				urlcon.setReadTimeout(60000);
-//				BufferedReader d = new BufferedReader(new InputStreamReader(urlcon.getInputStream()));
-//				String s;
-//				int size = httpcon.getContentLength();
-//				int sizeremaining = size;
-//				while ((s = d.readLine()) != null) {
-//					double pcntprocessed = 100*(size-sizeremaining)/size;
-//					sbmlmodelstring = sbmlmodelstring + s + "\n";
-//					sizeremaining = sizeremaining-s.getBytes().length;
-//					SBMLreactionFinder.msgbar.setValue((int) pcntprocessed);
-//					SBMLreactionFinder.msgarea.setText("Downloading reaction data..." + (int) pcntprocessed + "% complete");
-//				}
-//				d.close();
-//			} 
-//		}
-//		try {
-//			newdoc = new SBMLReader().readSBMLFromString(sbmlmodelstring);
-//		} catch (Exception e) {e.printStackTrace();}
 		
 		SBMLreactionFinder.msgbar.setIndeterminate(false); SBMLreactionFinder.msgbar.setValue(0);
 		SBMLreactionFinder.msgarea.setText("Finished downloading");
@@ -331,19 +284,26 @@ public class ReactionView extends JPanel implements ActionListener, MouseListene
 		}
 	}
 	
-	
+	// Choose where to store SBML for a selected reaction
 	public File chooseSaveLocation(){
 		JFileChooser filec = new JFileChooser();
+		filec.setPreferredSize(new Dimension(500,500));
+		
 		Boolean saveok = false;
 		File outputfile = null;
+		
 		while (!saveok) {
 			filec.setCurrentDirectory(SBMLreactionFinder.currentdirectory);
 			filec.setDialogTitle("Choose location to save SemSim file");
 			filec.addChoosableFileFilter(new FileFilter(new String[] { "xml" }));
-			int returnVal = filec.showSaveDialog(null);
+			
+			int returnVal = filec.showSaveDialog(SBMLreactionFinder.finder);
+			
+			
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 				outputfile = new File(filec.getSelectedFile().getAbsolutePath());
 				SBMLreactionFinder.currentdirectory = filec.getCurrentDirectory();
+				
 				if (!outputfile.getAbsolutePath().endsWith(".xml")
 						&& !outputfile.getAbsolutePath().endsWith(".xml")) {
 					outputfile = new File(filec.getSelectedFile().getAbsolutePath()
@@ -359,13 +319,18 @@ public class ReactionView extends JPanel implements ActionListener, MouseListene
 	}
 	
 	
+	// Choose folder when saving out all reactions in a model
 	public File chooseSaveLocationFolder(){
 		JFileChooser filec = new JFileChooser();
+		filec.setPreferredSize(new Dimension(500,500));
+
 		File outputdir = null;
 		filec.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 		filec.setCurrentDirectory(SBMLreactionFinder.currentdirectory);
 		filec.setDialogTitle("Choose directory to save the separate SBML models");
-		int returnVal = filec.showSaveDialog(null);
+		
+		int returnVal = filec.showSaveDialog(SBMLreactionFinder.finder);
+		
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
 			outputdir = new File(filec.getSelectedFile().getAbsolutePath());
 			SBMLreactionFinder.currentdirectory = filec.getCurrentDirectory();

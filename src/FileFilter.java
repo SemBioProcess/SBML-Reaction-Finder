@@ -2,8 +2,6 @@
 import java.io.File;
 
 public class FileFilter extends javax.swing.filechooser.FileFilter {
-	// public String extension = "";
-	// public String uppercase = extension.toUpperCase();
 	public String[] filetypes;
 
 	public FileFilter(String[] filetypes) {

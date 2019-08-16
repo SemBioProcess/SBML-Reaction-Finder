@@ -11,6 +11,7 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 import javax.xml.stream.XMLStreamException;
 
 
@@ -32,22 +33,30 @@ public class SearchResult extends JPanel implements MouseListener{
 		this.srcURIs = srcURIs;
 		this.GOstring = GOstring;
 		this.SBMLID = SBMLID;
-		GOlabel = new JLabel(GOstring);
-		GOlabel.setFont(new Font("SansSerif", Font.BOLD, 12));
-		GOlabel.setForeground(Color.blue);
-		GOlabel.setOpaque(false);
-		GOlabel.setBorder(BorderFactory.createEmptyBorder(3, 3, 0, 3));
 		
 		BiomodelsID = srcURIs.toArray(new String[]{})[0];
-		//BiomodelsID = BiomodelsID.substring(BiomodelsID.lastIndexOf("/")+1,BiomodelsID.lastIndexOf(".xml"));
 		setToolTipText(BiomodelsID);
 		
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		add(GOlabel);
+		
+		JLabel rxnidlabel = new JLabel("Reaction ID: " + SBMLID);
+		rxnidlabel.setFont(new Font("SansSerif", Font.BOLD, 13));
+		rxnidlabel.setOpaque(false);
+		rxnidlabel.setBorder(BorderFactory.createEmptyBorder(0,3,0,3));
+		add(rxnidlabel);
+		
 		JLabel modellabel = new JLabel("Model: " + srcmodelname);
 		modellabel.setOpaque(false);
-		modellabel.setBorder(BorderFactory.createEmptyBorder(3,3,3,3));
+		modellabel.setBorder(BorderFactory.createEmptyBorder(2,3,0,3));
 		add(modellabel);
+		
+		if( ! GOstring.isEmpty()) {
+			GOlabel = new JLabel("GO annotation: " + GOstring);
+			GOlabel.setForeground(Color.blue);
+			GOlabel.setOpaque(false);
+			GOlabel.setBorder(BorderFactory.createEmptyBorder(2, 3, 0, 3));
+			add(GOlabel);
+		}
 		
 		String tax = taxon;
 		if(taxon.equals(""))tax = "<unspecified>";
@@ -55,19 +64,18 @@ public class SearchResult extends JPanel implements MouseListener{
 		taxonlabel = new JLabel("Taxon: " + tax);
 		taxonlabel.setFont(new Font("SansSerif",Font.ITALIC,12));
 		taxonlabel.setOpaque(false);
-		taxonlabel.setBorder(BorderFactory.createEmptyBorder(0,3,3,3));
+		taxonlabel.setBorder(BorderFactory.createEmptyBorder(2,3,0,3));
 		this.add(taxonlabel);
 		
 		this.add(Box.createHorizontalGlue());
-		
-		
-		this.setBorder(BorderFactory.createEmptyBorder(2, 2, 2, 2));
+		Border border = BorderFactory.createLineBorder(new Color(255,255,255), 4);
+		this.setBorder(border);
 		this.setBackground(color);
 		this.addMouseListener(this);
 	}
 	
 	public void mouseClicked(MouseEvent arg0) {
-		if((SBMLreactionFinder.currentsearchresult==null || SBMLreactionFinder.currentsearchresult!=this)){
+		if( SBMLreactionFinder.currentsearchresult==null || SBMLreactionFinder.currentsearchresult!=this ){
 			// NEED TO FIX THIS SO YOU CAN"T START TWO DOWNLOADS AT A TIME
 				//&& (SBMLreactionFinder.progframe==null || !SBMLreactionFinder.progframe.isVisible())){
 			
@@ -83,10 +91,12 @@ public class SearchResult extends JPanel implements MouseListener{
 				else{showLocalReactionData();}
 			}
 			if(SBMLreactionFinder.currentsearchresult!=null){
-				SBMLreactionFinder.currentsearchresult.setBorder(BorderFactory.createEmptyBorder());
+				Border aborder = BorderFactory.createLineBorder(new Color(255,255,255), 4);
+				SBMLreactionFinder.currentsearchresult.setBorder(aborder);
 			}
 			SBMLreactionFinder.currentsearchresult = this;
-			SBMLreactionFinder.currentsearchresult.setBorder(BorderFactory.createLineBorder(Color.blue,3));
+			Border border = BorderFactory.createLineBorder(new Color(45,100,245), 4);
+			SBMLreactionFinder.currentsearchresult.setBorder(border);
 		}
 	}
 	public void mouseEntered(MouseEvent arg0) {

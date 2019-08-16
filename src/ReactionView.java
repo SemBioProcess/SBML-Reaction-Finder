@@ -82,17 +82,25 @@ public class ReactionView extends JPanel implements ActionListener, MouseListene
 					rxn = reaction;
 				}
 			}
+			
+			String rxnname = "";
+			String rxnidlookup = "";
 			String rxnareastr = "";
-			if(!rxn.getName().equals("")){
-				//System.out.println("has Name");
-				rxnareastr = "Reaction: " + rxn.getName();
+			
+			
+			if( ! rxn.getName().equals("")){
+				rxnname = rxn.getName();
 			}
-			else if(!rxn.getId().equals("")){
-				rxnareastr = "Reaction: " + rxn.getId();
+			
+			if(!rxn.getId().equals("")){
+				rxnidlookup = rxn.getId();
 			}
-			else{
+			
+			if(rxnname.equals("") && rxnidlookup.equals(""))
 				rxnareastr = "Reaction: " + rxnid + "(unnamed in BioModels)";
-			}
+			else
+				rxnareastr = "Reaction ID: " + rxnidlookup + "\nReaction name: " + rxnname;
+
 			JTextArea rxnarea = new JTextArea(rxnareastr);
 			rxnarea.setBorder(BorderFactory.createEmptyBorder(7,7,7,7));
 			rxnarea.setEditable(false);

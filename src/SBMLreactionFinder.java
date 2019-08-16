@@ -216,7 +216,7 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 		reactionscroller.setBackground(Color.white);
 		
 		sp = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, resultsscroller, reactionscroller);
-		sp.setDividerLocation(490);
+		sp.setResizeWeight(0.5);
 		sp.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 		
 		resultsnumber.setText("0 reactions found");
@@ -559,7 +559,7 @@ public class SBMLreactionFinder extends JFrame implements ActionListener{
 				srcmodelname = srcmodelname.replace(SBMLID,"");
 				srcmodelname = srcmodelname.replace("_", " ");
 				srcmodelname.trim();
-				GOstring = "<unknown reaction type>";
+				GOstring = "";
 				for(OWLClassExpression supercls : onerxn.asOWLClass().getSuperClasses(rxnont)){
 					if(GOparent.getSubClasses(rxnont).contains(supercls)){
 						GOstring = OWLMethods.getRDFLabels(rxnont, supercls.asOWLClass())[0];
